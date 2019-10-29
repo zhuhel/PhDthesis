@@ -1,0 +1,68 @@
+\subsection{Electroweak theory}
+\label{ewktheory}
+The electroweak interaction is the unified description of two of the four known fundamental interactions of nature: electromagnetism and the weak interaction.
+It is based on the gauge group of $SU(2)_{L} \times SU(1)_{Y}$, in which $L$ is the left-handed fields and $Y$ is the weak hypercharge \cite{Langacker:2009my}.
+It follows the Lagrangian of
+\begin{equation} \label{eq:Lew}
+	L_{EW} = L_{gauge} + L_{Higgs} + L_{fermion} + L_{Yukawa}
+\end{equation}
+
+$L_{gauge}$ is the \textbf{gauge term} part
+\begin{equation}
+	L_{gauge} = -\frac{1}{4} W^{i}_{\mu\nu} W^{\mu\nu i} - \frac{1}{4} B_{\mu\nu} B^{\mu\nu}
+\end{equation}
+where $W^{i}_{\mu}$ and $B_{\mu}$ respectively present the $SU(2)_{L}$ and $SU(1)_{Y}$ gauge fields, with the corresponding field strength tensors of
+\begin{equation}
+\begin{split}
+	& B_{\mu\nu} = \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu} \\
+	& W^{i}_{\mu\nu} = \partial_{\mu} W^{i}_{\nu} - \partial_{\nu} W^{i}_{\mu} - g \epsilon_{ijk} W^{j}_{\mu} W^{k}_{\nu}
+\end{split}
+\end{equation}
+In the equations above, $g$ is the $SU(2)_{L}$ gauge coupling and $\epsilon_{ijk}$ is the totally antisymmetric tensor.
+The gauge Lagrangian has three and four-point self interactions of $W^{i}$, which result in triple and quartic gauge boson couplings.
+
+The second term of the Lagrangian is the \textbf{scaler part}:
+\begin{equation} \label{eq:Lhiggs}
+	{L}_{Higgs} = \left(D^{\mu}\phi\right)^{\dagger}D_{\mu}\phi - V(\phi)
+\end{equation}
+where $\phi = \binom{\phi^{+}}{\phi^{0}}$  is a complex Higgs scalar,
+and $V(\phi)$ is the Higgs potential which is restricted into the form of 
+\begin{equation} \label{eq:Vhiggs}
+	V(\phi) = +\mu^{2}\phi^{\dagger}\phi + \lambda\left(\phi^{\dagger}\phi\right)^{2}
+\end{equation}
+due to the combination of $SU(2)_{L} \times SU(1)_{Y}$ invariance and renormalizability.
+In Eq.~\ref{eq:Vhiggs}, $\mu$ is a mass-dependent parameter and $\lambda$ is the quartic Higgs scalar coupling, 
+which represents a quartic self-interaction between the scalar fields.
+When $\mu^{2} < 0$, there will be spontaneous symmetry breaking (more details in section~\ref{symbreaking}).
+To maintain vacuum stability, $\lambda > 0$ is required.
+And in Eq.~\ref{eq:Lhiggs}, the gauge covariant derivative is defined as
+\begin{equation}
+	D_{\mu}\phi = \left(\partial_{\mu} +ig\frac{\tau^{i}}{2}W_{\mu}^{i} + \frac{ig^{'}}{2}B_{\mu}\right)\phi
+\end{equation}
+in which $\tau^{i}$ represents the Pauli matrices, and $g'$ is the $U(1)_{Y}$ gauge coupling.
+The square of the covariant derivative results in three and four-point interactions between the gauge and scalar fields.
+
+The third term of the Lagrangian is the \textbf{fermion part}
+\begin{equation} \label{eq:Lfermion}
+\begin{split}
+  	{L}_{fermion} = \sum_{m=1}^{F} & ( \bar{q}_{mL^{i}}^{0}\gamma_{\mu}D_{\mu}q_{mL}^{0} + \bar{l}_{mL^{i}}^{0}\gamma_{\mu}D_{\mu}l_{mL}^{0} + \bar{u}_{mR^{i}}^{0}\gamma_{\mu}D_{\mu}u_{mR}^{0} \\
+  	& + \bar{d}_{mR^{i}}^{0}\gamma_{\mu}D_{\mu}d_{mR}^{0} + \bar{e}_{mR^{i}}^{0}\gamma_{\mu}D_{\mu}e_{mR}^{0} + \bar{\nu}_{mR^{i}}^{0}\gamma_{\mu}D_{\mu}\nu_{mR}^{0})
+\end{split}
+\end{equation} 
+In Eq.~\ref{eq:Lfermion}, m is the family index of fermions, F is the number of families.
+The subscripts $L (R)$ stand for the left (right) chiral projection $\psi_{L(R)} \equiv \left(1 \mp \gamma_{5} \right) \psi/2$.
+\begin{equation}
+	q_{mL}^{0} = \binom{u_{m}^{0}}{d_{m}^{0}}_{L}   \qquad    l_{mL}^{0} = \binom{\nu_{m}^{0}}{e_{m}^{-0}}_{L}
+\end{equation}
+are the $SU(2)$ doublets of left-hand quarks and leptons, while 
+$u_{mR}^{0}$, $d_{mR}^{0}$, $e_{mR}^{-0}$ and $\nu_{mR}^{0}$ are the right-hand singlets.
+
+The last term in Eq.~\ref{eq:Lew} is \textbf{Yukawa term}
+\begin{equation}
+\begin{split}
+	{L}_{Yukawa} =& -\sum_{m,n=1}^{F} [\Gamma_{mn}^{u}\bar{q}_{mL}^{0}\widetilde{\phi}u_{nR}^{0} + \Gamma_{mn}^{d}\bar{q}_{mL}^{0}\phi d_{nR}^{0} \\
+	& + \Gamma_{mn}^{e}\bar{l}_{mn}^{0}\phi e_{nR}^{0} + \Gamma_{mn}^{\nu}\bar{l}_{mL}^{0}\widetilde{\phi}\nu_{nR}^{0}]+h.c.
+\end{split}
+\end{equation}
+the matrices $\Gamma_{mn}$ refer to the Yukawa couplings between single Higgs doublet ($\phi$) and the various flavors of quarks (m) and leptons (n).
+
