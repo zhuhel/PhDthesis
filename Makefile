@@ -5,7 +5,7 @@ BSTFILES = $(NAME)-numerical.bst $(NAME)-authoryear.bst $(NAME)-bachelor.bst
 
 SHELL = bash
 #LATEXMK = latexmk -xelatex -bibtex -f
-LATEXMK = latexmk -bibtex -f 
+LATEXMK = latexmk -bibtex 
 VERSION = $(shell cat $(NAME).dtx | egrep -o "\[\d\d\d\d/\d\d\/\d\d v.+\]" \
 	  | egrep -o "v\S+")
 TEXMF = $(shell kpsewhich --var-value TEXMFHOME)
