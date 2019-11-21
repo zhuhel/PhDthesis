@@ -4,6 +4,12 @@ The ATLAS simulation program is integrated into the ATLAS software framework cal
 which uses Python as an object-oriented scripting and interpreter language to configure and load C++ algorithms and objects.
 Figure~\ref{fig:frame_overview} shows the overview of ATLAS simulation data flow\cite{Aad:2010ah}.
 In the diagrams, the square-cornered boxes represents algorithms and applications to be run and round-cornered boxes denote data objects.
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=1.0\textwidth]{figures/Simulation/outline_atalsSimulation_v2.png}
+  \caption{The flow of the ATLAS simulation software.}
+  \label{fig:frame_overview}
+\end{figure}
 
 First of all, events are produced by MC generators in standard HepMC format.
 The events can be filtered at generation time with some certain requresments and then read into the simulation.
