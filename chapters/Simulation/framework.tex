@@ -17,10 +17,9 @@ The energies deposited in the sensitive regions of the detector are recorded as 
 position, and time, and are written to a simulation hit file.
 In the meatime, the events in "truth" format are also recorded to contain the history of the interactions from the generator, including incoming and outgoing particles.
 Simulated Data Objects (SDOs) are created from truth, which are maps between hits in sensitive portions of the detector and truth information of particles in simulation.
-The files are then sent to digitization, which firstly constructs "digits" inputs to the read out drivers (RODs) in the detector electronics.
-Then the ROD is emulated, from which one can get a Raw Data Object (RDO) file used for reconstruction.
+The files are then sent to digitization, with constructs "digits" inputs and be written into Raw Data Object (RDO) file used for reconstruction.
 
-In conclusion, there are three main parts of framework: \textit{Generation}, \textit{Simulation} and \textit{Reconstruction}. 
+In conclusion, there are three main parts of framework: \textit{Generation}, \textit{Simulation} and \textit{Digitization}.
 More details are given below.
 
 \textbf{Event generation}
@@ -35,7 +34,29 @@ There are several MC generators that have been widely-used with general purpose,
 
 \begin{figure}[!htb]
   \centering
-  \includegraphics[width=0.5\textwidth]{figures/Simulation/mc_event_structure.png}
+  \includegraphics[width=0.7\textwidth]{figures/Simulation/mc_event_structure.png}
   \caption{Sketch of a hardon-hardon collision simulated by MC event generator. The red blob in center denotes the hard collision, surrounded by tree-like structures representing Bremsstrahlung which is simulated by Parton Showers. The purple blob stands for a secondary hard scattering event. The light green blobs indecate the parton-to-hardon transitions and the dark green blobs represents hardon decays. The yellow lines are soft photon radiations.}
   \label{fig:mc_event_structure}
 \end{figure}
+
+\textbf{Simulation}
+
+GEANT4 is used as standard simulation toolkit for the ATLAS experiment, which transports physics particles through the detector's geometry.
+During the generation level, the entire connected chain of the HepMC event is stored as the Monte Carlo truth. 
+Only the stable particles are read into GEANT4 for further simulation and cuts and transformations can be applied to these events to select certain processes.
+During the simulation, many secondary tracks can be produced, therefore only information from the interactions of interest are stored, including the incoming particles, step sequence, vertex and also outgoing particles.
+The output of GEANT4 is called \textit{hit file}, which contains metadata describing the configuration of the simulation during the run, all truth information requested and a collection of hits for each subdetector.
+
+Since the standard ATLAS detector simulation cost very large computing resources to accurately model the complex detector geometry and physics descriptions, some fast simulation programss are developed according to different user purpose.
+Some widely-used fast-sim toolkits include \textit{Fast G4 Simulation}\cite{Barberio:2007gba}, \textit{ATLFAST-I}\cite{Richter-Was:683751} and \textit{ATLFAST-II}\cite{Edmonds:1091969}.
+
+\textbf{Digitization}
+
+The hit outputs from simulated events, including hard scattering signal, minimum bias, beam halo, beam gas and cavern background events, are then send into digitization to convert into detector response called "digits".
+Before converting into detector signal with 'digits' formart, each type of events can be overlaid at a user-specified rate.
+Those overlay, called "pile-up", can be done during degitization to save the CPU time in simulation level.
+At this stage, the detector noise and the first level trigger that implemented with hardware on the real detector are added into events.
+The digitization firstly constructs "digits" inputs to the read out drivers (RODs) in the detector electronics.
+The ROD functionality is then emulated, and the output digits are written out as Raw Data Object (RDO) file.
+In addition, the digitization algorithms can also produce Simulated Data Objects (SDOs), which contain information about all the particles, noise and the amount of energy that contributed to the signal. 
+Then all information are sent into reconstruction that will be described in next subsection.
