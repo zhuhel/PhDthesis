@@ -1,4 +1,4 @@
-\chapter{Simulation and Object Reconstruction for the ATLAS Experiment}
+\chapter{Simulation and Event Reconstruction for the ATLAS Experiment}
 
 In current LHC pp collison, bunches of protons collide every 25 nanoseconds (ns), which gives a large challenge to event reconstruction and selections.
 To predict and model each process, the Monte Carlo simulations of physics events are essential for high-energy physics experiments.
@@ -7,3 +7,22 @@ This section will briefly discuss the event simulation and reconstruction progra
 \section{Event sumilation}
 \input{chapters/Simulation/framework}
 %\subsection{Simulation framework}
+
+\subsection{Event reconstruction}
+
+The data flow of ATLAS data processing is sketched in figure~\ref{fig:data_processing}\cite{Boyd_2010}. 
+Data from detector is firstly filtered by online trigger system and then send to the \textit{Tier-0 (T0)} for initial processing by offline reconstruction software also based on Athena.
+A small amount of data named "express stream" is processed in almost real time in T0 for online data quality monitoring.
+In addition, some other dedicated data steams are sent out at trigger level for detector alignment and calibration.
+These calibration and alignment information are then used for bulk reconstruction in T0.
+At the end of the reconstruction chain, the data are delivered into \textit{Tier-1 (T1)} and \textit{Tier-2 (T2)} centers for further analysis and production of simulated data.
+Besides, T1 centers are also responsible for data reprocessing by re-running data reconstruction with improved calibration and alignment constants and with improved reconstruction algorithms.
+This sub-section describes the reconstruction of some important physics objects in ATLAS experiment, i.e. tracks, vertices, electrons, muons, jets, and missing energies.
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/Simulation/data_processing.png}
+  \caption{The flowchart of the ATLAS data processing.}
+  \label{fig:data_processing}
+\end{figure}
+
+\input{chapters/Simulation/track}
