@@ -1,4 +1,5 @@
-\subsubsection{Track}
+\subsection{Track}
+\label{sec:track}
 
 The ATLAS detector is composed of two independent tracking systems: the Inner Detector (ID) close to the interaction point, and the Muon Spectrometer (MS).
 The reconstructed charged-particle trajectories in the ID and MS are referred to as ID tracks and MS tracks respectively.
@@ -32,4 +33,17 @@ The MS track reconstruction\cite{Aad:2016jkr} starts from searching hit patterns
 In each MDT chamber and nearby trigger chamber, a Hough transform\cite{ILLINGWORTH198887} is used to search the hits lies on a certain trajectory in the bending plane of the detector.
 The MDT segments are reconstructed by performing a linear fit to the hits found in each layer.
 The RPC or TGC hits can be built by measuring the coordinate orthogonal to the bending plane.
-And the segments of CSC can be built using a separate combinatorial search in the $\eta$ and$\phi$ detector planes.
+And the segments of CSC can be built using a separate combinatorial search in the $\eta$ and $\phi$ detector planes.
+
+Then muon track candidates are built by fitting together hits from segments in different layers.
+This task makes use of the algorithm by performing a segment-seeded combinatorial search, which starts by using the segments generated in the middle layers of the detector where more trigger hits are available as seeds.
+The search is then extended to use the segments as seeds from the inner and outer layers.
+The segments are selected based on criterias of hit multiplicity and fit quality, and are matched using their relative positions and angles.
+To build a track, at least two matching segments are required, except in the barrel-endcap transition region where a single high-quality segment with $\eta$ and $\phi$ information can be used to build a track.
+At begining, the same segment can be used to build more than one track candidates.
+Later on, an overlap removal algorithm is performed to select the best assignment to a single track, or decide whether allows the certain segment to be shared between two tracks.
+
+The hits associated with each track candidate are then fitted using a global $\chi^{2}$ fit.
+Then the algorithm accepts the track candidate if its fitting $\chi^{2}$ passes the selection criteria.
+Hits contribute largely to $\chi^{2}$ are removed and the track fit is repeated.
+In addition, the algorithm performs a hit recovery procedure that looks for additional hits consistent with the candidate trajectory, and the track candidate is refit if additional hits are found.

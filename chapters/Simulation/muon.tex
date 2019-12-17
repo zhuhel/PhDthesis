@@ -1,0 +1,21 @@
+\subsection{Muon}
+
+Muons are distinctive signatures in final states of many physics analyses at LHC which include the Higgs analyses, SM measurements and BSM seaches and so on. 
+High performance of muon reconstruction and identifications are crucial.
+This section briefly describes some more details of the reconstruction, identification and isolation of muon.
+
+\textbf{Muon reconstruction}
+
+Muon reconstruction is firstly performed in inner detector (ID) and muon spectrometer (MS) independely as given in section~\ref{sec:track}.
+The information from each individual detectors are then combined together to form the muon tracks for physics analyses.
+The combined ID-MS reconstruction is developed according to several algorithm based on the information from ID, MS and calorimeters.
+Four different muon types are defined:
+\begin{itemize}
+	\item \textbf{Combined (CB) muons:} a combined track is formed by using the reconstructed tracks performed independently in ID and MS with a global refit. To improve the fit quality, the hits from MS may be added to or removed from the track. The outside-in pattern recognition is utilized for the reconstruction of most muons, in which the muons are first reconstructed in MS and then extrapolated inward to match the ID track. In the meantime, the inside-out pattern is also used as a complementary method.
+	\item \textbf{Segment-tagged (ST) muons:} a reconstructed track in ID is defined as muon, if it can associated with at least one track segment in MDT or CSC chambers. These ST muons are used when they can only pass across one layer of MS chambers due to their low $p_{T}$ or falling into regions with less MS acceptance.
+	\item \textbf{Calorimeter-tagged (CT) muons:} a reconstructed track in ID is categorized as muon if it's matched to the energy deposit in calorimeter which is recognized with a minimum-ionizing particle. This CT muons have lowest purity amount all types of muons, but it covers the region where ATLAS muon spectrometer is only partially constructed. For the region of $|\eta| < 0.1$ and $15 GeV < p_{T} < 100 GeV$, the identification of CT muons are optimal.
+	\item \textbf{Extrapolated (ME) muons:} the muon is reconstructed based only on the MS track and a loose requirement of originating from the interaction point. In general, this type of muon needs to pass at least two (three) layers of MS chambers to provide a track measurement in barrel (forward) region. ME muons are designed to extend the acceptance for muon reconstruction into the region $2.5 < |\eta| < 2.7$ where ID doesn't cover.
+\end{itemize}
+
+Before collecting those muons for physics analyses, overlap removals are performed between different muon types with the priority of CB > ST > CT, if two types of muons share the same ID track.
+Besides, the overlaps with ME muons are resolved by analyzing the track hit content, and selecting the track with better fit quality and larger number of hits.
