@@ -36,5 +36,12 @@ Five selection levels are developed to satisfy the different needs for different
 The \textit{Tight}, \textit{Medium}, \textit{Loose} are subsets from the tighter one to looser one.
 More detailed defination of each working point is given as follow:
 \begin{itemize}
-
+	\item \textit{Loose:} this working point is designed to maximize the reconstruction efficiency while keeping good-quality of muon tracks. And they are specifically developed for reconstructing Higgs boson candidates from four-lepton final states. All four muon types are used for this selection level. The CB and ME muons passing Medium WP that will mentioned below are all included into Loose category. In addition, the CT and ST muons are restricted to $|\eta| < 0.1$ region.
+In the range of $|\eta| < 2.5$, around 97.5\% Loose muons are CB muons, and about 1.5\% are CT while remaining 1\% are ST muons.
+	\item \textit{Medium:} this working point is the default criteria of muon identification in ATLAS. This selection minimizes the systematic uncertainties of muon reconstruction and calibration. In this category, we only use CB and ME muons. For CB muons, at least 3 hits in at least two layers of MDT is required, except $|\eta| < 0.1$ region, in which tracks with \geq 1 MDT layer but \leq 1 MDT hole layer are allowed. For ME muons, at least 3 MDT/CSC layers is required.
+Furthermore, a loose cut on the compatibility between measured momentum in ID and MS is applied to reduce the fake muons from hadrons misidentification. Besides, the q/p-significance is required to be less than 7.
+	\item \textit{Tight:} this working point is used to maximize the purity of muons but with sacrifice of some selection efficiency. Only CB muons with hits in \geq 2 stations of MS and passing Medium caiteria are selected.
+In addition, the normalized $\chi^{2}$ of combined track fit should be smaller than 8. Then, a two-dimensional cut of q/p-significance and $\rho'$ is adopted as a function of muon $p_{T}$ to ensure tighter background rejection for momentum below 20 GeV, in which the fake rate is usually higher.
+	\item \textit{High-$p_{T}$:} this set of selections aims to maximize the momentum resolution for tracks with $p_{T} > 100 GeV$ region. The selection is especially optimized for searching high-mass Z' and W' resonances. CB muons satisfying Medium selection and with \geq 3 hits in 3 MS stations are chosen. The specific region in MS where alignment is suboptimal are removed as a precaution.
+	\item \textit{Low-$p_{T}$:} this type of muon is newly defined for software release 21 starting from physics analysis of the year of 2017.
 \end{itemize}
