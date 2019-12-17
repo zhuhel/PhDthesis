@@ -9,7 +9,7 @@ This section briefly describes some more details of the reconstruction, identifi
 Muon reconstruction is firstly performed in inner detector (ID) and muon spectrometer (MS) independely as given in section~\ref{sec:track}.
 The information from each individual detectors are then combined together to form the muon tracks for physics analyses.
 The combined ID-MS reconstruction is developed according to several algorithm based on the information from ID, MS and calorimeters.
-Four different muon types are defined:
+Four different muon types are defined\cite{Aad:2016jkr}:
 \begin{itemize}
 	\item \textbf{Combined (CB) muons:} a combined track is formed by using the reconstructed tracks performed independently in ID and MS with a global refit. To improve the fit quality, the hits from MS may be added to or removed from the track. The outside-in pattern recognition is utilized for the reconstruction of most muons, in which the muons are first reconstructed in MS and then extrapolated inward to match the ID track. In the meantime, the inside-out pattern is also used as a complementary method.
 	\item \textbf{Segment-tagged (ST) muons:} a reconstructed track in ID is defined as muon, if it can associated with at least one track segment in MDT or CSC chambers. These ST muons are used when they can only pass across one layer of MS chambers due to their low $p_{T}$ or falling into regions with less MS acceptance.
@@ -19,3 +19,22 @@ Four different muon types are defined:
 
 Before collecting those muons for physics analyses, overlap removals are performed between different muon types with the priority of CB > ST > CT, if two types of muons share the same ID track.
 Besides, the overlaps with ME muons are resolved by analyzing the track hit content, and selecting the track with better fit quality and larger number of hits.
+
+\textbf{Muon identification}
+
+After reconstruction, the muon identification is then performed to durther discriminate between signal and background, especially to suppress backgrounds from pion and kaon decays by requiring prompt muons with high efficiency and guaranteeing a robust momentum measurement.
+The muon identification is defined by using the fit quality of combined track. 
+The variables utilized in judgement for CB tracks include:
+\begin{itemize}
+	\item \textit{q/p significance}, the absolute difference between q/g (charge over momentum) of muons measured in ID and MS divided quadratic sum of their corresponding uncertainties;
+	\item \textit{$\rho'$}, the absolute value of difference between the $p_{T}$ (transverse momentum) measured in ID and MS, divided by the $p_{T}$ of combined track;
+	\item \textit{Nomalized $\chi^{2}$} of the combined track fit;
+	\item \textit{Number of hits in ID and MS}
+\end{itemize}
+
+Five selection levels are developed to satisfy the different needs for different physics goals: \textit{LowPt}, \textit{Loose}, \textit{Medium}, \textit{Tight} and \textit{HighPt}.
+The \textit{Tight}, \textit{Medium}, \textit{Loose} are subsets from the tighter one to looser one.
+More detailed defination of each working point is given as follow:
+\begin{itemize}
+
+\end{itemize}
