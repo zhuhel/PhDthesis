@@ -22,7 +22,7 @@ Besides, the overlaps with ME muons are resolved by analyzing the track hit cont
 
 \textbf{Muon identification}
 
-After reconstruction, the muon identification is then performed to durther discriminate between signal and background, especially to suppress backgrounds from pion and kaon decays by requiring prompt muons with high efficiency and guaranteeing a robust momentum measurement.
+After reconstruction, the muon identification is then performed to further discriminate between signal and background, especially to suppress backgrounds from pion and kaon decays by requiring prompt muons with high efficiency and guaranteeing a robust momentum measurement.
 The muon identification is defined by using the fit quality of combined track. 
 The variables utilized in judgement for CB tracks include:
 \begin{itemize}
@@ -31,6 +31,12 @@ The variables utilized in judgement for CB tracks include:
 	\item \textit{Nomalized $\chi^{2}$} of the combined track fit;
 	\item \textit{Number of hits in ID and MS}
 \end{itemize}
+In addition, some new variables used for \textit{LowPt} muon working point what will be described below include\cite{Zheng:2649299}:
+\begin{itemize}
+	\item \textit{Momentum balance significance (MBS) } is computed as momentum difference between the ID and MS standalone measurements with respect to the uncertainty $\sigma$ on energy lost in the calorimeter system.
+	\item \textit{Scattering neighbor significance (SNS)} is defined to estimated the significance of a change in trajectory along the track, expected in the presence of a hadron decaying to a muon.
+	\item \textit{Scattering curvature significance (SCS)} is defined as the normalized integral of the scattering angle significances, corrected for large kinks along the trajectory.
+\end{itemize}
 
 Five selection levels are developed to satisfy the different needs for different physics goals: \textit{LowPt}, \textit{Loose}, \textit{Medium}, \textit{Tight} and \textit{HighPt}.
 The \textit{Tight}, \textit{Medium}, \textit{Loose} are subsets from the tighter one to looser one.
@@ -38,10 +44,31 @@ More detailed defination of each working point is given as follow:
 \begin{itemize}
 	\item \textit{Loose:} this working point is designed to maximize the reconstruction efficiency while keeping good-quality of muon tracks. And they are specifically developed for reconstructing Higgs boson candidates from four-lepton final states. All four muon types are used for this selection level. The CB and ME muons passing Medium WP that will mentioned below are all included into Loose category. In addition, the CT and ST muons are restricted to $|\eta| < 0.1$ region.
 In the range of $|\eta| < 2.5$, around 97.5\% Loose muons are CB muons, and about 1.5\% are CT while remaining 1\% are ST muons.
-	\item \textit{Medium:} this working point is the default criteria of muon identification in ATLAS. This selection minimizes the systematic uncertainties of muon reconstruction and calibration. In this category, we only use CB and ME muons. For CB muons, at least 3 hits in at least two layers of MDT is required, except $|\eta| < 0.1$ region, in which tracks with \geq 1 MDT layer but \leq 1 MDT hole layer are allowed. For ME muons, at least 3 MDT/CSC layers is required.
+	\item \textit{Medium:} this working point is the default criteria of muon identification in ATLAS. This selection minimizes the systematic uncertainties of muon reconstruction and calibration. In this category, we only use CB and ME muons. For CB muons, at least 3 hits in at least two layers of MDT is required, except $|\eta| < 0.1$ region, in which tracks with $\geq 1$ MDT layer but $\leq 1$ MDT hole layer are allowed. For ME muons, at least 3 MDT/CSC layers is required.
 Furthermore, a loose cut on the compatibility between measured momentum in ID and MS is applied to reduce the fake muons from hadrons misidentification. Besides, the q/p-significance is required to be less than 7.
-	\item \textit{Tight:} this working point is used to maximize the purity of muons but with sacrifice of some selection efficiency. Only CB muons with hits in \geq 2 stations of MS and passing Medium caiteria are selected.
+	\item \textit{Tight:} this working point is used to maximize the purity of muons but with sacrifice of some selection efficiency. Only CB muons with hits in $\geq 2$ stations of MS and passing Medium caiteria are selected.
 In addition, the normalized $\chi^{2}$ of combined track fit should be smaller than 8. Then, a two-dimensional cut of q/p-significance and $\rho'$ is adopted as a function of muon $p_{T}$ to ensure tighter background rejection for momentum below 20 GeV, in which the fake rate is usually higher.
-	\item \textit{High-$p_{T}$:} this set of selections aims to maximize the momentum resolution for tracks with $p_{T} > 100 GeV$ region. The selection is especially optimized for searching high-mass Z' and W' resonances. CB muons satisfying Medium selection and with \geq 3 hits in 3 MS stations are chosen. The specific region in MS where alignment is suboptimal are removed as a precaution.
-	\item \textit{Low-$p_{T}$:} this type of muon is newly designed for physics analyses with ATLAS software release version 21. It's designed to obtain a optimal muon identification with very low transverse momentum of $3 GeV < p_{T} < 5 GeV$.
+	\item \textit{High-$p_{T}$:} this set of selections aims to maximize the momentum resolution for tracks with $p_{T} > 100 GeV$ region. The selection is especially optimized for searching high-mass Z' and W' resonances. CB muons satisfying Medium selection and with $\geq 3$ hits in 3 MS stations are chosen. The specific region in MS where alignment is suboptimal are removed as a precaution.
+	\item \textit{Low-$p_{T}$:} this type of muon is newly designed for physics analyses with ATLAS software release version 21. It's designed to obtain a optimal muon identification with very low transverse momentum of $3 GeV < p_{T} < 5 GeV$, which is crucial for B-physics measurement in ATLAS. 
+	In this muon requirement, only CB muons are used. In the range of $|\eta| < 1.3$, it requests muons hit at least one MS station; in $1.3 < |\eta| < 1.55$, a least two MS stations are required; while in region of $|\eta| > 1.55$, \textit{Medium WP} is required. In addtion, cuts are applied to suppress fakes: |MBS| < 3.0, |SNS| < 3.0 and |SCS| < 3.0.
 \end{itemize}
+
+Figure~\ref{fig:muon_id_eff} and \ref{fig:muon_id_lowpt} show the selection efficiency of different muon identification working points. For \textit{Medium}, \textit{Tight} and \textit{High-$p_{T}$:}, $Z \rightarrow \mu\mu$ events with $p_{T} > 10 GeV$ are used for measurement. 
+In addition, the top plot also shows the efficiency of the \textit{Loose} selection (squares), in which the Loose and Medium selections differ significantly in region of $|\eta| < 0.1$.
+For \textit{LowPt}, $J/\Psi \rightarrow \mu\mu$ events with $3 GeV < p_{T} < 10 GeV$ are used for measurement.
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.42\textwidth]{figures/Simulation/muon_id_med.png} \\
+  \includegraphics[width=0.42\textwidth]{figures/Simulation/muon_id_tight.png}
+  \includegraphics[width=0.42\textwidth]{figures/Simulation/muon_id_highpT.png}
+  \caption{Muon reconstruction efficiency as a function of $\eta$ for: Medium (and Loose), Tight and High-$p_{T}$ working points.}
+  \label{fig:muon_id_eff}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.5\textwidth]{figures/Simulation/muon_id_lowpT.png}
+  \caption{Muon reconstruction efficiency for Low-$p_{T}$ working point as a function of $\eta$.}
+  \label{fig:muon_id_lowpt}
+\end{figure}
+
