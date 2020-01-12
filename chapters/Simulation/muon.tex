@@ -72,3 +72,22 @@ For \textit{LowPt}, $J/\Psi \rightarrow \mu\mu$ events with $3 GeV < p_{T} < 10 
   \label{fig:muon_id_lowpt}
 \end{figure}
 
+\textbf{Muon isolation}
+
+Similar as electron, the muon isolation is used to further distinguish the prompt muon from non-prompt backgrounds.
+There are also two types of isolation variables for muon:
+\begin{itemize}
+	\item \textbf{Calorimeter-based variable:} $E_{T}^{topocone20}$. It's defined as the sum of the transverse energy of topological clusters within a cone of size $\Delta R = 0.2$ around the candidate muon, after subtracting the contribution from the energy deposit of the muon itself and correcting for pile-up effects. The contributions from pile-up and underlying events are computed using the ambient energy-density technique\cite{CACCIARI2008119} and are corrected on an event-by-event basis.
+	\item \textbf{Tracked-based variable:} $p_{T}^{varcone30}$. It's computed as the scalar sum of the transverse momenta of the tracks with $p_{T} > 1 GeV$ in a cone size of $\Delta R = min(10 GeV/p_{T}^{\mu}, 0.3)$ around the candidate muon whose transverse momenta is $p_{T}^{\mu}$ after excluding the muon track itself. This $p_{T}$-dependent cone size can help to improve the performance for muons produced in the decay of particles with a large transverse momentum.
+\end{itemize}
+
+Then the isolation selections are applied based on \textit{relative isolation variables}, 
+which are computed as the ratio of the track- or calorimeter-based isolation variables to the transverse momentum of the muon.
+Figure~\ref{fig:muon_iso} shows the distribution of those relative isolation variables by using $Z \rightarrow \mu\mu$ events and passing \textit{Medium} identification criteria.
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.42\textwidth]{figures/Simulation/muon_iso_calo.png}
+  \includegraphics[width=0.42\textwidth]{figures/Simulation/muon_iso_track.png}
+  \caption{Distributions of the calorimeter-based (right) and the track-based (left) relative isolation variables measured in $Z \rightarrow \mu\mu$ events. }
+  \label{fig:muon_iso}
+\end{figure}

@@ -1,0 +1,26 @@
+\subsection{Missing transverse energy}
+
+Many interesting physics processes are with the inveloment of neutrinos.
+Since they do not interact with any materials in the detector, neutrinos cannot be detected directly;
+but instead, they can result in imbalance in the plane transverse to the beam axis, in which momentum conservation is assumed.
+It is known as the missing transverse momentum denoted as $E_{T}^{miss}$,
+which is obtained from the negative vector sum of the momenta of all particles detected in a proton-proton collision event.
+
+The $E_{T}^{miss}$ is measured using selected, reconstructed and calibrated hard objects in an event.
+Its x- and y- conponents can be calculated as follow\cite{ATL-PHYS-PUB-2015-027}:
+\begin{equation} \label{eq:met_xy}
+	E_{x(y)}^{miss} = E_{x(y)}^{miss, e} + E_{x(y)}^{miss, \gamma} + E_{x(y)}^{miss, \tau} + E_{x(y)}^{miss, jets} + E_{x(y)}^{miss, \mu} + E_{x(y)}^{miss, soft}
+\end{equation}
+where each object term is given by the negative vectorial sum of the momenta of the respective calibrated objects.
+The calorimeter signals are associated with the reconstructed objects in the following order: electrons, photons, hadronically decaying taus, jets, muons.
+The soft term is reconstructed from detected objects not overlap with any object passing the above selection cuts.
+
+Based on $E_{x(y)}^{miss}$, the magnitude of $E_{T}^{miss}$ and the azimuthal angle $\phi^{miss}$ are computed:
+\begin{equation}
+\begin{split}
+	E_{T}^{miss} &= \sqrt{ \left(E_{x}^{miss}\right)^{2} + \left(E_{y}^{miss}\right)^{2} } \\
+	\phi^{miss} &= arctan \left(E_{y}^{miss}/E_{x}^{miss}\right)
+\end{split}
+\end{equation}
+
+In equation~\ref{eq:met_xy}, each objects are required to pass certain reconstruction and calibrated criteria before taken as inputs.
