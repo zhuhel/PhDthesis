@@ -36,6 +36,14 @@
 \usepackage{amsthm}
 \usepackage{hyperref}
 
+%% sepecial defination for ATLAS
+\usepackage{latex/VBSZZNote-defs}
+\usepackage{latex/atlasunit}
+\usepackage{latex/atlasparticle}
+\usepackage{latex/atlasjournal}
+\usepackage{latex/atlasmisc}
+\usepackage{latex/atlasphysics}
+
 \DeclareRobustCommand\cs[1]{\texttt{\char`\\#1}}
 \newcommand\pkg{\textsf}
 
@@ -74,7 +82,7 @@ test
 \input{chapters/theory}
 \input{chapters/detector}
 \input{chapters/simulation}
-%\input{chapters/citations}
+\input{chapters/vbszz}
 \bibliography{bib/reference}
 
 \appendix
