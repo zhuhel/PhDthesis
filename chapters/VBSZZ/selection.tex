@@ -1,6 +1,6 @@
 \section{Objects and Event selection}
 
-\subsection{Objects defination}
+\subsection{Objects selection}
 
 The selection of analysis relies on the defination of multiple objects: \textit{electrons}, \textit{Muons}, and \textit{jets}.
 Details of definations for each objects are described as below:
@@ -11,11 +11,105 @@ To increase the acceptance range in reco-level for \llll jj channel, all four ty
 The identified muons are then required to pass $p_{T} > 7 \gev$ and $|\eta| < 2.7$,
 and satisfy the \textit{Loose} identification criterion (see defination in sec~\ref{sec:muon}).
 The impact parameter cuts are further applied to suppress the contribution from cosmic muons and non-prompt muons,
-with the value of: $|d_{0}/\sigma(d_{0})| < 3.0$ and $|z_{0} sin\theta| < 0.5 mm$.
-In order to avoid muons associated with jets, all muons are required to be isolated that pass \textit{FixedCutLoose} isolation criteria.
+with the value of: $|d_{0}/\sigma(d_{0})| < 3.0$ and $|z_{0} sin\theta| < 0.5 mm$,
+where $d_{0}$ is the transverse impactparameter relativetothebeamline, $\sigma(d_{0})$ is its uncertainty, 
+and z0 is the longitudinal impactparameter relative to the primary vertex.
+In order to avoid muons associated with jets, all muons are required to be isolated and pass \textit{FixedCutLoose} isolation criteria,
+which required $E_{T}^{topocone20} / p_{T} < 0.3$ and $p_{T}^{varcone30} / p_{T} < 0.15$.
 
 \textbf{Electron:} 
 As described in section~\ref{sec:electron}, electrons are reconstructed from energy deposits in the EM calorimeter matched to a track in the inner detector.
 The electron candidates must satisfy the \textit{Loose} criterion valuing by the likelihood-based (LH) method.
 And electrons are required to have $p_{T} > 7 \gev$ and $|\eta| < 2.47$.
 Moreover, the impact parameter requirements of $|d_{0}/\sigma(d_{0})| < 5.0$ and $|z_{0} sin\theta| < 0.5 mm$ are applied.
+Same as muon, all electrons are required to satisfy \textit{FixedCutLoose} isolation criteria
+of $E_{T}^{cone20} / p_{T} < 0.2$ and $p_{T}^{varcone20} / p_{T} < 0.15$.
+
+\textbf{Jets:} 
+Jet are key signatures for VBS processes. 
+This analysis use the jets clustered using the anti-kt algorithm with radius parameter R = 0.4, more details of jets' reconstruction can be found in section~\ref{sec:jet}.
+The jets are reuiqred to have $\pT >$ 30 (40)~\gev~in the $|\eta| <$ 2.4 ($2.4 < |\eta| < 4.5)$ region.
+To further reduce the effects of pile-up jets, a jet vertex tagger (JVT) is applied to jets with $p_{T} <$ 60~\gev~and $|\eta| < 2.4$ to select jets from hard-scattering vertex.
+
+\textbf{Overlap removal:} 
+An overlap-removal procedure is applied to selected leptons and jets in this analysis.
+To enhance the selection efficiency, leptons are given higher priority to be kept when overlaping with jets.
+With this lepton prefered mothed, the events of EWK signal after selection increases about 19\% while background only increases \~ 14\%.
+More details of the strategy is summarized in table~\ref{tab:OR_4l}.
+\begin{table}[htbp]
+\begin{center}
+\renewcommand\arraystretch{1.8}
+\resizebox{\linewidth}{!}{
+\small
+\begin{tabular}{ l | c | c}
+\hline
+\centering & Reference objects & Criteria\\
+\hline \hline
+Remove electrons & electrons & Share a track or have overlapping calorimeter cluster. Keep higher \pt electron \\
+\hline
+Remove muons & electrons & Share track and muon is calo-tagged \\
+\hline
+Remove electrons & muons & Share track \\
+\hline
+\multirow{3}{*}{Remove jets} & electrons & $\Delta R_{e-jet}$ < 0.2  \\
+\cline{2-3}
+                   & \multirow{2}{*}{muons}     & $\Delta R_{\mu-jet}$ < 0.2 OR muon track is ghost-associated to jet \\
+                   &       &  \textbf{AND} ($N_{Trk}(jet)<3$ OR ($p_T^{jet}/p_T^{\mu}<2$ and $p_T^{\mu}/\Sigma_{TrkPt}>0.7$)) \\
+\hline\hline
+\end{tabular}}
+\end{center}
+\caption{Overlap removal criteria between pre-selection objects for the \llll channel. The overlap removal follows the order shown in this table. Once an object has been marked as removed, it does not participate in the subsequent stages of the overlap removal procedure. }
+\label{tab:OR_4l}
+\end{table}
+
+%% ========================================================================
+\subsection{Event selection in reconstruction level}
+
+The \llll quadruplets are formed by two opposite-sign, same-flavour (OSSF) lepton pairs ($l^{+}l^{-}$),
+in which leptons are required to be separated by $\Delta R > 0.2$ in table~\ref{tab:OR_4l}.
+At most one muon is allowed to be ME or CT muon.
+The $\pT$ threshold of first three leading muons are 20, 20 and 10~\gev.
+If more than one quadruplets are found, the one with minimum sum of difference between two muon pair masses and Z boson mass 
+($|m_{l_{1}^{+}l_{1}^{-}} - m_{Z}| + |m_{l_{2}^{+}l_{2}^{-}} - m_{Z}|$) is selected.
+Both two dilepton pair masses are required to between 66 to 116~\gev.
+In addition, the invariant masses of all possible OSSF pairs are required to be greater than 10 \gev to reject events from $J/\phi$ or $\Upsilon$ decay.
+
+For VBS topology, the two most energetic jets in different detector side ($y_{j1} \times y_{j2} < 0$) are selected.
+Furthermore, the invariant mass of two jets ($\mjj$) is required to be greater than 300~\gev, 
+while $\dyjj$ is required to be larger than 2.
+Table~\ref{tab:selection_reco} summarizes the above selection requirements, which is defined as signal region (SR).
+
+\begin{table}[!htbp]
+\begin{center}
+\scalebox{0.75} {
+\begin{tabular}{c c}
+\hline
+\hline \noalign{\smallskip}
+\multirow{2}{*}{Electrons}     & $\pT >$ 7~\GeV{}, $|\eta| <$ 2.47            \\
+                     & $|d_0/\sigma_{d_0}|<5$ and $|z_0\times\sin\theta|<0.5$ mm                                                             \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+\multirow{2}{*}{Muons}         & $\pT >$ 7~\GeV{}, $|\eta| <$ 2.7             \\
+                     & $|d_0/\sigma_{d_0}|<3$ and $|z_0\times\sin\theta|<0.5$ mm                                                              \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+Jets                 & $\pT >$ 30 (40)~\GeV{} for $|\eta| <$ 2.4 ($2.4<|\eta|<4.5$)       \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+\multirow{5}{*}{$ZZ$ selection}  & $\pT >$ 20, 20, 10~\GeV{} for the leading, sub-leading and third leptons      \\
+                     & Two OSSF lepton pairs with smallest $|m_{\ell^+\ell^-} - m_Z| + |m_{\ell^{'+}\ell^{'-}} - m_Z|$      \\
+                     & $m_{\ell^+\ell^-} >$ 10~\GeV{} for lepton pairs                                            \\
+                     & $\Delta R(\ell,\ell') >$ 0.2                                                               \\
+                     & 66 $< m_{\ell^+\ell^-} <$ 116~\GeV{}                                                       \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+\multirow{2}{*}{Dijet selection}  & Two most energetic jets with $y_{j_1} \times y_{j_2} < 0$                                \\
+                     & $\mjj >$ 300~\GeV{} and $\dyjj >$ 2                                                         \\
+\noalign{\smallskip}\hline
+\hline
+\end{tabular}}
+\end{center}
+\caption{Summary of selection of physics objects and candidate events at detector level in the \lllljj signal region.}
+\label{tab:selection_reco}
+\end{table}
+Besides, a QCD Control region (CR) is defined by reverting either the $\mjj$ or $\dyjj$ requirements. 
+
+\subsection{Defination of fiducial volumes}
+
+
