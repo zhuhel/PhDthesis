@@ -1,0 +1,82 @@
+\section{Measurement of fiducial cross section}
+
+The fiducial cross section for the production of inclusive $ZZjj$, which includes both EW and QCD components, is then measured.
+
+The defination of fiducial volume, which is used for cross section measurement, follows closely to the detector-level selection
+but use physics objects in "particle-level", which are reconstructed in simulation from stable final-state particles,
+prior to their interactions with the detector.
+For electrons and muons, QED final-state radiation is for the most part recovered 
+by adding the four-momenta of surrounding photons that are not originating from hadrons and within an angular distance $\Delta R < 0.1$
+to the lepton four-momentum, called lepton "dressing".
+Particle-level jets are built with anti-$k_{T}$ algorithm with radius parameter $R = 0.4$ using all final-state particles except leptons and neutrinos as inputs.
+Comparing to the events selection in detector-level in section~\ref{sec:selection},
+in particle-level, the selected dilepton pair mass required is relaxed to be within 60 to 120~\gev to reduce the migration effect
+as well as be more compatibility with previous CMS publication\cite{2017682}.
+All the other kinematics selection requirements are the same as the defination in detector-level.
+
+\subsection{Calculation of C-factor}
+
+C-factor is defined as the ratio between the number of selected events in detector-level and the number of particle-level events in fiducial volume (FV):
+\begin{equation}
+	\mathcal{C} = \frac{N_{detector-level}}{N_{FV.}}
+\end{equation}
+The C-factor value of each $ZZjj$ processes calculated from each individual simulation samples are listed in table~\ref{tab:xs_cf} as well as their systematics.
+\begin{table}[H]
+\begin{center}
+   \begin{tabular}{|c|c|c|c|c|}
+   \hline
+   Process          & $\mathcal{C}$ & $\Delta$C(stats) & $\Delta$C(sys)        & $\Delta$C(theo)       \\
+   \hline
+   EWK ZZjj         & 0.663         & $\pm$0.002       & $\pm^{0.032}_{0.031}$ & NA                    \\
+   \hline
+   QCD \qqZZ        & 0.702         & $\pm$0.003       & $\pm^{0.061}_{0.051}$ & $\pm^{0.015}_{0.018}$ \\
+   \hline
+   QCD \ggZZ        & 0.741         & $\pm$0.021       & $\pm^{0.143}_{0.072}$ & $\pm{0.002}$          \\
+   \hline
+\end{tabular}
+\end{center}
+\caption{C Factor of different $ZZjj$ processes.}
+\label{tab:xs_cf}
+\end{table}
+
+Then the $\mathcal{C}$ from different processes are combined together to be used as inputs for cross section calculation:
+\begin{equation}
+	\mathcal{C} = \Sigma_{i} \frac{N_{FV.}^{i}}{\Sigma_{j} N_{FV.}^{j}} \times \mathcal{C}_{i} = 0.699\pm0.003(stats.)\pm^{0.011}_{0.013}(theo.)\pm0.028(exp.)
+\end{equation}
+The stats. refers to the statistical uncertainty from MC simulation statistics.
+The theo. and exp. denote the theoretical and experimental uncertainties described in section~\ref{sec:systematics}.
+
+\subsection{Result of fiducial cross section}
+
+The cross section in fiducial volume is computed as:
+\begin{equation}\label{eq:xs}
+	\sigma^{FV.} = \frac{N_{data} - N_{bkg}}{\mathcal{C} \times Lumi}
+\end{equation}
+where $N_{data}$ and $N_{bkg}$ denote the number of events selected from detector-level selection from data and sum of backgrounds,
+and $\mathcal{C}$ is the C-factor calculated above, Lumi represents the integrated luminosity of data 2015$~$2018 of 139~\ifb.
+
+As shown in table~\ref{tab:yield_prefit}, in inclusive measurement, only "Others" represents background, 
+processes of EW-ZZjj, QCD-\qqZZ and QCD-\ggZZ are signals.
+Table~\ref{tab:xs} shows the fiducial cross section for \llll channel measured from equation~\ref{eq:xs}, 
+as well as the predicted cross section measured from signals MC directly.
+\begin{table}[!htbp]
+\begin{center}
+\scalebox{0.90}{
+\begin{tabular}{ c | c}
+\hline
+\hline\noalign{\smallskip}
+Measured fiducial $\sigma$ [fb] & Predicted fiducial $\sigma$ [fb] \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+$1.27 \pm 0.12(\mathrm{stat}) \pm 0.02(\mathrm{theo}) \pm 0.07(\mathrm{exp}) \pm 0.01(\mathrm{bkg}) \pm 0.03(\mathrm{lumi})$ & $1.14 \pm 0.04(\mathrm{stat}) \pm 0.20(\mathrm{theo})$ \\
+\noalign{\smallskip}\hline
+\hline
+\end{tabular}}
+\end{center}
+\caption{
+Measured and predicted fiducial cross-sections in \lllljj final-state.
+Uncertainties due to different sources are presented.
+}
+\label{tab:xs}
+\end{table}
+The measured cross section has a total uncertainty of 11\%, and is found to be compatible with SM prediction.
+The data statitic is still dominanted for the measurement.

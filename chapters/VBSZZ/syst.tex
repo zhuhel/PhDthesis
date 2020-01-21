@@ -1,4 +1,5 @@
 \section{Systematics}
+\label{sec:systematics}
 
 The analysis performances both the statistical fit to MD distribution to extract the EW-ZZjj contributions
 and the cross section measurements in fiducial volume.
@@ -45,6 +46,7 @@ the value of parton showering component is taken from the measurement of EW proc
 
 Table~\ref{tab:syst_theo_sr} summarizes the uncertainties of each theoretical components in fiducial volume,
 while table~\ref{tab:syst_theo_cr} shows the numbers in QCD-enriched CR region.
+For QCD process, the uncertainty is QCD scale dominanted.
 Both of them are taken as inputs for statistical fit.
 \begin{table}[!htb]
 \small
@@ -84,10 +86,116 @@ Summary of theoretical uncertainties for the control region for EW and qqQCD pro
 The uncertainties of QCD gg induced process ($gg \rightarrow ZZ$) as the function of MD discriminant is shown in figure~\ref{fig:syst_theo_gg} for both fiducial volume (SR) and QCD CR.
 \begin{figure}
   \centering
-  \includegraphics[width=0.48\textwidth]{figures/4l/sys/ggZZ/BDT_SR_linear.pdf}
-  \includegraphics[width=0.48\textwidth]{figures/4l/sys/ggZZ/BDT_CR_linear.pdf}
+  \includegraphics[width=0.42\textwidth]{figures/VBSZZ/syst/BDT_SR_linear.pdf}
+  \includegraphics[width=0.42\textwidth]{figures/VBSZZ/syst/BDT_CR_linear.pdf}
   \caption{The theoretical uncertainties for \ggZZ background in particle-level SR (left) and CR (right).}
   \label{fig:syst_theo_gg}
 \end{figure}
 
+\subsection{Experimental systematics}
+
+The major experimental uncertainties are from the luminosity uncertainty, the momentum scale and resolution of leptons and jets, as well as the lepton reconstruction and selection efficiency.
+Some smaller uncertaities, such as trigger efficiency and pile-up correction, are also considered.
+Overall, most large systematics are from leptons and jets. 
+Table~\ref{tab:syst_exp_num} lists the major systematic components from leptons are jets for major processes in \llll channel.
+The total uncertainties for sources from electron, muon and jet repectively, as well as the sum (quadratic sum) of them are also summarized in this table.
+\begin{table}[H]
+\begin{center}
+\small
+\begin{tabular}{|c|c|c|c|}
+\hline
+name&EW-ZZjj&QCD qq-initial&QCD gg\\
+\hline
+nominal yield&20.61&76.69&13.10\\
+\hline
+EG\_RESOLUTION\_ALL&$\pm^{0.00\%}_{0.03\%}$&$\pm_{0.04\%}^{0.02\%}$&$\pm^{0.01\%}_{1.41\%}$\\
+\hline
+EG\_SCALE\_ALL&$\pm^{0.03\%}_{0.05\%}$&-0.04\%&$\pm^{0.01\%}_{0.06\%}$\\
+\hline
+EL\_EFF\_ID\_TOTAL\_1NPCOR\_PLUS\_UNCOR&$\pm^{2.66\%}_{2.58\%}$&$\pm^{2.60\%}_{2.53\%}$&$\pm^{2.65\%}_{2.57\%}$\\
+\hline
+EL\_EFF\_Iso\_TOTAL\_1NPCOR\_PLUS\_UNCOR&$\pm$0.70\%&$\pm$0.47\%&$\pm$0.42\%\\
+\hline
+EL\_EFF\_Reco\_TOTAL\_1NPCOR\_PLUS\_UNCOR&$\pm$0.55\%&$\pm$0.55\%&$\pm$0.63\%\\
+\hline
+JET\_EtaIntercalibration\_NonClosure&-0.01\%&-0.03\%&0\%\\
+\hline
+JET\_GroupedNP\_1&$\pm$1.97\%&$\pm^{11.82\%}_{10.14\%}$&$\pm^{16.21\%}_{12.92\%}$\\
+\hline
+JET\_GroupedNP\_2&$\pm$0.23\%&$\pm$1.26\%&+5.3\%\\
+\hline
+JET\_GroupedNP\_3&$\pm$0.55\%&$\pm$2.94\%&$\pm^{3.14\%}_{0.12\%}$\\
+\hline
+JET\_JER\_SINGLE\_NP&0.11\%&+5.47\%&+6.31\%\\
+\hline
+JET\_JvtEfficiency&$\pm$0.04\%&$\pm$0.12\%&$\pm$0.15\%\\
+\hline
+MUON\_EFF\_ISO\_STAT&$\pm$0.09\%&$\pm$0.08\%&$\pm$0.07\%\\
+\hline
+MUON\_EFF\_ISO\_SYS&$\pm$0.54\%&$\pm$0.55\%&$\pm$0.56\%\\
+\hline
+MUON\_EFF\_RECO\_STAT&$\pm$0.15\%&$\pm$0.19\%&$\pm$0.15\%\\
+\hline
+MUON\_EFF\_RECO\_STAT\_LOWPT&$\pm$0.06\%&$\pm$0.02\%&$\pm$0.03\%\\
+\hline
+MUON\_EFF\_TTVA\_STAT&$\pm$0.06\%&$\pm$0.07\%&$\pm$0.06\%\\
+\hline
+MUON\_EFF\_TTVA\_SYS&$\pm$0.03\%&$\pm$0.4\%&$\pm$0.03\%\\
+\hline
+MUON\_ID&$\pm$0.03\%&$\pm$0.02\%&$<$0.001\%\\
+\hline
+MUON\_MS&-0.05\%&$\pm^{0.04\%}_{0.01\%}$&$<$0.001\%\\
+\hline
+MUON\_SAGITTA\_RESBIAS&$\pm$0.01\%&$\pm$0.02\%&$<$0.001\%\\
+\hline
+MUON\_SAGITTA\_RHO&+1.13\%&-0.73\%&$\pm$1.00\%\\
+\hline
+MUON\_SCALE&$\pm$0.02\%&$\pm^{0.03\%}_{0.02\%}$&$<$0.001\%\\
+\hline
+PRW\_DATASF&$\pm$0.5\%&$\pm^{0.42\%}_{1.02\%}$&$\pm^{2.17\%}_{1.46\%}$\\
+\hline
+\hline
+Electron Exp&$\pm^{2.8\%}_{2.7\%}$&$\pm^{2.70\%}_{2.62\%}$&$\pm^{2.75\%}_{2.64\%}$\\
+\hline
+Muon Exp&$\pm$1.3\%&$\pm$1.3\%&$\pm$1.04\%\\
+\hline
+Jet Exp&$\pm$2.0\%&$\pm^{13.39\%}_{10.64\%}$&$\pm^{18.54\%}_{13.57\%}$\\
+\hline
+\hline
+Total experimental uncertainties &$\pm^{3.7\%}_{4.0\%}$&$\pm^{13.72\%}_{11.11\%}$&$\pm^{18.90\%}_{13.57\%}$\\
+\hline
+\end{tabular}
+\caption{
+Experimental uncertainties in 4l channel (normalized to 139 fb$^{-1}$).
+The "Electron Exp", "Muon Exp" and "Jet Exp" represent the quadrature of the respective sources from electron, muon, and jets.
+}
+\label{tab:syst_exp_num}
+\end{center}
+\end{table}
+
+In addition, the uncertainty of the combined 2015$~$2018 integrated luminosity is 1.7\%\cite{ATLAS-CONF-2019-021},
+obtained using the LUCID-2 detector\cite{Avoni_2018} for the primary luminosity measurements.
+
+An systematic uncertainty for MD distribution with different pile-up ($<\mu>$) is also been considered,
+by comparing the distribution between events with low and high pile-up conditions.
+A boundary of $<\mu> = 33$ is used to defined low/high pile-up according to the average $<\mu>$ for signal (about 34.5) and QCD background (about 33).
+Figure~\ref{fig:syst_exp_pu} shows the MD distribution in SR (left) and QCD CR (right), the difference as function of MD is then taken into account as additional shape uncertainty for statistical fit.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.42\textwidth]{figures/VBSZZ/syst/pu_uncer_BDT_SR.pdf}
+  \includegraphics[width=0.42\textwidth]{figures/VBSZZ/syst/pu_uncer_BDT_CR.pdf}
+  \caption{MD distribution between low and high pile-up events for SR (left) and CR (right).}
+  \label{fig:syst_exp_pu}
+\end{figure}
+
+Moreover, a conservative uncertainty is signed to QCD-ZZjj process by comparing the sample modeled by \textsc{Sherpa} generator (nominal) to \MGMCatNLO.
+The MD shape differences for both SR (left) and QCD CR (right) are shown in figure~\ref{fig:sys_exp_shmg}.
+The modeling uncertainty is calculated from the envelop of MD shape difference between nominal and alternative samples as function of MD.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.42\textwidth]{figures/VBSZZ/syst/BDT_shape_nor_linear_SR.pdf}
+  \includegraphics[width=0.42\textwidth]{figures/VBSZZ/syst/BDT_shape_nor_linear_CR.pdf}
+  \caption{MD shape difference for QCD \qqZZ background between different \textsc{Sherpa} theoretical uncertainties and sample from \MGMCatNLO on SR (left) and CR (right).}
+  \label{fig:sys_exp_shmg}
+\end{figure}
 
