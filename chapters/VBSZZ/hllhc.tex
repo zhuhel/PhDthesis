@@ -84,10 +84,141 @@ In addition to the \textit{baseline} selection listed above, two alternative sel
 From this table, one can see the extended track coverage increases the \lllljj events by 15$~$30\%, by improving the lepton efficiency.
 But the significance of searching for EW-$ZZjj$ process does not improve so much due to the large increment of background events.
 
-%Figure~\ref{fig:kine} shows some kinematic distributions 
+Figure~\ref{fig:kine} shows the kinematic distributions of dijet invariant mass (\mjj), the ZZ invariant mass (\mzz) and 
+the $\phi$ separation of two Z bosons ($|\Delta\phi(ZZ)|$) as well as the centrality of the ZZ system.
+The ZZ centrality is defined as:
+\begin{equation}
+  ZZ~\text{centrality} = \frac{|y_{ZZ} - (y_{j1} + y_{j2})/2|}{|y_{j1} - y_{j2}|}
+\end{equation}
+To measure the event yield, the up panel shows the stack distribution for EW- and QCD-$ZZjj$ processes,
+while bottom panel is the ratio between EW and QCD.
+\begin{figure}[!htbp]
+\centering
+\subfloat[]{
+\includegraphics[width=0.42\textwidth]{figures/VBSZZ/hllhc/TagJJM_final_noshape_0_ratio.pdf}
+}
+\subfloat[]{
+\includegraphics[width=0.42\textwidth]{figures/VBSZZ/hllhc/MVV_noshape_0_ratio.pdf}
+}
+\\
+\subfloat[]{
+\includegraphics[width=0.42\textwidth]{figures/VBSZZ/hllhc/dPhiZZ_noshape_0_ratio.pdf}
+}
+\subfloat[]{
+\includegraphics[width=0.42\textwidth]{figures/VBSZZ/hllhc/ZZCen_noshape_0_ratio.pdf}
+}
+\caption{
+Detector-level distributions of EW- and QCD-$ZZjj$ processes with selected events in defined phase space at 14~\tev of 
+(a) \mjj,
+(b) \mzz,
+(c) $|\Delta\phi(ZZ)|$,
+(d) ZZ centrality,
+normalized to 3000~\ifb{}.
+}
+\label{fig:kine}
+\end{figure}
+
 
 \subsection{Systematics}
 
 According to studies in section~\ref{sec:systematics}, the dominanted systematic in \llll channel is from theoretical systematic for QCD-$ZZjj$ background process.
 Different sizes of systematics have been tested, at 5, 10 and 30\% level on background modeling.
+The 5\% uncertainty is an optimal estimation when there is enough data events from QCD-enrich control region at HL-LHC to constrain the theoretical modeling on QCD-$ZZjj$ process.
+The 30\% one is a conservative estimation, in which the uncertainties are calculated from different PDF sets and QCD renormalization and factorization
+scales, following recommendation from PDF4LHC mentioned in section~\ref{sec:systematics}.
+
+For experimental sources, the jet systematic has been checked following the setting provided by HL-LHC in Ref.\cite{ATL-PHYS-PUB-2016-026},
+and the uncertainties are within 5\% level, which is smaller than run-2 measurement at 10\%.
+Figure~\ref{fig:jet_uncer} depicts the up and down variations for jet uncertainty provided by HL-LHC performance tool as function of dijet invariant mass.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.42\textwidth]{figures/VBSZZ/hllhc/Uncer_baseline_TagJJM_ewk_linear.pdf}
+  \includegraphics[width=0.42\textwidth]{figures/VBSZZ/hllhc/Uncer_baseline_TagJJM_qcd_linear.pdf}
+  \caption{Jet variations on $\mjj$ distribution for EW-ZZjj (left) and QCD-ZZjj (right) processes
+           with luminosity of 3000~\ifb at 14~\tev.
+	   \textit{Upgrade Performance Function} is used to extract the uncertainties with \textit{baseline} setting.}
+  \label{fig:jet_uncer}
+\end{figure}
+Therefore, a conservative 5\% uncertainty is used as experimental uncertainty.
+
+The final results rely largely on the uncertainties, especially the theoretical uncertainties on QCD-$ZZjj$ production.
+So results with different uncertainty conditions will be shown:
+\begin{itemize}
+	\item The case with statistical uncertainty of simulated samples only.
+	\item The case with statistical and experimental uncertainties (5\%)
+	\item The case with statistical, experimental and additional theoretical uncertainties at 5\%, 10\% and 30\% respectively.
+\end{itemize}
+Three different sources of uncertainties are treated as uncorrelated.
+
+\subsection{Results}
+
+In this analysis, the expected significance of EW-$ZZjj$ production is calculated as:
+\begin{equation}
+  \text{Significance} = \frac{S}{\sqrt{\sigma(B)_{stat.}^2 + \sigma(B)_{syst.}^2}},
+\end{equation}
+where $S$ presents the number of selected signal events,
+and $\sigma(B)_{stat.}$ and $\sigma(B)_{syst.}$ denote the statistical and systematic (exp. + theo.) uncertainties from background processes.
+The statistical is computed from expected yield at 3000~\ifb.
+
+Base on baseline selection of $\mjj > 600~\gev$, a additional scan over different \mjj cuts are performed with a step of 50~\gev
+for luminosity of 3000~\ifb under different systematic conditions, as shown in figure~\ref{fig:mjj_scan}.
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.48\textwidth]{figures/VBSZZ/hllhc/significance_noshape_0_noratio.pdf}
+\caption{
+The expected significance of EW-ZZjj processes as a function of different \mjj cut with 3000~\ifb,
+under conditions of different sizes of theoretical uncertainties on the QCD-ZZjj background modelling.
+The statistical uncertainty is estimated from expected data yield at 14~\TeV{} with 3000~\ifb.
+Different uncertainties are summed up quadratically.
+}
+\label{fig:mjj_scan}
+\end{figure}
+
+In addition, the expected differential cross section of EW-$ZZjj$ process is measured in the defined phase space at 14~\tev,
+as a function of \mzz and \mjj, shown in figure~\ref{fig:xs_mjj_mzz}.
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.48\textwidth]{figures/VBSZZ/hllhc/TagJJM_final_all_linear.pdf}
+\includegraphics[width=0.48\textwidth]{figures/VBSZZ/hllhc/MZZ_all_linear.pdf}
+\caption{
+The projected differential cross-sections at 14~\TeV{} for the EW-ZZjj processes as a function of \mjj (left) and \mzz (right).
+The top panel shows measurement with statistical only case,
+where statistical uncertainty is estimated from expected data yield at 14~\TeV{} with 3000~\ifb.
+The bottom panel shows impact of different sizes of systematic uncertainties.
+}
+\label{fig:xs_mjj_mzz}
+\end{figure}
+The expected differential cross sections are calculated as:
+\begin{equation}
+\begin{split}
+  \sigma = \frac{N_{pseudo-data} - N_{QCD-ZZjj}}{L*C_{EW-ZZjj}}\\
+  C_{EW-ZZjj} = \frac{N_{EW-ZZjj}^{det.}}{N_{EW-ZZjj}^{part.}}
+\end{split}
+\end{equation}
+where $N_{pseudo-data}$ denotes the expected number of data events with 3000~\ifb{} luminosity at 14~\tev,
+and $N_{QCD-ZZjj}$ and $N_{EW-ZZjj}$ are the number of predicted events of QCD-ZZjj and EW-ZZjj processes in particle-level.
+The $C_{EW-ZZjj}$ factor represents the detector efficiency for EW-ZZjj processes introduced in section~\ref{sec:cf}.
+The interference between EW- and QCD-ZZjj processes is ignored due to its minor contribution.
+
+The number of expected integrated cross section as well as its uncertainty under different uncertainty conditions are shown in table~\ref{tab:xsec}
+in 3000~\ifb luminosity at 14~\tev.
+The statistical uncertainty is at 10\% level when with such large luminosity.
+The result is dominanted by systematics and can reach 100\% level when theoretical modeling uncertainty is 30\% for QCD-$ZZjj$ processees.
+\begin{table}[htbp]
+  \small
+  \centering
+  \begin{tabular}{c|c|c|c|c|c|c}
+    \hline
+     & Cross section [fb] & Stat. only & Plus exp. & Plus $5\%$ theo. & Plus $10\%$ theo. & Plus $30\%$ theo. \\
+    \hline
+    EW-ZZjj & 0.21 & $\pm0.02$ & $\pm0.04$ & $\pm0.05$ & $\pm 0.08$ & $\pm 0.21$ \\
+    \hline
+  \end{tabular}
+  \caption{
+  Summary of expected cross-section measurements with different theoretical uncertainties.
+  The statistical uncertainty is estimated from expected data yield at 14~\TeV{} with 3000~\ifb.
+  Different uncertainties are summed up quadratically.
+  }
+  \label{tab:xsec}
+\end{table}
 
