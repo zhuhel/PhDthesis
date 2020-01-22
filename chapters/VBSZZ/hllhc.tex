@@ -1,0 +1,93 @@
+\section{Prospect study of EW-$ZZjj$ production in HL-LHC}
+
+\subsection{Introduction}
+The High-Luminosity Large Hadron Collider (HL-LHC) project aims to increase luminosity by a factor of 10 beyond the LHC’s design value 
+to increase the potential for discoveries after 2025.
+The designed luminosity will reach 3000~\ifb with the centre-of-mass energy of 14~\tev.
+
+As introduced in previous sections, with full run-2 data of 139~\ifb collected by ATLAS detector at LHC, 
+the EW-$ZZjj$ production is the last channel of observation for VBS processes with massive boson 
+due to its very low cross section in $ZZ$ decay.
+So we expect that this channel will benefit significantly from the increased luminosity at the high-luminosity LHC (HL-HLC),
+and can be studied in great details for this known mechanism.
+
+In this section, a prospect study has been performed for EW-$ZZjj$ production at the HL-LHC in the llll channel with the ATLAS detector.
+The study uses 3000~\ifb of simulated pp collisions at a centre-of-mass energy of 14~\tev that is expected to be recorded by the ATLAS detector at HL-LHC.
+All simulated events are produced at particle-level, 
+and the detector effects of lepton and jet reconstruction and identification are estimated by corrections, 
+assuming the mean number of interactions per bunch crossing ($<\mu>$) of 200.
+
+\subsection{The ATLAS detector at HL-LHC}
+
+As the expectation of HL-LHC, the new Inner Tracker (ITk)\cite{Collaboration:2285585}
+ will extend the acceptance capability of ATLAS detector to pseudorapidity ($|\eta|$) up to 4.0.
+By including a forward muon trigger, the upgraded Muon Spectrometer\cite{Collaboration:2285580} is also expected to provide 
+muon identification capabilities to $|\eta|$ up to 4.0.
+The new high granularity timing detector (HGTD)\cite{Collaboration:2623663} designed to mitigate the pile-up (PU) effects 
+is also foreseen in the forward region of $2.4 < |\eta| < 4.0$.
+The expected performance of the upgraded ATLAS detector at HL-LHC has been studied as reported in Ref.\cite{ATL-PHYS-PUB-2016-026}.
+
+\subsection{Simulation}
+
+The analysis is performed using particle-level events for simulated samples.
+The samples are generated at $\sqrt{s} = 14~\tev$ and with a fast simulation based on setting for ATLAS detector at HL-LHC.
+The signal in this analysis is EW-$ZZjj$ process, while only the dominanted ireducible background of QCD-$ZZjj$ is considered.
+Both signal and background are generated using \textsc{Sherpa} with NNPDF3.0NNLO PDF set.
+The signal sample is generated with two jets at Matrix Element (ME) level.
+The background is qq-initial process, in which events with up to one (three) outgoing partons are generated at NLO (LO) in perturbative QCD.
+As a quick study, other irreducible backgrounds like fake backgrounds from \Zjet and top-quark processes, as well as Diboson without 4l final-state and Triboson processes are not included into this analysis.
+Furthermore, for hard scattering events, the pile-up collisions are set with a mean value of 200 interactions per bunch crossing.
+In studies, signal and background yields are then scaled to 3000~\ifb for HL-LHC.
+
+\subsection{Event selection}
+
+The analysis selection follows closely to the one in ATLAS run-2 analysis as described in section~\ref{sec:selection}.
+Here are some changes according to the expectation of HL-LHC scenario for ATLAS detector:
+\begin{itemize}
+	\item Extend the lepton indentification in forward with $|\eta| <$ 4.0
+	\item Pile-up (PU) jet suppression is applied with a PU rejection factor of 50 for all PU jets in the region of $|\eta| <$ 3.8, based on the expected ATLAS detector performance at the HL-LHC.
+	\item The jets are reuiqred to have $\pT >$ 30 (70)~\gev~in the $|\eta| <$ 3.8 ($3.8 < |\eta| < 4.5)$ region.
+	\item For two selected jets, tight the $\mjj$ requirement to > 600~\gev, and require $\Delta \eta_{jj} >$ 2.
+\end{itemize}
+In addition, a fiducial volume, which is used to study the expected precision of the cross-section measurements,
+ is defined at particle-level with the same kinematic requirements listed above.
+
+Table~\ref{tab:event_yield} summarized the number of selected signal and background events normalized to 3000~\ifb.
+In addition to the \textit{baseline} selection listed above, two alternative selections are also studies:
+\begin{itemize}
+	\item Reduce the lepton $\eta$ region to 2.7, to uncerstand the effect due to forward lepton reconstruction and identification with the upgraded ATLAS detector.
+	\item Only apply the PU jet suppression with region $|\eta| < 2.4$, to measure the improvement of \textit{baseline} by extending the rejection range of PU jets at the HL-LHC.
+\end{itemize}
+\begin{table}[htbp]
+  \small
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    Selection & $N_{\mathrm{EW-ZZjj}}$ & $N_{\mathrm{QCD-ZZjj}}$ & $N_{\mathrm{EW-ZZjj}}$ / $\sqrt{N_{\mathrm{QCD-ZZjj}}}$ \\
+    \hline
+    Baseline                                 & 432 $\pm$ 21 & 1402 $\pm$ 37   & 11.54 $\pm$ 0.58 \\
+    \hline
+    Leptons with $|\eta|<$ 2.7               & 373 $\pm$ 19 & 1058 $\pm$ 33   & 11.46 $\pm$ 0.62 \\
+    \hline
+    PU jet suppression only in $|\eta|<$ 2.4 & 536 $\pm$ 23 & 15470 $\pm$ 120 &  4.31 $\pm$ 0.19  \\
+    \hline
+  \end{tabular}
+  \caption{
+    Comparison of event yields for signal ($N_{\mathrm{EW-ZZjj}}$) and background ($N_{\mathrm{QCD-ZZjj}}$) processes, 
+    and expected significance of EW-$ZZjj$ processes,
+    normalized to 3000~\ifb{} data at 14~\TeV{},
+    with baseline and alternative selections.
+    Uncertainties in the table refer to expected data statistical uncertainty at 14~\TeV{} with 3000~\ifb{}.
+  }
+  \label{tab:event_yield}
+\end{table}
+From this table, one can see the extended track coverage increases the \lllljj events by 15$~$30\%, by improving the lepton efficiency.
+But the significance of searching for EW-$ZZjj$ process does not improve so much due to the large increment of background events.
+
+%Figure~\ref{fig:kine} shows some kinematic distributions 
+
+\subsection{Systematics}
+
+According to studies in section~\ref{sec:systematics}, the dominanted systematic in \llll channel is from theoretical systematic for QCD-$ZZjj$ background process.
+Different sizes of systematics have been tested, at 5, 10 and 30\% level on background modeling.
+
