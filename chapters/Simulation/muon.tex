@@ -1,13 +1,13 @@
 \subsection{Muon}
 \label{sec:muon}
 
-Muons are distinctive signatures in final states of many physics analyses at LHC which include the Higgs analyses, SM measurements and BSM seaches and so on. 
+Muons are distinctive signatures in final states of many physics analyses at the LHC which include the Higgs analyses, SM measurements and BSM searches and so on. 
 High performance of muon reconstruction and identifications are crucial.
 This section briefly describes some more details of the reconstruction, identification and isolation of muon.
 
 \textbf{Muon reconstruction}
 
-Muon reconstruction is firstly performed in inner detector (ID) and muon spectrometer (MS) independely as given in section~\ref{sec:track}.
+Muon reconstruction is firstly performed in inner detector (ID) and muon spectrometer (MS) independently as given in section~\ref{sec:track}.
 The information from each individual detectors are then combined together to form the muon tracks for physics analyses.
 The combined ID-MS reconstruction is developed according to several algorithm based on the information from ID, MS and calorimeters.
 Four different muon types are defined\cite{Aad:2016jkr}:
@@ -41,17 +41,17 @@ In addition, some new variables used for \textit{LowPt} muon working point what 
 
 Five selection levels are developed to satisfy the different needs for different physics goals: \textit{LowPt}, \textit{Loose}, \textit{Medium}, \textit{Tight} and \textit{HighPt}.
 The \textit{Tight}, \textit{Medium}, \textit{Loose} are subsets from the tighter one to looser one.
-More detailed defination of each working point is given as follow:
+More detailed definition of each working point is given as follow:
 \begin{itemize}
-	\item \textit{Loose:} this working point is designed to maximize the reconstruction efficiency while keeping good-quality of muon tracks. And they are specifically developed for reconstructing Higgs boson candidates from four-lepton final states. All four muon types are used for this selection level. The CB and ME muons passing Medium WP that will mentioned below are all included into Loose category. In addition, the CT and ST muons are restricted to $|\eta| < 0.1$ region.
+	\item \textit{Loose:} this working point is designed to maximize the reconstruction efficiency while keeping good-quality of muon tracks. And they are specifically developed for reconstructing the Higgs boson candidates from four-lepton final states. All four muon types are used for this selection level. The CB and ME muons passing Medium WP that will mentioned below are all included into Loose category. In addition, the CT and ST muons are restricted to $|\eta| < 0.1$ region.
 In the range of $|\eta| < 2.5$, around 97.5\% Loose muons are CB muons, and about 1.5\% are CT while remaining 1\% are ST muons.
 	\item \textit{Medium:} this working point is the default criteria of muon identification in ATLAS. This selection minimizes the systematic uncertainties of muon reconstruction and calibration. In this category, we only use CB and ME muons. For CB muons, at least 3 hits in at least two layers of MDT is required, except $|\eta| < 0.1$ region, in which tracks with $\geq 1$ MDT layer but $\leq 1$ MDT hole layer are allowed. For ME muons, at least 3 MDT/CSC layers is required.
 Furthermore, a loose cut on the compatibility between measured momentum in ID and MS is applied to reduce the fake muons from hadrons misidentification. Besides, the q/p-significance is required to be less than 7.
-	\item \textit{Tight:} this working point is used to maximize the purity of muons but with sacrifice of some selection efficiency. Only CB muons with hits in $\geq 2$ stations of MS and passing Medium caiteria are selected.
+	\item \textit{Tight:} this working point is used to maximize the purity of muons but with sacrifice of some selection efficiency. Only CB muons with hits in $\geq 2$ stations of MS and passing Medium criteria are selected.
 In addition, the normalized $\chi^{2}$ of combined track fit should be smaller than 8. Then, a two-dimensional cut of q/p-significance and $\rho'$ is adopted as a function of muon $p_{T}$ to ensure tighter background rejection for momentum below 20 GeV, in which the fake rate is usually higher.
 	\item \textit{High-$p_{T}$:} this set of selections aims to maximize the momentum resolution for tracks with $p_{T} > 100 GeV$ region. The selection is especially optimized for searching high-mass Z' and W' resonances. CB muons satisfying Medium selection and with $\geq 3$ hits in 3 MS stations are chosen. The specific region in MS where alignment is suboptimal are removed as a precaution.
 	\item \textit{Low-$p_{T}$:} this type of muon is newly designed for physics analyses with ATLAS software release version 21. It's designed to obtain a optimal muon identification with very low transverse momentum of $3 GeV < p_{T} < 5 GeV$, which is crucial for B-physics measurement in ATLAS. 
-	In this muon requirement, only CB muons are used. In the range of $|\eta| < 1.3$, it requests muons hit at least one MS station; in $1.3 < |\eta| < 1.55$, a least two MS stations are required; while in region of $|\eta| > 1.55$, \textit{Medium WP} is required. In addtion, cuts are applied to suppress fakes: |MBS| < 3.0, |SNS| < 3.0 and |SCS| < 3.0.
+	In this muon requirement, only CB muons are used. In the range of $|\eta| < 1.3$, it requests muons hit at least one MS station; in $1.3 < |\eta| < 1.55$, a least two MS stations are required; while in region of $|\eta| > 1.55$, \textit{Medium WP} is required. In addition, cuts are applied to suppress fakes: |MBS| < 3.0, |SNS| < 3.0 and |SCS| < 3.0.
 \end{itemize}
 
 Figure~\ref{fig:muon_id_eff} and \ref{fig:muon_id_lowpt} show the selection efficiency of different muon identification working points. For \textit{Medium}, \textit{Tight} and \textit{High-$p_{T}$:}, $Z \rightarrow \mu\mu$ events with $p_{T} > 10 GeV$ are used for measurement. 

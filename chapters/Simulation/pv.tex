@@ -1,7 +1,7 @@
 \subsection{Primary vertex}
 
 The primary vertex (PV) is reconstructed by using the reconstructed tracks introduced in previous section as inputs.
-The tracks to be considered for vertex reconstruction must satisfy the following criterias\cite{ATL-PHYS-PUB-2015-026}:
+The tracks to be considered for vertex reconstruction must satisfy the following criteria~\cite{ATL-PHYS-PUB-2015-026}:
 \begin{itemize}
 	\item $p_{T} > 400$ MeV
 	\item $|\eta| < 2.5$
@@ -24,20 +24,19 @@ The latter one works on the reconstruction of the actual vertex position and its
 More details are described as below:
 
 First of all, a set of tracks passing the selection criteria mentioned above is selected.
-Then a seed position for the first vertex is choosed.
+Then a seed position for the first vertex is chosen.
 This seed position is determined by beam spot in the transverse plane.
 The starting point for x- and y- coordinates are directly from the centre of the beam spot,
 while the one for z-coordinate is calculated as the mode of z-coordinates of tracks at their respective points with closest approach to the reconstructed centre of the beam spot. 
 
 After determining the seed position, the iterative primary vertex finding procedure starts.
-An adaptive vertex fitting algorithm is used to find the optimal vertex position by using an iterative $\chi^{2}$ minimization.
-The seed position is used as start point and the reconstruction tracks are used as input measurements.
-The input tracks are asigned weights to reflect their compatibility with the vertex estimation, and the vertex position is calculated based one the weighted tracks.
-It's the iterative procedure, in each iteration, the less compatible tracks are down-weighted and then the vertex position is recomputed based on the reweighted tracks.
-
+An vertex fitting algorithm is adopted to find the optimal vertex position by performing an iterative $\chi^{2}$ minimization,
+in which the seed position is used as the start point and the reconstructed tracks are used as input measurements.
+For this fitting procedure, the input tracks are assigned weights to reflect their compatibility with the vertex estimation, and the vertex position is re-calculated based on these weighted tracks.
+Then the iterative procedure is repeated by re-calculating the track weight according to the new vertex position.
 After the last iteration, the final weight of each track used in vertex fit is estimated. 
-And based on their final weights, the incompatible tracks are then rejected from this vertex candidate and moved back to the unused pool for next determination of another vertex.
-Then the procedures describes above are repeated again, util not no unassociated tracks are left or no additional vertex could be found in remaining tracks.
+And those incompatible tracks ($> 7~\sigma$) are then rejected from this vertex candidate and moved back to the unused pool for next vertex finding.
+Then iteration procedure describes above are repeated again by using the remaining tracks, until no un-associated tracks are left or no additional vertex can be found in remaining tracks.
 
 At the end, the vertices with at least two associated tracks passing through are treated as possible PV candidates.
 And the output of this vertex reconstruction algorithm is the information of three dimensional vertex positions and their covariance matrices.

@@ -1,9 +1,9 @@
 \section{Background estimation}
 \label{sec:background}
 
-Table~\ref{tab:yield_prefit} sumarizes the background yields for $ZZjj \rightarrow \lllljj$ channel in 139~\ifb.
+Table~\ref{tab:yield_prefit} summarizes the background yields for $ZZjj \rightarrow \lllljj$ channel in 139~\ifb.
 Uncertainties on the predictions include both statistical and systematic components.
-"Others" includes minor contributions from non-ZZ processes including \Zjet, top-quark, triboson and ttV processes.
+"Others" includes minor contributions from non-$ZZ$ processes including \Zjet, top-quark, triboson and $ttV$ processes.
 Detail of estimation for each source will described below.
 
 \begin{table}[!htbp]
@@ -41,10 +41,10 @@ Uncertainties on the predictions include both statistical and systematic compone
 
 \subsection{QCD backgrounds}
 
-The QCD-ZZjj production, which include both qq and gg induced processes, is an irreducible background in the search of EW-ZZjj production.
+The QCD-$ZZjj$ production, which include both $qq$ and $gg$ induced processes, is an irreducible background in the search of EW-$ZZjj$ production.
 A QCD-enriched control region (CR) is defined to constrain the contribution by reverting either the $\mjj$ or $\dyjj$ requirements:\\
 	$\mjj <$ 300~\GeV{} or $\dyjj <$ 2 \\
-Then the normalization factor of QCD-ZZjj process is included into statistical fit as a float parameter to properly treat the uncertainty correlations between SR and CR, 
+Then the normalization factor of QCD-$ZZjj$ process is included into statistical fit as a float parameter to properly treat the uncertainty correlations between SR and CR, 
 while the shapes are taken from MC simulation.
 Table~\ref{tab:yield_qcdcr} shows the event yields of each background components in this CR.
 Uncertainties are statistical one only.
@@ -62,9 +62,9 @@ table-align-uncertainty=true
    \hline
    Process                 & \multicolumn{2}{c}{\lllljj}       \\
    \hline
-   EW $ZZjj$               &   3.9 &  0    \\
-   QCD $ZZjj$              & 136.9 &  0.6  \\
-   QCD $ggZZjj$            &  16.8 &  0.1  \\
+   EW-$ZZjj$               &   3.9 &  0    \\
+   QCD-$ZZjj$              & 136.9 &  0.6  \\
+   QCD-$ggZZjj$            &  16.8 &  0.1  \\
    Diboson                 &   0.3 &  0.1  \\
    Triboson                &   1.6 &  0.1  \\
    \Zjet                   &   \multicolumn{2}{l}{0}    \\
@@ -78,13 +78,13 @@ table-align-uncertainty=true
 \end{center}
 \caption{
 Observed data and expected signal and background yields in 139~\ifb{} of luminosity.
-Diboson includes all the other diboson processes discussed in section~\ref{sec:mc}, except those with four-lepton final state.
+Diboson background in table includes all the other diboson processes discussed in section~\ref{sec:mc}, except those with four-lepton final state.
 Uncertainties include only MC statistic.
-No events from \Zjet and \ttbar MC pass the selection, and are indicated as 0 in the table.
+No events from \Zjet and \ttbar MC samples pass the selection, and are indicated as 0 in the table.
 }
 \label{tab:yield_qcdcr}
 \end{table}
-The distributions of 4l and dijet invariant mass in QCD CR are shown in figure~\ref{fig:qcdcr_prefit}.
+The distributions of 4l and di-jet invariant mass in QCD CR are shown in figure~\ref{fig:qcdcr_prefit}.
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=0.42\textwidth]{figures/VBSZZ/QCDCR/MZZ_4l_QCD_CR.pdf}
@@ -98,7 +98,7 @@ The distributions of 4l and dijet invariant mass in QCD CR are shown in figure~\
 Backgrounds from \Zjet, top-quark and $WZ$ processes are estimated by data-driven method.
 These events usually contain two or three leptons from Z/W decays, together with heavy-flavor jets or misidentified components of jets reconstructed as leptons called "fake leptons".
 A \textit{fake factor} method is used to estimate this backgrounds, in which the lepton misidentification is measured in data regions 
-with enhanced contributions from Z + jets and top-quark processes:
+with enhanced contributions from \Zjet and top-quark processes:
 \begin{enumerate}
 	\item Define a dedicated background dominant region to derive the fake factor for this background. 
 The \textit{fake factor} is defined as:
@@ -111,10 +111,10 @@ where $\mathcal{N}_{good}$ refers to the number of good leptons passing all SR s
 \begin{equation}
 	\mathcal{N}_{fake} = \left( N_{gggp} - N_{gggp}^{ZZ} \right) \times \mathcal{F} - \left( N_{ggpp} - N_{ggpp}^{ZZ} \right) \times \mathcal{F}^{2}
 \end{equation}
-with the subtraction of ZZ contribution, and the double counting between ($N_{gggp}$ and $N_{ggpp}$).
+with the subtraction of $ZZ$ contribution, and the double counting between ($N_{gggp}$ and $N_{ggpp}$).
 \end{enumerate}
 
-For the defination of \textit{poor} leptons:
+For the definition of \textit{poor} leptons:
 The poor electrons are defined as failing "FixedCutLoose" isolation requirement or "LooseLH" electron ID requirement but satisfying "VeryLooseLH" WP.
 The poor muons are required to fail the "FixedCutLoose" isolation requirement or invert the impact parameter cut to be $3 < d_{0}/\sigma(d_{0}) < 10$.
 The dedicated \Zjet and \ttbar dominant regions are defined to calculate the fake factor respectively in the following subsections.
@@ -122,8 +122,8 @@ The dedicated \Zjet and \ttbar dominant regions are defined to calculate the fak
 
 \subsubsection{Fake factor for \Zjet}
 
-Fake factor for \Zjet background is calculated in \Zjet-enriched region, where events with one SFOS lepton pair around Z mass associated with two jets are selected.
-The value of fake factor is drived from data, and as a function of $p_{T}$ and $\eta$ as shown in figure~\ref{fig:fake_zjet_el} for electrons and figure~\ref{fig:fake_zjet_mu} for muons.
+Fake factor for \Zjet background is calculated in \Zjet-enriched region, where events with one SFOS lepton pair around $Z$ mass associated with two jets are selected.
+The value of fake factor is driven from data, and as a function of $p_{T}$ and $\eta$ as shown in figure~\ref{fig:fake_zjet_el} for electrons and figure~\ref{fig:fake_zjet_mu} for muons.
 During calculation, the contributions from non-\Zjet backgrounds (\ttbar, $ZZ$, $WZ$) have been subtracted from data.
 The values calculated from \Zjet MC directly are also shown in plots for comparison.
 \begin{figure}[!htb]
@@ -189,12 +189,12 @@ The ratios between $\Zjet$ and $\ttbar$ ($\Zjet / \ttbar$) in each individual ch
 The systematics of fake factor method can be measured by varying the parameters and selection requirements in fake factor calculation.
 In addition, due to the very limited data statistic in \llll channel, to be more conservative, 
 the difference between data measurement and MC simulation are also considered as another systematics component.
-In detail, the sources of systematics that have been included are listed as follow:
+In detail, the sources of systematics that have been included are listed as below:
 \begin{itemize}
-	\item Variation of isolation cut for the poor lepton definition up and down scaled by factor of two.
-	\item Variation of the yield of those subtracted MC in fake control region by 30\% up and down.
-	\item The difference of fake factors between drived from data and from MC simulation.
-	\item The difference of fake factors when changing to one bin measurement (instead of $p_{T}$ ot $\eta$ dependent).
+	\item Variations of isolation cut for the poor lepton definition up and down scaled by a factor of two.
+	\item Variations of the yields of those subtracted MC in fake control region scaled by 30\% up and down.
+	\item The difference of fake factors between driven from data and from MC simulation.
+	\item The difference of fake factors when changing to one bin measurement (instead of $p_{T}$ or $\eta$ dependent).
 	\item The statistical uncertainties on fake factor in fake control region.
 \end{itemize}
 
@@ -219,8 +219,8 @@ Uncertainties of each value in table are statistical one.
         \end{tabular}
         }
     \caption{
-    Fake background estimations in the SR. For the nominal value the 2D fake factor together with the $Z$+jets and $t\bar{t}$ combination is applied.
-    The other lines show the estimatins with different uncertainty variations.
+    Fake background estimations in the SR. For the nominal value the 2D fake factor together with the \Zjet and \ttbar combination applied.
+    The other lines show the estimations with different uncertainty variations.
     }
     \label{tab:fake_uncer}
 \end{table}

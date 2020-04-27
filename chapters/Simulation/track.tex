@@ -4,13 +4,13 @@
 The ATLAS detector is composed of two independent tracking systems: the Inner Detector (ID) close to the interaction point, and the Muon Spectrometer (MS).
 The reconstructed charged-particle trajectories in the ID and MS are referred to as ID tracks and MS tracks respectively.
 The ID reconstruction needs to handle high track density that imposes a large number of combinatorial track candidates, 
-the MS reconstruction is however largely limited by the huge amount of inert material, the large background and the highly inhomogeneous magnetic field\cite{Cornelissen:1020106}.
+the MS reconstruction is however largely limited by the huge amount of inert material, the large background and the highly inhomogeneous magnetic field~\cite{Cornelissen:1020106}.
 More details of two types of track reconstructions are given below.
 
 \textbf{Inner detector track}
 
 Figure~\ref{fig:track_ID} shows the ID system used for detect charge-particle tracks.
-The ID track revonstructions contains two sequences: \textit{inside-out} track reconstruction and \textit{outside-in} one.
+The ID track reconstructions contains two sequences: \textit{inside-out} track reconstruction and \textit{outside-in} one.
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=0.7\textwidth]{figures/Simulation/track_ID.png}
@@ -24,7 +24,7 @@ Then, these seeds are extended throughout the SCT to build track candidates.
 After that, these candidates are fitted, some quality cuts are applied to remove the outlier clusters, reject the fake tracks and resolve ambiguities in the cluster-to-track association.
 The selected tracks are then further extended to TRT, and refitted with the full information from pixel, SCT and TRT detectors.
 
-Another complementary approach, ouside-in, searches for unused track segments start from TRT instead.
+Another complementary approach, outside-in, searches for unused track segments start from TRT instead.
 These segments are then extended into the SCT and pixel detectors to improve the tracking efficiency for secondary tracks from conversions or decays of long-lived particles.
 
 \textbf{Muon spectrometer track}
@@ -38,9 +38,9 @@ And the segments of CSC can be built using a separate combinatorial search in th
 Then muon track candidates are built by fitting together hits from segments in different layers.
 This task makes use of the algorithm by performing a segment-seeded combinatorial search, which starts by using the segments generated in the middle layers of the detector where more trigger hits are available as seeds.
 The search is then extended to use the segments as seeds from the inner and outer layers.
-The segments are selected based on criterias of hit multiplicity and fit quality, and are matched using their relative positions and angles.
+The segments are selected based on criteria of hit multiplicity and fit quality, and are matched using their relative positions and angles.
 To build a track, at least two matching segments are required, except in the barrel-endcap transition region where a single high-quality segment with $\eta$ and $\phi$ information can be used to build a track.
-At begining, the same segment can be used to build more than one track candidates.
+At beginning, the same segment can be used to build more than one track candidates.
 Later on, an overlap removal algorithm is performed to select the best assignment to a single track, or decide whether allows the certain segment to be shared between two tracks.
 
 The hits associated with each track candidate are then fitted using a global $\chi^{2}$ fit.

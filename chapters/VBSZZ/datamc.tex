@@ -2,7 +2,7 @@
 
 \subsection{Data samples}
 
-The data sets for this analysis are the full run-2 pp collision data collected by the ATLAS experiment during the years from 2015 to 2018.
+The data sets for this analysis include the full run-2 pp collision data collected by the ATLAS experiment during the years from 2015 to 2018.
 Data event is only used if it passed the latest Good Run List (GRL) released by the Data Quality group from ATLAS experiment as listed below:
 
 
@@ -15,30 +15,30 @@ data18_13TeV.periodAllYear_DetStatus-v102-pro22-04_Unknown_PHYS_StandardGRL_All_
 \end{verbatim}
 }
 
-The events are required to additionally recorded by single and multi-lepton triggers, with transverse momentum ($p_{T}$) thresholds varing from 8 to 26 GeV.
+The events are required to additionally recorded by single or multi-lepton triggers, with transverse momentum ($p_{T}$) thresholds varying from 8 to 26 GeV.
 The overall trigger efficiency for selected inclusive \llll jj signal events in the analysis region are from 95 to 99\%.
 
 %% =======================================================
 \subsection{MC simulation}
 \label{sec:mc}
 
-The EW-ZZjj production (signal) is modelled using \MGMCatNLO~2.6.1~\cite{Alwall:2014hca} matrix elements (ME) calculated in the leading-order (LO) approximation
-in perturbative QCD (pQCD) and with NNPDF2.3LO~\cite{Ball:2012cx} parton distribution functions (PDF).
-VBF Higgs process is also included.
+The EW-$ZZjj$ production (signal) is modelled using \MGMCatNLO~2.6.1~\cite{Alwall:2014hca} matrix elements (ME) calculated in the leading-order (LO) approximation
+in perturbative QCD (pQCD) and with the NNPDF2.3LO~\cite{Ball:2012cx} parton distribution functions (PDF).
+The VBF Higgs process is also included.
 
-The QCD-ZZjj production is modelled using \textsc{Sherpa} 2.2.2~\cite{Gleisberg:2008ta} with the NNPDF3.0NNLO~\cite{ball2015parton} PDF,
+The QCD-$ZZjj$ production is modelled using \textsc{Sherpa} 2.2.2~\cite{Gleisberg:2008ta} with the NNPDF3.0NNLO~\cite{ball2015parton} PDF,
 in which events with up to one (three) outgoing partons are generated at NLO (LO) in pQCD.
-The production of ZZjj from the gluon-gluon initial state with a four-fermion loop or with an exchange of the Higgs boson has an order of $\alpha_{S}^{4}$ in QCD,
+The production of $ZZjj$ from the gluon-gluon initial state with a four-fermion loop or with an exchange of the Higgs boson has an order of $\alpha_{S}^{4}$ in QCD,
 and is not included in the \textsc{Sherpa} simulation.
 A separate $gg$ induced $ZZ$ + 2jets sample is modelled using \textsc{Sherpa} 2.2.2 with the NNPDF3.0NNLO PDF,
 and with an additional 1.7 k-factor~\cite{PhysRevD.92.094028} being applied.
 
-Then the interference between EW- and QCD-ZZjj is modelled with \MGMCatNLO~2.6.1 calculated at LO.
+Then the interference between EW- and QCD-$ZZjj$ is modelled with \MGMCatNLO~2.6.1 calculated at LO.
 
-The diboson productions from QCD $WW \rightarrow lvqq$ as well as QCD and EW $WZ \rightarrow llqq$ are modelled using \textsc{Sherpa} 2.2.2 with NNPDF3.0NNLO PDF.
+The diboson productions from QCD $WW \rightarrow lvqq$ as well as QCD and EW $WZ \rightarrow llqq$ are modelled using \textsc{Sherpa} 2.2.2 with the NNPDF3.0NNLO PDF.
 The productions of semileptonic decays ($WW \rightarrow lvqq$ and $WZ \rightarrow qqll$) are modelled using \textsc{Powheg-Box}~v2~\cite{Frixione:2007nw} with the CT10 PDF~\cite{Lai:2010vv}.
-Other diboson processes are not included due to negligible contributions.
-The triboson production is modelled using \textsc{Sherpa} 2.2.2 with NNPDF3.0NNLO PDF.
+%Other diboson processes are not included due to negligible contributions.
+The triboson production is modelled using \textsc{Sherpa} 2.2.2 with the NNPDF3.0NNLO PDF.
 
 For top-quark pair (\ttbar) production, the \textsc{Powheg-Box}~v2 is used with the CT10 PDF.
 The single top-quark production in $t$-channel, $s$-channel and $Wt$-channel were simulated using the \textsc{Powheg-Box}~v1 event generator~\cite{Alioli:2009je,Frederix:2012dh,Re:2010bp}.
@@ -46,11 +46,11 @@ The productions of \ttbar~in association with vector boson(s) ($ttV$) is modelle
 with \textsc{Sherpa} 2.2.1 for $ttZ$ with the $Z$ to dilepton decays,
 and with \MGMCatNLO~2.2.2 for $ttWW$ respectively.
 
-The \Zjet processes are modelled using \textsc{Sherpa} 2.2.1 with NNPDF3.0NNLO PDF, 
+The \Zjet processes are modelled using \textsc{Sherpa} 2.2.1 with the NNPDF3.0NNLO PDF, 
 in which the ME is calculated for up to two partons with next-to-leading-order (NLO) accuracy in pQCD and up to four partons with LO accuracy.
 
 For all the samples except those from \textsc{Sherpa}, 
-the parton showering is modelled with \textsc{Pythia8}~\cite{Sjostrand:2007gs} using NNPDF2.3~\cite{Ball:2012cx} PDF set,
+the parton showering is modelled with \textsc{Pythia8}~\cite{Sjostrand:2007gs} using the NNPDF2.3~\cite{Ball:2012cx} PDF set,
 and the A14 set of tuned parameters~\cite{ATL-PHYS-PUB-2014-021}.
 For \textsc{Sherpa} samples, the parton showering is simulated within the programme.
 

@@ -1,13 +1,13 @@
 \subsection{Missing transverse energy}
 
-Many interesting physics processes are with the inveloment of neutrinos.
+Many interesting physics processes are with the involvement of neutrinos.
 Since they do not interact with any materials in the detector, neutrinos cannot be detected directly;
 but instead, they can result in imbalance in the plane transverse to the beam axis, in which momentum conservation is assumed.
 It is known as the missing transverse momentum denoted as $E_{T}^{miss}$,
 which is obtained from the negative vector sum of the momenta of all particles detected in a proton-proton collision event.
 
 The $E_{T}^{miss}$ is measured using selected, reconstructed and calibrated hard objects in an event.
-Its x- and y- conponents can be calculated as follow\cite{Aaboud2018}:
+Its x- and y- components can be calculated as follow\cite{Aaboud2018}:
 \begin{equation} \label{eq:met_xy}
 	E_{x(y)}^{miss} = E_{x(y)}^{miss, e} + E_{x(y)}^{miss, \gamma} + E_{x(y)}^{miss, \tau} + E_{x(y)}^{miss, jets} + E_{x(y)}^{miss, \mu} + E_{x(y)}^{miss, soft}
 \end{equation}
@@ -27,30 +27,30 @@ Details of applied selections for each term are summarized in table~\ref{tab:met
      Priority & Type & Selections & Variables & Comments \\
      \hline
      (1) & $e$          & $|\eta|<1.37~or~1.52<|\eta|<1.47 \newline p_{T}>10 GeV$ & $E_{T}^{miss, e}$      
-         & all $e^{\pm}$ passing medium reconstruction quality and kinematic selections \\ 
+         & all $e^{\pm}$ passing kinematic selections and medium reconstruction quality \\ 
      \hline
      (2) & $\gamma$     & $|\eta|<1.37~or~1.52<|\eta|<1.47 \newline p_{T}>25 GeV$ & $E_{T}^{miss, \gamma}$ 
-         & all $\gamma$ passing tight quality and kinematic selections in reconstruction, and without signal overlap with (1) \\
+         & all $\gamma$ passing kinematic selections and tight reconstruction quality, and without signal overlap with (1) \\
      \hline
      (3) & $\tau_{had}$ & $|\eta|<1.37~or~1.52<|\eta|<1.47 \newline p_{T}>20 GeV$ & $E_{T}^{miss, \tau}$   
-         & all $\tau_{had}$ passing medium reconstruction quality and kinematic selections, and without signal overlap with (1) and (2) \\
+         & all $\tau_{had}$ passing kinematic selections and medium reconstruction quality, and without overlap with (1) and (2) \\
      \hline
      (4) & $\mu$        & $|\eta|<2.7 \newline p_{T}>10 GeV$ & $E_{T}^{miss, \mu}$
-         & all $\mu$ passing medium quality and kinematic selections in reconstruction \\
+         & all $\mu$ passing kinematic selections and medium reconstruction quality \\
      \hline
      (5) & jet          & $|\eta|<4.5 \newline p_{T}>60 GeV \newline 
 			--- or --- \newline 
 			2.4<|\eta|<4.5 \newline 20 GeV<p_{T}<60 GeV \newline
 			--- or --- \newline
 			|\eta|<2.4 \newline 20 GeV<p_{T}<60 GeV \newline JVT>0.59$ & $E_{T}^{miss, jet}$
-         & all jets passing reconstruction quality (jet cleaning) and kinematic selections, and without signal overlap with (1)–(4) \\
+         & all jets passing kinematic selections and reconstruction quality (jet cleaning) , and without overlap with (1)–(4) \\
      \hline
      (6) & ID track     & $p_{T}>400 MeV \newline 
 			|d_{0}|<1.5 mm \newline 
 			|z_{0}sin\theta|<1.5 mm \newline 
 			\Delta R(track, e/\gamma cluster)>0.05 \newline 
 			\Delta R(track, \tau_{had})> 0.2$       &  $E_{T}^{miss, soft}$ 
-         & all ID tracks from the hard-scatter vertex passing reconstruction quality and kinematic selections, and not associated with any particle from (1), (3) or (4), or ghostassociated with a jet from (5) \\
+         & all ID tracks from the hard-scattering vertex passing kinematic selections and reconstruction quality, and not associated with any particle from (1), (3) or (4), or associated with a jet from (5) \\
     \bottomrule
   \end{tabular}
   \end{center}

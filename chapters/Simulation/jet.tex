@@ -1,7 +1,7 @@
 \subsection{Jets}
 \label{sec:jet}
 
-Jets are another important features for many physics analyses at LHC, and especially the key signatures for vector boson fusion/scattering (VBF/VBS) processes.
+Jets are another important features for many physics analyses at the LHC, and especially the key signatures for vector boson fusion/scattering (VBF/VBS) processes.
 In ATLAS detector, jets are reconstructed as groups of topologically associated energy deposits in the calorimeters, 
 tracks associated with charged particles measured in the inner tacking detector, or simulated particles.
 This section will introduce the jet reconstruction, jet energy scale (JES) calibration and the b-jet tagging technical.
@@ -59,8 +59,8 @@ First of all, the origin correction recompute the four-momentum of jets to point
 This correction improves the $\eta$ resolution of jets for roughly 25\% at a jet $p_{T}$ of 20 GeV and > 5 times improvement for jet with $p_{T}$ above 200 GeV, 
 as measured from the difference between reconstructed jets and truth jets in MC simulation.
 Secondly, the pile-up correction is adopted to remove the excess energy due to in-time and out-of-time pile-up,
-which consistents two processes: an area-based $p_{T}$ density subtraction applied on the top of each event; and a residual correction derived from the simulation.
-Thirdly, the absolute JES calibration corrects the jet four-momentum to the particle-level energy scale, using truth jets in dijet MC events.
+which consists of two processes: an area-based $p_{T}$ density subtraction applied on the top of each event; and a residual correction derived from the simulation.
+Thirdly, the absolute JES calibration corrects the jet four-momentum to the particle-level energy scale, using truth jets in di-jet MC events.
 Furthermore, the step of global sequential calibration use calorimeter, track and MS-based variables to reduce the flavor dependence and energy leakage effects.
 Finally, the residual in situ calibration is adopted to correct jets in data by using well-measured objects eg. photons, Z bosons and calibrated jets.
 
@@ -68,13 +68,13 @@ Finally, the residual in situ calibration is adopted to correct jets in data by 
 
 Tagging of b-jets plays a important role in many physics analyses involving b- or t- quark.
 On the other hand, lots of analyses need to apply b-jet veto to suppress top-antitop process.
-There are three major types of algrothms that have been developed to distinguish b-jet from light-quark (u,d,s) jets\cite{ATL-PHYS-PUB-2016-012}:
+There are three major types of algorithms that have been developed to distinguish b-jet from light-quark (u,d,s) jets~\cite{ATL-PHYS-PUB-2016-012}:
 \begin{itemize}
-	\item \textbf{Impact parameter based algorithms (IP2D and IP3D):} b-hardons usually have long lifetime ($\sim$1.5 ps, $c_{\tau}\sim450~\mu$m), which leads to large impact parameter for tracks produced from b-hardon decay. The impact parameter taggers are developed based on these variables. The IP2D tagger makes use of the transverse impact parameter significance $d_{0}/\sigma(d_{0})$ as descriminant, while IP3D tagger uses two-dimensional descriminant of both transverse and longitudinal impact parameter significances: $d_{0}/\sigma(d_{0})$ and $z_{0}sin\theta/\sigma(z_{0})$.
-	\item \textbf{Secondary vertex finding algorithm (SV1)} makes use of the secodary vertex formed by decay products of b-hardon within the jet. All track pairs within a jet are tested for a two-track vertex hypothesis, and removed if they are likely to originate from a long-live particle decay (eg. $K_{s}$ or $\Lambda$), hadronic interactions or photon conversions. After that, a new vertex is fitted with all tracks from remaining two-track vertices, and the outliers are removed from this set of tracks.
+	\item \textbf{Impact parameter based algorithms (IP2D and IP3D):} b-hadons usually have long lifetime ($\sim$1.5 ps, $c_{\tau}\sim450~\mu$m), which leads to large impact parameter for tracks produced from b-hadon decay. The impact parameter taggers are developed based on these variables. The IP2D tagger makes use of the transverse impact parameter significance $d_{0}/\sigma(d_{0})$ as discriminant, while IP3D tagger uses two-dimensional discriminant of both transverse and longitudinal impact parameter significances: $d_{0}/\sigma(d_{0})$ and $z_{0}sin\theta/\sigma(z_{0})$.
+	\item \textbf{Secondary vertex finding algorithm (SV1)} makes use of the secondary vertex formed by decay products of b-hadon within the jet. All track pairs within a jet are tested for a two-track vertex hypothesis, and removed if they are likely to originate from a long-live particle decay (eg. $K_{s}$ or $\Lambda$), hadronic interactions or photon conversions. After that, a new vertex is fitted with all tracks from remaining two-track vertices, and the outliers are removed from this set of tracks.
 	\item \textbf{Decay chain multi-vertex algorithm (JetFitter)}\cite{Piacquadio_2008} exploits the topological structure of weak b- and c- hardon decays inside the jet and tries to reconstruct the full b-hadron decay chain. A Kalman filter is adopted to find a common line between primary vertex and b-/c- vertices, as well as their position in this line, which gives a approximated flight path for the b-hadron. In this approach, the b- and c-hadron vertices, whenever resolution allows, can be resolved, even when there is only a single track associated to them.
 \end{itemize}
-The final descrimination commonly used in many physics analyses is called \textbf{Multivariate Algorithm (MV2)}, which is based on Boosted Decision Tree (BDT) implemented in the TMVA package\cite{Speckmayer_2010} by combining the outputs from underlaying taggers mentioned above.
+The final discrimination commonly used in many physics analyses is called \textbf{Multivariate Algorithm (MV2)}, which is based on Boosted Decision Tree (BDT) implemented in the TMVA package\cite{Speckmayer_2010} by combining the outputs from underlaying taggers mentioned above.
 The MV2 was trained using jets in $t\bar{t}$ sample, where b-jets are treated as signal and c- and light-flavor jets are treated as backgrounds.
 There are three kinds of MV2 depending on the fraction of c-jets in background for training: \textit{MV2c00}, \textit{MV2c10} and \textit{MV2c20}.
 Figure~\ref{fig:jet_mv2} presents the output score of MV2c10 for different flavor jets.
