@@ -1,0 +1,23 @@
+\section{Objects and Event selection}
+\label{sec:hmhzz_selection}
+
+\subsection{Objects selection}
+
+Similar as described in section~\ref{sec:vbszz_selection}, the selection of this analysis relies on the definition of multiple objects: \textit{electrons}, \textit{Muons}, and \textit{jets}.
+Details of definitions for each objects are described as below:
+
+\textbf{Electron:}
+The reconstruction of electrons is described in section~\ref{sec:electron}.
+In this analysis, the electron candidates satisfying \textit{Loose} working point (WP) are selected,
+with a selection efficiency ranging from 90\% for transverse momentum \pt = 20~\gev to 96\% for \pt > 60~\gev.
+Also, electrons are required to have $p_{T} > 7 \gev$ and $|\eta| < 2.47$.
+
+\textbf{Muon:}
+To increase the acceptance range in reco-level for \lllljj channel, all four types of muons
+(CB, ST, CT, ME muons, described in section~\ref{sec:muon}) are used.
+But at most one CT, ST or ME muon is allowed in one \llll quadruplet.
+The Muon candidates are required to pass $p_{T} > 7 \gev$ and $|\eta| < 2.7$,
+and satisfy the \textit{Loose} identification criterion with an efficiency of 98.5\%.
+
+\textbf{Jets:}
+Jets are clustered using the anti-kt algorithm with radius parameter R = 0.4 implemented in the package, with the inputs of particle flow (PFlow) objects
