@@ -3,18 +3,18 @@
 
 \subsection{Objects selection}
 
-The selection of analysis relies on the defination of multiple objects: \textit{electrons}, \textit{Muons}, and \textit{jets}.
-Details of definations for each objects are described as below:
+The selection of analysis relies on the definition of multiple objects: \textit{electrons}, \textit{Muons}, and \textit{jets}.
+Details of definitions for each objects are described as below:
 
 \textbf{Muon:} 
-To increase the acceptance range in reco-level for \llll jj channel, all four types of muons 
+To increase the acceptance range in reco-level for \lllljj channel, all four types of muons 
 (CB, ST, CT, ME muons, described in section~\ref{sec:muon}) are used.
 The identified muons are then required to pass $p_{T} > 7 \gev$ and $|\eta| < 2.7$,
-and satisfy the \textit{Loose} identification criterion (see defination in sec~\ref{sec:muon}).
+and satisfy the \textit{Loose} identification criterion (see definition in sec~\ref{sec:muon}).
 The impact parameter cuts are further applied to suppress the contribution from cosmic muons and non-prompt muons,
 with the value of: $|d_{0}/\sigma(d_{0})| < 3.0$ and $|z_{0} sin\theta| < 0.5 mm$,
-where $d_{0}$ is the transverse impactparameter relativetothebeamline, $\sigma(d_{0})$ is its uncertainty, 
-and z0 is the longitudinal impactparameter relative to the primary vertex.
+where $d_{0}$ is the transverse impact parameter relative to the beam line, $\sigma(d_{0})$ is its uncertainty, 
+and $z_{0}$ is the longitudinal impact parameter relative to the primary vertex.
 In order to avoid muons associated with jets, all muons are required to be isolated and pass \textit{FixedCutLoose} isolation criteria,
 which required $E_{T}^{topocone20} / p_{T} < 0.3$ and $p_{T}^{varcone30} / p_{T} < 0.15$.
 
@@ -29,13 +29,13 @@ of $E_{T}^{cone20} / p_{T} < 0.2$ and $p_{T}^{varcone20} / p_{T} < 0.15$.
 \textbf{Jets:} 
 Jet are key signatures for VBS processes. 
 This analysis use the jets clustered using the anti-kt algorithm with radius parameter R = 0.4, more details of jets' reconstruction can be found in section~\ref{sec:jet}.
-The jets are reuiqred to have $\pT >$ 30 (40)~\gev~in the $|\eta| <$ 2.4 ($2.4 < |\eta| < 4.5)$ region.
+The jets are required to have $\pT >$ 30 (40)~\gev~in the $|\eta| <$ 2.4 ($2.4 < |\eta| < 4.5)$ region.
 To further reduce the effects of pile-up jets, a jet vertex tagger (JVT) is applied to jets with $p_{T} <$ 60~\gev~and $|\eta| < 2.4$ to select jets from hard-scattering vertex.
 
 \textbf{Overlap removal:} 
 An overlap-removal procedure is applied to selected leptons and jets in this analysis.
-To enhance the selection efficiency, leptons are given higher priority to be kept when overlaping with jets.
-With this lepton prefered mothed, the events of EWK signal after selection increases about 19\% while background only increases \~ 14\%.
+To enhance the selection efficiency, leptons are given higher priority to be kept when overlapping with jets.
+With this lepton preferred method, the events of EWK signal after selection increases about 19\% while background only increases \~ 14\%.
 More details of the strategy is summarized in table~\ref{tab:OR_4l}.
 \begin{table}[htbp]
 \begin{center}
@@ -65,6 +65,9 @@ Remove electrons & muons & Share track \\
 
 %% ========================================================================
 \subsection{Event selection in reconstruction level}
+
+The events are required to additionally recorded by single or multi-lepton triggers, with transverse momentum ($p_{T}$) thresholds varying from 8 to 26~\gev.
+The overall trigger efficiency for selected inclusive \lllljj signal events in the analysis region are from 95 to 99\%.
 
 The \llll quadruplets are formed by two opposite-sign, same-flavour (OSSF) lepton pairs ($l^{+}l^{-}$),
 in which leptons are required to be separated by $\Delta R > 0.2$ in table~\ref{tab:OR_4l}.
