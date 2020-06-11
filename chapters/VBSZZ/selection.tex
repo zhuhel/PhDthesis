@@ -24,13 +24,13 @@ The electron candidates must satisfy the \textit{Loose} criterion valuing by the
 And electrons are required to have $p_{T} > 7 \gev$ and $|\eta| < 2.47$.
 Moreover, the impact parameter requirements of $|d_{0}/\sigma(d_{0})| < 5.0$ and $|z_{0} sin\theta| < 0.5 mm$ are applied.
 Same as muon, all electrons are required to satisfy \textit{FixedCutLoose} isolation criteria
-of $E_{T}^{cone20} / p_{T} < 0.2$ and $p_{T}^{varcone20} / p_{T} < 0.15$.
+of $E_{T}^{topocone20} / p_{T} < 0.2$ and $p_{T}^{varcone20} / p_{T} < 0.15$.
 
 \textbf{Jets:} 
 Jet are key signatures for VBS processes. 
-This analysis use the jets clustered using the anti-kt algorithm with radius parameter R = 0.4, more details of jets' reconstruction can be found in section~\ref{sec:jet}.
-The jets are required to have $\pT >$ 30 (40)~\gev~in the $|\eta| <$ 2.4 ($2.4 < |\eta| < 4.5)$ region.
-To further reduce the effects of pile-up jets, a jet vertex tagger (JVT) is applied to jets with $p_{T} <$ 60~\gev~and $|\eta| < 2.4$ to select jets from hard-scattering vertex.
+This analysis use the jets clustered using the anti-$k_t$ algorithm with radius parameter $R$ = 0.4, more details of jets' reconstruction can be found in section~\ref{sec:jet}.
+The jets are required to satisfy $\pT >$ 30 (40)~\gev~in the $|\eta| <$ 2.4 ($2.4 < |\eta| < 4.5)$ region.
+To further reduce the effects of pile-up jets, a jet vertex tagger (JVT) is applied to jets with $p_{T} <$ 60~\gev~and $|\eta| < 2.4$ to select jets from hard-scattering vertex~\cite{PERF-2014-03}.
 
 \textbf{Overlap removal:} 
 An overlap-removal procedure is applied to selected leptons and jets in this analysis.
@@ -66,7 +66,7 @@ Remove electrons & muons & Share track \\
 %% ========================================================================
 \subsection{Event selection in reconstruction level}
 
-The events are required to additionally recorded by single or multi-lepton triggers, with transverse momentum ($p_{T}$) thresholds varying from 8 to 26~\gev.
+The events are required to additionally be recorded by single or multi-lepton triggers, with transverse momentum ($p_{T}$) thresholds varying from 8 to 26~\gev.
 The overall trigger efficiency for selected inclusive \lllljj signal events in the analysis region are from 95 to 99\%.
 
 The \llll quadruplets are formed by two opposite-sign, same-flavour (OSSF) lepton pairs ($l^{+}l^{-}$),
