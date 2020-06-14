@@ -1,0 +1,203 @@
+\section{Systematic uncertainties}
+
+This section describes the sources and value of theoretical and experimental systematic uncertainties considered in this analysis.
+In addition, as mentioned in previous sections, the uncertainties of irreducible background modelling, reducible background shape smoothing procedure and signal yield difference between simulation and parameterization are all token into account.
+
+%% =========================================================================================================================
+\subsection{Theoretical uncertainties}
+
+The theoretical modelling uncertainties include the PDF variations, missing QCD higher-order corrections via the variations of factorisation and renormalization scales,
+and the parton showering uncertainties.
+
+\subsubsection{Theoretical uncertainties for signal}
+\label{sec:hmhzz_theo_signal}
+
+The PDF, QCD scale and parton showering uncertainties affecting the acceptance difference originating from analysis selection for signal are token into account in different categories.
+The acceptance uncertainties are calculated on the acceptance factor which extrapolates from the fiducial space to the full phase space by a simple ratio:
+\begin{equation}
+        A = \frac{N_{fiducial}}{N_{total}}
+\end{equation}
+
+For PDF uncertainties, the standard derivations of 100 PDF replicas of NNPDF3.0 NNLO, as well as comparison to two external PDF sets: MMHT2014 NNLO, CT14 NNLO are considered.
+For missing QCD higher-order corrections, the effects are studied with truth events by comparing weights corresponding to
+variations of the renormalization and factorization scale factors, up and down by a factor of two, and the envelop of different variations are used.
+The parton showering uncertainties are estimated by comparing events with different setting via \textsc{Pythia8}.
+
+Systematic uncertainties are studied for both cut- and DNN- based event categorizations respectively, 
+in two different categories: the inclusive ggF and VBF category for cut-based analysis and three different categories: inclusive ggF, VBF, ``rest'' category for DNN-based one.
+Only DNN-based results are shown in this section as examples.
+
+Table~\ref{tab:acc-ggF-dnn} and ~\ref{tab:acc-VBF-dnn} show the theoretical uncertainties mentioned above for ggF and VBF signal respectively in DNN-based categorization.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Summary of acceptance uncertainties of PDF, QCD scale and parton shower variations for ggF production. The DNN-based categorization is used.}
+  \label{tab:acc-ggF-dnn}
+  \begin{tabular}{cccc}
+    \toprule
+    Categories  & PDF    & QCD Scale  & Parton Shower \\
+    \midrule
+    ggF  & 0.40\% & 0.06\% & 2.03\% \\
+    rest & 0.56\% & 0.07\% & 4.86\% \\
+    VBF  & 0.53\% & 0.09\% & 3.43\% \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Summary of acceptance uncertainties of PDF, QCD scale and parton shower variations for VBF production. The DNN-based categorization is used.}
+  \label{tab:acc-VBF-dnn}
+  \begin{tabular}{cccc}
+    \toprule
+    Categories  & PDF    & QCD Scale  & Parton Shower \\
+    \midrule
+    ggF  & 0.18\% & 1.20\% & 0.41\% \\
+    resr & 0.43\% & 0.26\% & 0.36\% \\
+    VBF  & 0.23\% & 3.19\% & 0.85\% \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%\textbf{Cut-based analysis} \\
+%
+%Table~\ref{tab:acc-ggF-cut} and ~\ref{tab:acc-VBF-cut} show the theoretical uncertainties for ggF and VBF signals respectively in cut-based categorization.
+%The uncertainties are computed in two different categories: the inclusive ggF and VBF category.
+%\begin{table}[htbp]
+%  \centering
+%  \caption{Summary of acceptance uncertainties of PDF, QCD scale and parton shower variations for ggF production. The cut-based categorization is used.}
+%  \label{tab:acc-ggF-cut}
+%  \begin{tabular}{cccc}
+%    \toprule
+%    Categories  & PDF    & QCD Scale  & Parton Shower \\
+%    \midrule
+%    ggF  & 0.44\% & 0.07\% & 0.22\% \\
+%    VBF  & 0.61\% & 0.12\% & 3.33\% \\
+%    \bottomrule
+%  \end{tabular}
+%\end{table}
+%
+%\begin{table}[htbp]
+%  \centering
+%  \caption{Summary of acceptance uncertainties of PDF, QCD scale and parton shower variations for VBF production. The cut-based categorization is used.}
+%  \label{tab:acc-VBF-cut}
+%  \begin{tabular}{cccc}
+%    \toprule
+%    Categories  & PDF    & QCD Scale  & Parton Shower \\
+%    \midrule
+%    ggF  & 0.18\% & 2.87\% & 0.52\% \\
+%    VBF  & 0.08\% & 4.52\% & 0.72\% \\
+%    \bottomrule
+%  \end{tabular}
+%\end{table}
+
+
+\subsubsection{Theoretical uncertainties for SM background processes}
+
+The theoretical uncertainties of irreducible $ZZ$ backgrounds are considered in terms of both the variations of shape of \mfl distributions
+and the acceptance originating from the event selection.
+
+The PDF and QCD scale uncertainties are considered by using the same method as described for signal in section~\ref{sec:hmhzz_theo_signal}
+The parton showering uncertainties for those \textsc{Sherpa} samples are evaluated by varying the resummation scale by a factor of 2, 
+changing the CKKW setting and using different showering option, following the PMG recommendation in ref.~\cite{twiki_pmgsyst},
+and the quadratic sum between the uncertainties in different kinds of showering option is token as final result of uncertainties.
+Moreover, the shape uncertainty associated with electroweak higher-order correction for \qqZZ process is also token into account.
+
+Same as for signals, these theoretical uncertainties for irreducible backgrounds are studied for both cut- and DNN- based event categorizations.
+The value of shape uncertainties vary from less than 1\% at low mass region to 50\% at high mass tail due to large statistic fluctuation at tail.
+As for acceptance uncertainties, the values vary from about 1\% for PDF variations to 40\% for parton showering variations in DNN-based analysis for VBF category.
+
+As an example, table~\ref{tab:acc-all-qqZZ_DNN} summarizes the acceptance uncertainties of PDF, QCD scale, and parton showering variations for the dominant background: \qqZZ process.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Summary of acceptance uncertainties of PDF, scale, and parton showering variations for QCD \qqZZ background. The DNN-based categorization is used.}
+  \label{tab:acc-all-qqZZ_DNN}
+  \begin{tabular}{cccc}
+    \toprule
+    Categories  & PDF    & QCD Scale   & Parton showering \\
+    \midrule
+    ggF  & 1.15\% & 10.16 \% & 3.71\% \\
+    rest & 1.04\% & 3.26  \% & 3.80\% \\
+    VBF  & 2.91\% & 27.90 \% & 23.82\% \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%% =========================================================================================================================
+\subsection{Experimental systematics}
+
+The signal and background predictions used in this analysis are also affected by various sources of experimental systematic uncertainties.
+Similar as described in section~\ref{sec:vbszz_exp_uncer} in VBSZZ analysis, the dominant experimental uncertainties in this analysis come from the energy/momentum scales 
+and reconstruction and identification efficiencies of the leptons and jets, as well as the luminosity uncertainty.
+The systematic uncertainties are calculated using the recommendations from the Combined Performance (CP) groups.
+Table~\ref{tab:np_list} summarizes the experimental systematics considered in this analysis that affect either the normalization of total event yield or the shape of \mfl distribution.
+The impact of those systematics in statistical fit will be studied in section~\ref{sec:hmhzz_result_4l}.
+
+\begin{table}
+  \centering
+  \caption{
+  A list of the experimental systematics considered in this analysis. The NPs have been separated by whether they only
+  affect the normalisation (left column) or if they affect the shape (right column) of the \mfl distribution. They are
+  further subdivided into the primary objects that they affect.
+  }
+  \begin{spacing}{0.65}
+  \small
+  \begin{tabular}{l|l}
+    \toprule
+    \multicolumn{1}{c}{Normalisation NPs} & \multicolumn{1}{c}{Shape NPs} \\
+    \midrule
+    \multicolumn{2}{c}{\textbf{Electrons}} \\
+    \midrule
+    \texttt{EL\_EFF\_ID\_CorrUncertaintyNP[0-15]}               & \texttt{EG\_RESOLUTION\_ALL} \\
+    \texttt{EL\_EFF\_ID\_SIMPLIFIED\_UncorrUncertaintyNP[0-17]} & \texttt{EG\_SCALE\_ALLCORR} \\
+    \texttt{EL\_EFF\_Iso\_TOTAL\_1NPCOR\_PLUS\_UNCOR}           & \texttt{EG\_SCALE\_E4SCINTILLATOR} \\
+    \texttt{EL\_EFF\_Reco\_TOTAL\_1NPCOR\_PLUS\_UNCOR}          & \texttt{EG\_SCALE\_LARCALIB\_EXTRA2015PRE} \\
+    ~                                                           & \texttt{EG\_SCALE\_LARTEMPERATURE\_EXTRA2015PRE} \\
+    ~                                                           & \texttt{EG\_SCALE\_LARTEMPERATURE\_EXTRA2016PRE} \\
+    \midrule
+    \multicolumn{2}{c}{\textbf{Muons}} \\
+    \midrule
+    \texttt{MUON\_EFF\_ISO\_STAT}         & \texttt{MUON\_ID} \\
+    \texttt{MUON\_EFF\_ISO\_SYS}          & \texttt{MUON\_MS} \\
+    \texttt{MUON\_EFF\_RECO\_STAT}        & \texttt{MUON\_SAGITTA\_RESBIAS} \\
+    \texttt{MUON\_EFF\_RECO\_STAT\_LOWPT} & \texttt{MUON\_SAGITTA\_RHO} \\
+    \texttt{MUON\_EFF\_RECO\_SYS}         & \texttt{MUON\_SCALE} \\
+    \texttt{MUON\_EFF\_RECO\_SYS\_LOWPT}  & ~ \\
+    \texttt{MUON\_EFF\_TTVA\_STAT}        & ~ \\
+    \texttt{MUON\_EFF\_TTVA\_SYS}         & ~ \\
+    \midrule
+    \multicolumn{2}{c}{\textbf{Jets}} \\
+    \midrule
+    ~                            & \texttt{JET\_BJES\_Response} \\
+    ~                            & \texttt{JET\_EffectiveNP\_[1-7]} \\
+    ~                            & \texttt{JET\_EffectiveNP\_8restTerm} \\
+    ~                            & \texttt{JET\_EtaIntercalibration\_Modelling} \\
+    ~                            & \texttt{JET\_EtaIntercalibration\_NonClosure\_highE} \\
+    ~                            & \texttt{JET\_EtaIntercalibration\_NonClosure\_negEta} \\
+    ~                            & \texttt{JET\_EtaIntercalibration\_NonClosure\_posEta} \\
+    ~                            & \texttt{JET\_EtaIntercalibration\_TotalStat} \\
+    ~                            & \texttt{JET\_Flavor\_Composition} \\
+    ~                            & \texttt{JET\_Flavor\_Response} \\
+    ~                            & \texttt{JET\_JER\_DataVsMC} \\
+    ~                            & \texttt{JET\_JER\_EffectiveNP\_[1-6]} \\
+    ~                            & \texttt{JET\_JER\_EffectiveNP\_7restTerm} \\
+    ~                            & \texttt{JET\_Pileup\_OffsetMu} \\
+    ~                            & \texttt{JET\_Pileup\_OffsetNPV} \\
+    ~                            & \texttt{JET\_Pileup\_PtTerm} \\
+    ~                            & \texttt{JET\_Pileup\_RhoTopology} \\
+    ~                            & \texttt{JET\_PunchThrough\_MC16} \\
+    ~                            & \texttt{JET\_SingleParticle\_HighPt} \\
+    \midrule
+    \multicolumn{2}{c}{\textbf{Other}} \\
+    \midrule
+    \texttt{HOEW\_QCD\_syst}    & ~ \\
+    \texttt{HOEW\_syst}         & ~ \\
+    \texttt{HOQCD\_scale\_syst} & ~ \\
+    \texttt{PRW\_DATASF}        & ~ \\
+    \bottomrule
+  \end{tabular}
+  \end{spacing}
+  \label{tbl:np_list}
+\end{table}
+
