@@ -357,61 +357,61 @@ For ggF network, the only one RNN model takes as input features of the \pt and \
         \end{tabular}
 \end{table}
 
-Figure~\ref{fig:dnn_vbf_distribution} (figure~\ref{fig:dnn_ggf_distribution}) shows the distributions of input features with events before training reweighting for VBF (ggF) network of background and 4 signal samples at mass points of 300, 700, 1400 and 2000~\gev.
+%Figure~\ref{fig:dnn_vbf_distribution} (figure~\ref{fig:dnn_ggf_distribution}) shows the distributions of input features with events before training reweighting for VBF (ggF) network of background and 4 signal samples at mass points of 300, 700, 1400 and 2000~\gev.
+%
+%\begin{figure}[htbp]
+%        \captionsetup[subfigure]{labelformat=empty}
+%        \centering
+%        \subfloat[]{\includegraphics[width=0.19\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_0_score_dijet_invmass}}
+%        \subfloat[]{\includegraphics[width=0.19\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_2_score_dijet_pt}}
+%        \subfloat[]{\includegraphics[width=0.19\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_3_score_eta_zepp_ZZ}}
+%        \subfloat[]{\includegraphics[width=0.19\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_4_score_min_dR_jZ}}
+%        \subfloat[]{\includegraphics[width=0.19\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_5_score_m4l_unconstrained}}\\
+%
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_23_score_j_1_pt}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_24_score_j_1_eta}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_25_score_j_2_pt}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_26_score_j_2_eta}}\\
+%
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_15_score_lep_1_pt}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_16_score_lep_1_eta}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_17_score_lep_2_pt}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_18_score_lep_2_eta}}\\
+%
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_19_score_lep_3_pt}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_20_score_lep_3_eta}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_21_score_lep_4_pt}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_22_score_lep_4_eta}}\\
+%        \caption{Distributions of input features as listed in table~\ref{tab:dnn_features_vbf} for the VBF network of signals at mass points of 300, 700, 1400, 2000~\gev (coloured) and the background (grey). Only events satisfying the training selection of $N_\mathrm{jets}\geq2$ are shown.}
+%        \label{fig:dnn_vbf_distribution}
+%\end{figure}
 
-\begin{figure}[htbp]
-        \captionsetup[subfigure]{labelformat=empty}
-        \centering
-        \subfloat[]{\includegraphics[width=0.19\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_0_score_dijet_invmass}}
-        \subfloat[]{\includegraphics[width=0.19\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_2_score_dijet_pt}}
-        \subfloat[]{\includegraphics[width=0.19\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_3_score_eta_zepp_ZZ}}
-        \subfloat[]{\includegraphics[width=0.19\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_4_score_min_dR_jZ}}
-        \subfloat[]{\includegraphics[width=0.19\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_5_score_m4l_unconstrained}}\\
-
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_23_score_j_1_pt}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_24_score_j_1_eta}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_25_score_j_2_pt}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_26_score_j_2_eta}}\\
-
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_15_score_lep_1_pt}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_16_score_lep_1_eta}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_17_score_lep_2_pt}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_18_score_lep_2_eta}}\\
-
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_19_score_lep_3_pt}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_20_score_lep_3_eta}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_21_score_lep_4_pt}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/vbf_input/input_comparison_300_to_2000_22_score_lep_4_eta}}\\
-        \caption{Distributions of input features as listed in table~\ref{tab:dnn_features_vbf} for the VBF network of signals at mass points of 300, 700, 1400, 2000~\gev (coloured) and the background (grey). Only events satisfying the training selection of $N_\mathrm{jets}\geq2$ are shown.}
-        \label{fig:dnn_vbf_distribution}
-\end{figure}
-
-\begin{figure}[htbp]
-        \centering
-        \captionsetup[subfigure]{labelformat=empty}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_5_score_m4l_unconstrained}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_6_score_dR_jH}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_7_score_cth1_unconstrained}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_8_score_cth2_unconstrained}}\\
-
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_9_score_cthstr_unconstrained}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_10_score_phi_unconstrained}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_11_score_pt4l_unconstrained}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_12_score_eta4l_unconstrained}}\\
-
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_15_score_lep_1_pt}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_16_score_lep_1_eta}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_17_score_lep_2_pt}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_18_score_lep_2_eta}}\\
-
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_19_score_lep_3_pt}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_20_score_lep_3_eta}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_21_score_lep_4_pt}}
-        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_22_score_lep_4_eta}}\\
-
-        \caption{Distributions of input features as listed in table~\ref{tab:dnn_features_ggf} for the ggF network of signals at mass points of 300, 700, 1400, 2000~\gev (coloured) and the background (grey). Events with any jet multiplicity are shown, as this model is evaluated in both $N_\mathrm{jets}\geq2$ and $N_\mathrm{jets}<2$.}
-        \label{fig:dnn_ggf_distribution}
-\end{figure}
+%\begin{figure}[htbp]
+%        \centering
+%        \captionsetup[subfigure]{labelformat=empty}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_5_score_m4l_unconstrained}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_6_score_dR_jH}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_7_score_cth1_unconstrained}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_8_score_cth2_unconstrained}}\\
+%
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_9_score_cthstr_unconstrained}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_10_score_phi_unconstrained}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_11_score_pt4l_unconstrained}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_12_score_eta4l_unconstrained}}\\
+%
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_15_score_lep_1_pt}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_16_score_lep_1_eta}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_17_score_lep_2_pt}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_18_score_lep_2_eta}}\\
+%
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_19_score_lep_3_pt}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_20_score_lep_3_eta}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_21_score_lep_4_pt}}
+%        \subfloat[]{\includegraphics[width=0.24\textwidth]{figures/HMHZZ/selection/ggf_input/input_comparison_300_to_2000_22_score_lep_4_eta}}\\
+%
+%        \caption{Distributions of input features as listed in table~\ref{tab:dnn_features_ggf} for the ggF network of signals at mass points of 300, 700, 1400, 2000~\gev (coloured) and the background (grey). Events with any jet multiplicity are shown, as this model is evaluated in both $N_\mathrm{jets}\geq2$ and $N_\mathrm{jets}<2$.}
+%        \label{fig:dnn_ggf_distribution}
+%\end{figure}
 
 \textbf{Evaluation of models} \\
 Figure~\ref{fig:dnn_output_score} shows the classifier response output of background samples (QCD and EW \qqZZ and \ggZZ) as well as VBF (left) and ggF (right) signal sample at 700~\gev.
@@ -464,6 +464,7 @@ In summary, cuts applied in categorization are defined as follow, and these phas
 \end{figure}
 
 \subsection{Signal acceptance} 
+\label{sec:hmhzz_signal_acc}
 The signal acceptance is defined as the ratio of events passing all analysis selection in each category to the total number of simulated events in whole phase space.
 In denominator, the events with $\tau$ final states are not token into account.
 And the contribution of $\tau$-lepton decay to electrons and muons final states is found to be negligible.

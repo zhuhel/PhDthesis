@@ -1,4 +1,5 @@
 \section{Signal modelling}
+\label{sec:signal_model}
 
 The parameterization based on simulated samples of \mfl distributions for signals are described in this section.
 Several signal models are studied in this analysis, including heavy Higgs like narrow-width signal (NWA) and large-width signal (LWA), as well as the modelling of Randall-Sundrum graviton (RSG) signal.
@@ -190,6 +191,7 @@ This modelling is not valid for lower masses due to the rapid change of detector
 \end{figure}
 
 \subsection{Modelling of interference}
+\label{sec:int_model}
 
 There are three processes sharing the same $gg$ initial state and $ZZ$ final state:
 \begin{itemize}
@@ -300,6 +302,40 @@ One can see the interference effect on signal shape becomes less important when 
 \end{figure}
 
 
-%\subsection{Modelling of spin-2 RS Graviton signal}
+\subsection{Modelling of spin-2 RS Graviton signal}
 
+The search for Randall-Sundrum (RS) graviton is performed in mass region between 600 to 2000~\gev.
+The width of resonance is determined by the \kOverMpl, which, as mentioned in section~\ref{sec:hmhzz_signal_mc}, is set to be 1. 
+In this configuration, the width of signal is expected to be about 6\% of its mass.
 
+The reconstructed \mfl lineshape of graviton is also built by convolving the truth-level lineshape with a detector resolution function,
+where the detector resolution effect is modelled by a Gaussian + Crystal Ball function, whose parameters are taken from the NWA signal parameterization in section~\ref{sec:signal_nwa}.
+And for truth-level shape, for graviton, it's modelled as the product of a relativistic Breit-Wigner (RBW) term, a term corresponding to the squared matrix element of the production process and a parton luminosity term $\mathcal{L}$ as given in ~\cite{Bijnens_2001}.
+So the truth lineshape of \mfl is token from:
+\begin{equation*}
+        \mfl^{\text{Truth}} \sim \mathcal{L}_{gg} \cdot s^2 \cdot \frac{s(1 + s)(1 + 2s + 2s^2)}{(s^2 - \mG^2)^2 + \mG^2 \Gamma^2}
+\end{equation*}
+The truth-level signal model is extracted by fit to MC simulation at truth-level with the mass $\mG$ and width $\Gamma$ parameters floating at each mass points respectively.
+And then the two parameters are parameterized as the function of \mH by a linear fit as shown in figure~\ref{fig:graviton_truth_param_vs_mG}.
+\begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.4\textwidth]{figures/HMHZZ/signal/RSGraviton/graviton_param_m_RBW.eps}
+        \includegraphics[width=0.4\textwidth]{figures/HMHZZ/signal/RSGraviton/graviton_param_G_RBW.eps}
+        \caption{Fitted parameters of the graviton RBW, $m_{\text{RBW}}$ and $\Gamma_{\text{RBW}}$, as a function of the
+        graviton resonance mass, \mG.}
+        \label{fig:graviton_truth_param_vs_mG}
+\end{figure}
+
+The final signal model is obtained by convolving the truth-level lineshape with the detector resolution function.
+To verify the result, figure~\ref{fig:graviton_reco_shape_2mu2e} compares the \mfl lineshape from parameterization with the one observed from reconstructed-level MC simulation in 2$e$2$\mu$ channel at masses of 600~\gev, 1600~\gev and 2000~\gev as examples.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.32\textwidth]{figures/HMHZZ/signal/RSGraviton/graviton_reco_shape_m4l_constrained_HM_600GeV_2mu2e.eps}
+    \includegraphics[width=0.32\textwidth]{figures/HMHZZ/signal/RSGraviton/graviton_reco_shape_m4l_constrained_HM_1600GeV_2mu2e.eps}
+    \includegraphics[width=0.32\textwidth]{figures/HMHZZ/signal/RSGraviton/graviton_reco_shape_m4l_constrained_HM_2000GeV_2mu2e.eps}
+    \caption{Reconstructed \mfl distributions in the $2\mu 2e$ channel with the final signal
+        model superimposed for each RS graviton signal sample at masses of 600~$\gev$, 1600~$\gev$ and 2000~$\gev$. The lower panel in each plot shows
+        the pull distribution. The dashed green lines show the truth-level graviton signal models for reference.}
+    \label{fig:graviton_reco_shape_2mu2e}
+\end{figure}

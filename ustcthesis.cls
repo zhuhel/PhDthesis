@@ -302,8 +302,8 @@
 \fi
 \geometry{
   paper      = a4paper,
-  vmargin    = 2.54cm,
-  hmargin    = 3.17cm,
+  vmargin    = 2.50cm,
+  hmargin    = 3.00cm,
   headheight = 0.75cm,
   headsep    = 0.29cm,
   footskip   = 0.79cm,
@@ -513,7 +513,7 @@
   \ustc@setdefaultlanguage
 }
 \renewcommand\maketitle{%
-  \newgeometry{margin=2.54cm}%
+  \newgeometry{margin=2.50cm}%
   \pagenumbering{Alph}%
   \pagestyle{empty}%
   \ustc@makezhtitle
