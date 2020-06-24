@@ -108,9 +108,9 @@ The normalization of $ZZ$ background is taken from data for one category each, a
     \toprule
      Normalization factor  & Fitted value \\
     \midrule
-    muZZ\_ggF  & 1.06 $\pm$ 0.046 \\
+    muZZ\_ggF  & 1.07 $\pm$ 0.047 \\
     \hline
-    muZZ\_VBF  & 0.89 $\pm$ 0.306 \\
+    muZZ\_VBF  & 0.91 $\pm$ 0.314 \\
     \hline
     muZZ\_rest & 1.12 $\pm$ 0.026 \\
     \bottomrule
@@ -139,18 +139,38 @@ The Asimov data is generated with background data only.
 \end{center}
 \end{figure}
 
-The impact of systematic uncertainties on expected signal sensitivity is studied using signal injected Asimov data, with injected signal cross-section close to the expected upper limit as shown in figure~\ref{fig:rank_cb_NWA}.
+The impact of a systematic uncertainty on the result depends on the production mode as well as the mass hypothesis.
+To check the impact of systematic uncertainties on expected signal sensitivity, a NP ranking study is performed using
+signal injected Asimov data with the injected cross section close to 95\% CLs upper limit at two masses: 400~\gev and 1000~\gev.
+The results are shown in Fig.~\ref{fig:rank_cb_NWA_ggF} (\ref{fig:rank_cb_NWA_VBF}) for ggF (VBF) production mode.
+For ggF production, at lower masses, the systematic uncertainties of parton showering variation for signal, the luminosity uncertainty, and the and the parametrization of signal acceptance
+dominate,
+while at higher masses, the shape uncertainties from PDF variation for ZZ (\qqZZ and \ggZZ) background become important, as also seen in VBF production mode.
+For VBF production, jet related uncertainties become more important comparing to ggF production.
+In addition, the dominate uncertainties include the acceptance uncertainty from QCD scale variation for signal and the luminosity uncertainty.
 
 \begin{figure}[!ht]
 \begin{center}
-\subfloat[]{\includegraphics[width=0.48\figwidth]{figures/HMHZZ/results/NPranking_NWA_floatZZ_DNNbased_Asimov_mH400.pdf}}
-\subfloat[]{\includegraphics[width=0.48\figwidth]{figures/HMHZZ/results/NPranking_NWA_floatZZ_DNNbased_Asimov.pdf}}
+\subfloat[]{\includegraphics[width=0.48\figwidth]{figures/HMHZZ/results/workspace_4l_NWA_dnn_400_ggF_newAsimov_0p226_pulls_paper.pdf}}
+\subfloat[]{\includegraphics[width=0.48\figwidth]{figures/HMHZZ/results/workspace_4l_NWA_dnn_1000_ggF_newAsimov_0p03_pulls_paper.pdf}}
 \caption{NP ranking plot for the \xsggF\ fit to Asimov data in the \llll channel.
-The Asimov data is injected with \xsggF\ = 0.226 fb for $m_H = 400$ GeV (left) and \xsggF\ = 0.050 fb for $m_H = 1000$ GeV (right).
+The Asimov data is injected with \xsggF\ = 0.226 fb for $m_H = 400$ GeV (left) and \xsggF\ = 0.030 fb for $m_H = 1000$ GeV (right).
 }
-\label{fig:rank_cb_NWA}
+\label{fig:rank_cb_NWA_ggF}
 \end{center}
 \end{figure}
+
+\begin{figure}[!ht]
+\begin{center}
+\subfloat[]{\includegraphics[width=0.48\figwidth]{figures/HMHZZ/results/workspace_4l_NWA_dnn_400_VBF_newAsimov_0p12_pulls_paper.pdf}}
+\subfloat[]{\includegraphics[width=0.48\figwidth]{figures/HMHZZ/results/workspace_4l_NWA_dnn_1000_VBF_newAsimov_0p0226_pulls_paper.pdf}}
+\caption{NP ranking plot for the \xsVBF\ fit to Asimov data in the \llll channel.
+The Asimov data is injected with \xsVBF\ = 0.120 fb for $m_H = 400$ GeV (left) and \xsVBF\ = 0.0226 fb for $m_H = 1000$ GeV (right).
+}
+\label{fig:rank_cb_NWA_VBF}
+\end{center}
+\end{figure}
+
 
 %% =======================================================================================================
 \subsection{Interpretations}
@@ -164,8 +184,8 @@ No excess over 2\sigma is found.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/4l_dnn_ggF.pdf}
-    \includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/4l_dnn_VBF.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/limits_DNN_ggF.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/limits_DNN_VBF.pdf}
     \caption{The expected and observed upper limits at 95\% CL on $\sigma \times BR(H \rightarrow ZZ)$ using the DNN-based analysis for ggF (left) and VBF (right) production. The green and yellow bands represent the $\pm 1\sigma$ and $\pm 2\sigma$ uncertainties in the expected limits.
  }
     \label{fig:NWA201518_DNN}
@@ -173,8 +193,8 @@ No excess over 2\sigma is found.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/4l_cut_ggF.pdf}
-    \includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/4l_cut_VBF.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/limits_Cut2020_ggF.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/limits_Cut2020_VBF.pdf}
     \caption{The expected and observed upper limits at 95\% CL on $\sigma \times BR(H \rightarrow ZZ)$ using the cut-based analysis for ggF (left) and VBF (right) production. The green and yellow bands represent the $\pm 1\sigma$ and $\pm 2\sigma$ uncertainties in the expected limits.
  }
     \label{fig:NWA201518_Cut}
@@ -188,10 +208,10 @@ The upper limit at 95\% confidence level (CL) on ggF cross section times branch 
 
 \begin{figure}[h]
     \begin{center}
-    \includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/LWA_4l_w1.pdf}
-    \includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/LWA_4l_w5.pdf} \\
-    \includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/LWA_4l_w10.pdf}
-    \includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/LWA_4l_w15.pdf} \\
+    \includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/Limits_LWA_withInt_1.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/Limits_LWA_withInt_5.pdf} \\
+    \includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/Limits_LWA_withInt_10.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/Limits_LWA_withInt_15.pdf} \\
     \end{center}
     \caption{The upper limits at 95\% confidence level on $\sigma_{ggF} \times BR(H\rightarrow ZZ)$
     as a function of the heavy resonance mass $m_{H}$ for the ggF production mode with an intrinsic width of 1\% (top left), 5\% (top right), 10\% (bottom left) and 15\% (bottom right) for both the case where interference with Standard Model processes is considered.
@@ -209,7 +229,7 @@ Comparing with the results provided by \llll channel, this spin-2 graviton is ex
 
 \begin{figure}[h]
     \begin{center}
-    \includegraphics[width=0.45\textwidth]{figures/HMHZZ/results/RSG_4l.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/HMHZZ/results/Limits_RSG.pdf}
     \end{center}
     \caption{The upper limits at 95\% confidence level on $\sigma_{ggF} \times BR(G_{KK}\rightarrow ZZ)$
     as a function of the heavy resonance mass $m(G_{KK})$ for the ggF production mode in RS Graviton model.
