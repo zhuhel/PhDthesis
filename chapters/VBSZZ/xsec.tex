@@ -1,19 +1,19 @@
 \section{Measurement of fiducial cross section}
 \label{sec:xsec}
 
-The fiducial cross section for the production of inclusive $ZZjj$, which includes both EW and QCD components, is then measured.
-
+The fiducial cross section for inclusive $ZZjj$ production, which includes both EW and QCD components, is then measured.
 The definition of fiducial volume, which is used for cross section measurement, follows closely to the detector-level selection
-but use physics objects in "particle-level", which are reconstructed in simulation from stable final-state particles,
+but use physics objects in particle-level, which are reconstructed in simulation from stable final-state particles,
 prior to their interactions with the detector.
+
 For electrons and muons, QED final-state radiation is for the most part recovered 
 by adding the four-momenta of surrounding photons that are not originating from hadrons and within an angular distance $\Delta R < 0.1$
-to the lepton four-momentum, called lepton "dressing".
+to the lepton four-momentum, called lepton ``dressing" in truth level.
 Particle-level jets are built with anti-$k_{T}$ algorithm with radius parameter $R = 0.4$ using all final-state particles except leptons and neutrinos as inputs.
 Comparing to the events selection in detector-level in section~\ref{sec:vbszz_selection},
-in particle-level, the selected dilepton pair mass required is relaxed to be within 60 to 120~\gev to reduce the migration effect
-as well as be more compatibility with previous CMS publication\cite{2017682}.
-All the other kinematics selection requirements are the same as the definition in detector-level.
+in particle-level, the selected dilepton pair mass required is relaxed to be within 60 to 120~\gev~ for the reasons of reducing the migration effect,
+as well as being more compatibility with CMS publication~\cite{2017682}.
+All other kinematic selections are the same as the definition in detector-level.
 
 \subsection{Calculation of C-factor}
 \label{sec:cf}
@@ -22,7 +22,7 @@ C-factor is defined as the ratio between the number of selected events in detect
 \begin{equation}
 	\mathcal{C} = \frac{N_{detector-level}}{N_{FV.}}
 \end{equation}
-The C-factor value of each $ZZjj$ processes calculated from each individual simulation samples are listed in table~\ref{tab:xs_cf} as well as their systematics.
+The value of C-factor for each $ZZjj$ process are calculated from each individual simulation samples as listed in table~\ref{tab:xs_cf} together with their systematics.
 \begin{table}[H]
 \begin{center}
    \begin{tabular}{|c|c|c|c|c|}
@@ -55,12 +55,12 @@ The cross section in fiducial volume is computed as:
 	\sigma^{FV.} = \frac{N_{data} - N_{bkg}}{\mathcal{C} \times Lumi}
 \end{equation}
 where $N_{data}$ and $N_{bkg}$ denote the number of events selected from detector-level selection from data and sum of backgrounds,
-and $\mathcal{C}$ is the C-factor calculated above, Lumi represents the integrated luminosity of data 2015$~$2018 of 139~\ifb.
+and $\mathcal{C}$ is the C-factor calculated above, Lumi represents the integrated luminosity of data from 2015 to 2018 of 139~\ifb.
+%As shown in table~\ref{tab:yield_prefit}, in inclusive measurement, only the ``Others" represents background, 
+%processes of EW-$ZZjj$, QCD-\qqZZ and QCD-\ggZZ are signals.
+Table~\ref{tab:xs} shows the fiducial cross section for \llll final state measured from equation~\ref{eq:xs}, 
+as well as the predicted cross section measured from MC simulation directly.
 
-As shown in table~\ref{tab:yield_prefit}, in inclusive measurement, only "Others" represents background, 
-processes of EW-$ZZjj$, QCD-\qqZZ and QCD-\ggZZ are signals.
-Table~\ref{tab:xs} shows the fiducial cross section for \llll channel measured from equation~\ref{eq:xs}, 
-as well as the predicted cross section measured from signals MC directly.
 \begin{table}[!htbp]
 \begin{center}
 \scalebox{0.90}{
@@ -81,4 +81,4 @@ Uncertainties due to different sources are presented.
 \label{tab:xs}
 \end{table}
 The measured cross section has a total uncertainty of 11\%, and is found to be compatible with SM prediction.
-The data statistic is still dominant for the measurement.
+This measurement is still dominant by data statistic.

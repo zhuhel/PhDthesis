@@ -2,17 +2,17 @@
 
 \textbf{Luminosity}
 
-In beam–beam collisions, the event rate for a given process is given by~\cite{Evans_2008}:
+In beam–beam collisions, the event rate for a process is given by~\cite{Evans_2008}:
 \begin{equation}
-	N = L\sigma
+	N = \mathcal{L} \sigma
 \end{equation}
-where $\sigma$ is the cross section of the process, and $L$ is the luminosity.
-For the studies of rare events, $L$ must be as high as possible.
+where $\sigma$ is the cross section of the process, and $\mathcal{L}$ is the luminosity.
+For the studies of rare events, $\mathcal{L}$ must be as high as possible.
 The luminosity only depends on the beam parameters, and can be written as:
 \begin{equation} \label{eq:lumi}
-	L = \frac{ N_{b}^{2} n f_{r} \gamma}{4\pi \epsilon_{n} \beta^{*}}
+	\mathcal{L} = \frac{ N_{b}^{2} n f_{r} \gamma}{4\pi \epsilon_{n} \beta^{*}}
 \end{equation}
-where $N_{b}$ denotes the number of particles per bunch, n is the number of bunches per beam,
+where $N_{b}$ denotes the number of particles per bunch, $n$ is the number of bunches per beam,
 $f_{r}$ is the revolution frequency, $\gamma$ represents relativistic $\gamma$ factor, 
 $\epsilon_{n}$ is the normalized transverse emittance and $\beta^{*}$ denotes the $\beta$ function at the collision point.
 To reduce the beam-beam interaction effects, the bunches must have a crossing angle,
@@ -31,8 +31,9 @@ which is the integral over time:
 	L = \int \mathcal{L}(t) dt
 \end{equation}
 The unit of integrated luminosity we commonly use is $b^{-1}$ ($1 b^{-1} = 10^{24} cm^{-2}$).
-Figure~\ref{fig:lumi_vs_time} shows integrated luminosity versus time delivered to ATLAS (green), 
+Figure~\ref{fig:lumi_vs_time} shows integrated luminosity as a function of time delivered to ATLAS (green), 
 recorded by ATLAS (yellow), and certified to be good quality data (blue) during run-2 pp collisions.
+For most physics analysis, the data with good quality (require to satisfy \textit{Good Run List}) is used.
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=0.6\textwidth]{figures/Detector/intlumivstimeRun2DQall.pdf}
@@ -42,8 +43,8 @@ recorded by ATLAS (yellow), and certified to be good quality data (blue) during 
 
 \textbf{Pile-up}
 
-In collisions, multiple interactions can happen in one single bunch crossing, which is called "\textit{pile-up}".
-The variable $\mu$, which represents the average number of interactions per bunch crossing, 
+In collisions, multiple interactions can happen in one single bunch crossing, which is called ``\textit{pile-up}".
+The variable $\left< \mu \right>$, representing the average number of interactions per bunch crossing, 
 is defined to describe pile-up effect:
 \begin{equation}
 	\left< \mu \right> = \frac{L_{bunch}\sigma}{f_{r}n_{bunch}}

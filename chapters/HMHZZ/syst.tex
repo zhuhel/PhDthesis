@@ -2,7 +2,7 @@
 \label{sec:hmhzz_sys}
 
 This section describes the sources and value of theoretical and experimental systematic uncertainties considered in this analysis.
-In addition, as mentioned in previous sections, the uncertainties of irreducible background modelling, reducible background shape smoothing procedure and signal yield difference between simulation and parameterization are all token into account.
+In addition, as mentioned in previous sections, the uncertainties of irreducible background modelling, reducible background shape smoothing procedure and signal yield difference between simulation and parameterization are all taken into account.
 
 %% =========================================================================================================================
 \subsection{Theoretical uncertainties}
@@ -13,7 +13,7 @@ and the parton showering uncertainties.
 \subsubsection{Theoretical uncertainties for signal}
 \label{sec:hmhzz_theo_signal}
 
-The PDF, QCD scale and parton showering uncertainties affecting the acceptance difference originating from analysis selection for signal are token into account in different categories.
+The PDF, QCD scale and parton showering uncertainties affecting the acceptance difference originating from analysis selection for signal are taken into account in different categories.
 The acceptance uncertainties are calculated on the acceptance factor which extrapolates from the fiducial space to the full phase space by a simple ratio:
 \begin{equation}
         A = \frac{N_{fiducial}}{N_{total}}
@@ -21,27 +21,27 @@ The acceptance uncertainties are calculated on the acceptance factor which extra
 
 For PDF uncertainties, the standard derivations of 100 PDF replicas of NNPDF3.0 NNLO, as well as comparison to two external PDF sets: MMHT2014 NNLO, CT14 NNLO are considered.
 For missing QCD higher-order corrections, the effects are studied with truth events by comparing weights corresponding to
-variations of the renormalization and factorization scale factors, up and down by a factor of two, and the envelop of different variations are used.
+variations of the renormalization and factorization scale factors, up and down by a factor of two, and the envelop of different variations is used.
 The parton showering uncertainties are estimated by comparing events with different setting via \textsc{Pythia8}.
 
-Systematic uncertainties are studied for both cut- and DNN- based event categorizations respectively, 
-in two different categories: the inclusive ggF and VBF category for cut-based analysis and three different categories: inclusive ggF, VBF, ``rest'' category for DNN-based one.
-Only DNN-based results are shown in this section as examples.
+Systematic uncertainties are studied for both cut- and MVA- based event categorizations, 
+in two different categories: the inclusive ggF-CBA-enriched and VBF-CBA-enriched category for cut-based analysis and in three different categories: inclusive ggF-MVA-high, ggF-MVA-low and VBF-MVA-enriched category for MVA-based one.
+This section shows the MVA-based results as an example.
 
-Table~\ref{tab:acc-ggF-dnn} and ~\ref{tab:acc-VBF-dnn} show the theoretical uncertainties mentioned above for ggF and VBF signal respectively in DNN-based categorization.
+Table~\ref{tab:acc-ggF-dnn} and ~\ref{tab:acc-VBF-dnn} show the theoretical uncertainties mentioned above for ggF and VBF signal respectively in MVA-based categorization.
 
 \begin{table}[htbp]
   \centering
-  \caption{Summary of acceptance uncertainties of PDF, QCD scale and parton shower variations for ggF production. The DNN-based categorization is used.}
+  \caption{Summary of acceptance uncertainties of PDF, QCD scale and parton shower variations for ggF production. The MVA-based categorization is used.}
   \label{tab:acc-ggF-dnn}
   \begin{spacing}{0.75}
   \begin{tabular}{cccc}
     \toprule
     Categories  & PDF    & QCD Scale  & Parton Shower \\
     \midrule
-    ggF  & 0.40\% & 0.06\% & 2.03\% \\
-    rest & 0.56\% & 0.07\% & 4.86\% \\
-    VBF  & 0.53\% & 0.09\% & 3.43\% \\
+    ggF-MVA-high  & 0.40\% & 0.06\% & 2.03\% \\
+    ggF-MVA-low   & 0.56\% & 0.07\% & 4.86\% \\
+    VBF-MVA-enriched  & 0.53\% & 0.09\% & 3.43\% \\
     \bottomrule
   \end{tabular}
   \end{spacing}
@@ -49,16 +49,16 @@ Table~\ref{tab:acc-ggF-dnn} and ~\ref{tab:acc-VBF-dnn} show the theoretical unce
 
 \begin{table}[htbp]
   \centering
-  \caption{Summary of acceptance uncertainties of PDF, QCD scale and parton shower variations for VBF production. The DNN-based categorization is used.}
+  \caption{Summary of acceptance uncertainties of PDF, QCD scale and parton shower variations for VBF production. The MVA-based categorization is used.}
   \label{tab:acc-VBF-dnn}
   \begin{spacing}{0.75}
   \begin{tabular}{cccc}
     \toprule
     Categories  & PDF    & QCD Scale  & Parton Shower \\
     \midrule
-    ggF  & 0.18\% & 1.20\% & 0.41\% \\
-    resr & 0.43\% & 0.26\% & 0.36\% \\
-    VBF  & 0.23\% & 3.19\% & 0.85\% \\
+    ggF-MVA-high  & 0.18\% & 1.20\% & 0.41\% \\
+    ggF-MVA-low   & 0.43\% & 0.26\% & 0.36\% \\
+    VBF-MVA-enriched  & 0.23\% & 3.19\% & 0.85\% \\
     \bottomrule
   \end{tabular}
   \end{spacing}
@@ -102,30 +102,31 @@ Table~\ref{tab:acc-ggF-dnn} and ~\ref{tab:acc-VBF-dnn} show the theoretical unce
 The theoretical uncertainties of irreducible $ZZ$ backgrounds are considered in terms of both the variations of shape of \mfl distributions
 and the acceptance originating from the event selection.
 
-The PDF and QCD scale uncertainties are considered by using the same method as described for signal in section~\ref{sec:hmhzz_theo_signal}
+The PDF and QCD scale uncertainties are considered by using the same method as described for signal.
 The parton showering uncertainties for those \textsc{Sherpa} samples are evaluated by varying the resummation scale by a factor of 2, 
 changing the CKKW setting and using different showering option, following the PMG recommendation in ref.~\cite{twiki_pmgsyst},
-and the quadratic sum between the uncertainties in different kinds of showering option is token as final result of uncertainties.
-Moreover, the shape uncertainty associated with electroweak higher-order correction for \qqZZ process is also token into account.
+and the quadratic sum between the uncertainties in different kinds of showering option is taken as final result of uncertainties.
+Moreover, the shape uncertainty associated with electroweak higher-order correction for \qqZZ process is also taken into account.
 
-Same as for signals, these theoretical uncertainties for irreducible backgrounds are studied for both cut- and DNN- based event categorizations.
-The value of shape uncertainties vary from less than 1\% at low mass region to 50\% at high mass tail due to large statistic fluctuation at tail.
-As for acceptance uncertainties, the values vary from about 1\% for PDF variations to 40\% for parton showering variations in DNN-based analysis for VBF category.
+Same as for signals, these theoretical uncertainties for irreducible backgrounds are studied for both cut- and MVA- based event categorizations.
+The value of shape uncertainties vary from less than 1\% at low mass region to 50\% at high mass tail due to large statistic fluctuation.
+As for the acceptance uncertainties, the values vary from about 1\% for PDF variations to 40\% for parton showering variations.
+The VBF category has relative larger uncertainties.
 
-As an example, table~\ref{tab:acc-all-qqZZ_DNN} summarizes the acceptance uncertainties of PDF, QCD scale, and parton showering variations for the dominant background: \qqZZ process.
+Table~\ref{tab:acc-all-qqZZ_MVA} summarizes the acceptance uncertainties of PDF, QCD scale, and parton showering variations for the dominant background: \qqZZ.
 
 \begin{table}[htbp]
   \centering
-  \caption{Summary of acceptance uncertainties of PDF, scale, and parton showering variations for QCD \qqZZ background. The DNN-based categorization is used.}
-  \label{tab:acc-all-qqZZ_DNN}
+  \caption{Summary of acceptance uncertainties of PDF, scale, and parton showering variations for QCD \qqZZ background. The MVA-based categorization is used.}
+  \label{tab:acc-all-qqZZ_MVA}
   \begin{spacing}{0.75}
   \begin{tabular}{cccc}
     \toprule
     Categories  & PDF    & QCD Scale   & Parton showering \\
     \midrule
-    ggF  & 1.15\% & 10.16 \% & 3.71\% \\
-    rest & 1.04\% & 3.26  \% & 3.80\% \\
-    VBF  & 2.91\% & 27.90 \% & 23.82\% \\
+    ggF-MVA-high  & 1.15\% & 10.16 \% & 3.71\% \\
+    ggF-MVA-low   & 1.04\% & 3.26  \% & 3.80\% \\
+    VBF-MVA-enriched  & 2.91\% & 27.90 \% & 23.82\% \\
     \bottomrule
   \end{tabular}
   \end{spacing}
@@ -135,11 +136,11 @@ As an example, table~\ref{tab:acc-all-qqZZ_DNN} summarizes the acceptance uncert
 \subsection{Experimental systematics}
 
 The signal and background predictions used in this analysis are also affected by various sources of experimental systematic uncertainties.
-Similar as described in section~\ref{sec:vbszz_exp_uncer} in VBSZZ analysis, the dominant experimental uncertainties in this analysis come from the energy/momentum scales 
+Similar as described in section~\ref{sec:vbszz_exp_uncer}, the dominant experimental uncertainties in this analysis come from the energy/momentum scales 
 and reconstruction and identification efficiencies of the leptons and jets, as well as the luminosity uncertainty.
-The systematic uncertainties are calculated using the recommendations from the Combined Performance (CP) groups.
+The systematic uncertainties are calculated using the recommendations from the Combined Performance (CP) groups of ATLAS experiment.
 Table~\ref{tab:np_list} summarizes the experimental systematics considered in this analysis that affect either the normalization of total event yield or the shape of \mfl distribution.
-The impact of those systematics in statistical fit will be studied in section~\ref{sec:hmhzz_result_4l}.
+The impact of those systematics in statistical fit are studied in section~\ref{sec:hmhzz_result_4l}.
 
 \begin{table}
   \centering

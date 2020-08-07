@@ -1,46 +1,15 @@
 \section{Search for EW-$ZZjj$}
 
-Figure~\ref{fig:scaled_mjj} represents the $\mjj$ distribution in SR (left) and QCD CR (right),
-where the normalization of EW and QCD processes are scaled according to their observed value explained later in this section.
-High $\mjj$ region is more sensitive for EW-$ZZjj$ events detection from this figure.
-Figure~\ref{fig:scaled_mzz} shows the spectrum of invariant mass of \llll system ($\mzz$) in SR.
-\begin{figure}[!htbp]
-\begin{center}
-\includegraphics[width=0.32\textwidth]{figures/VBSZZ/fit/MJJ_4l_SR.pdf}
-\includegraphics[width=0.32\textwidth]{figures/VBSZZ/fit/MJJ_4l_QCD_CR.pdf}
-\end{center}
-\caption{Observed and expected \mjj distributions in SR (left) and QCD CR (right).
-        The error bands include the expected experimental and theoretical uncertainties.
-        The error bars on the data points show the statistical uncertainty on data.
-        The contributions from the QCD and EW production of $ZZjj$ events are scaled by 0.96 and 1.35, respectively,
-        which correspond to the observed normalization factors in the statistical fit to the combined channel.
-        The last bin includes the overflow events.
-        }
-\label{fig:scaled_mjj}
-\end{figure}
-
-\begin{figure}[!htbp]
-\begin{center}
-\includegraphics[width=0.4\textwidth]{figures/VBSZZ/fit/MZZ_4l_SR.pdf}
-\end{center}
-\caption{Observed and expected $\mzz$ spectrum in SR.
-        The error bands include the expected experimental and theoretical uncertainties.
-        The error bars on the data points show the statistical uncertainty on data.
-        The contributions from the QCD and EW production of $ZZjj$ events are scaled by 0.96 and 1.35, respectively,
-        which correspond to the observed normalization factors in the statistical fit to the combined channel.
-        The last bin includes the overflow events.
-        }
-\label{fig:scaled_mzz}
-\end{figure}
-
 \subsection{MD discriminant}
 
-To further separate the EW-$ZZjj$ component from QCD-$ZZjj$, a MD based on \textit{Gradient Boosted Decision Tree (BDTG)} algorithm\cite{Coadou_BDT} 
+To further separate the EW-$ZZjj$ component from QCD-$ZZjj$, a MD based on Gradient Boosted Decision Tree (BDTG) algorithm~\cite{Coadou_BDT} 
 is trained with simulated events via TMVA framework\cite{Speckmayer_2010}.
 For \llll channel, training is performed between EW (signal) and QCD (background) processes.
 Twelve event kinematic variables sensitive to the characteristics of the EW signal is used as input features in training. 
-Table~\ref{tab:bdt_features} listed those input variables with the order of their ranking provide by TMVA tool.
-The jet-related information provides larger sensitive in \llll final-state.
+Table~\ref{tab:bdt_features} lists those input variables with the order of their ranking provided by TMVA tool.
+The jet-related information provides larger sensitivity.
+Then the MD distributions in both SR and QCD CR region are used for statistical fit.
+
 \begin{table}[h]
 \begin{center}
 \renewcommand\arraystretch{1.8}
@@ -69,21 +38,20 @@ Rank & Variables                    & Description 			\\ \hline
 \label{tab:bdt_features}
 \end{center}
 \end{table}
-Then the MD distributions in both SR and QCD CR region are used for statistical fit.
 
 \subsection{Profile likelihood ratio method}
 
 To examine the compatibility between data and the signal-plus-background hypothesis, 
 a test statistic is driven by using the profile likelihood ratio method.
 %The likelihood function is the product of all the Poisson probability density functions built in individual MD bins given as:
-The binned likelihood function is given as"
+The binned likelihood function is given as
 \begin{equation}
 	\mathcal{L}(\mu,\sigma) = \prod_{i}^\mathrm{bins} \mathcal{L}_{\mathrm{poiss}}(N_{\mathrm{data}}\,|\,\mu s(\theta)+b(\theta))_{i} \times \mathcal{L}_{\text{gauss}}(\theta)_{i}
 \end{equation}
 where the Poisson term presents the statistical fluctuations of the data 
 and a Gaussian term models the pdf of auxiliary measurement to constrain the systematics.
 $\mu$ denotes the signal strength of EW-$ZZjj$ process, computed as the ratio between measured (expected) cross section to the SM prediction.
-$\theta$ presents the nuisance parameter, which is the set of parameters that parameterize the effect of systematic uncertainties described in section~\ref{sec:systematics}.
+$\theta$ presents the nuisance parameter, which is the set of parameters that parameterize the effect of systematic uncertainties described in section~\ref{sec:systematics} following the Gaussian distribution.
 $N_{data}$ is the number of selected data events, while the $s(\theta)$ is the expected signal yield and $b(\theta)$ is the expected background yield as the function of nuisance parameters.
 
 The test statistic $q_{\mu}$ is defined as:
@@ -101,25 +69,26 @@ is calculated to obtain the observed (expected) significance respectively.
 
 A profile likelihood fit is performed on MD discriminant to extract the EW-$ZZjj$ signal from backgrounds.
 %The fit combined the observed and expected measurements from both \llll and \llvv channel from EW-ZZ production to gain more statistic.
-The binning of MD distributions in SR is optimized to maximize the sensitive for detecting EW signal.
-The normalization of QCD-$ZZjj$ production ($\mu_{QCD}^{llll}$) in \llll channel is varied simultaneously in the fit in SR and QCD CR as described in section~\ref{sec:background}.
+The binning of MD distributions in SR is optimized to maximize the sensitivity for detecting EW signal.
+The normalization of QCD-$ZZjj$ production ($\mu_{QCD}^{llll}$) in \llll channel is determined by data from simultaneously fit in SR and QCD CR as described in section~\ref{sec:background}.
 The signal strength of EW-$ZZjj$ production ($\mu_{EW}$) is taken as parameter of interest and floated in the fit.
 The effects of the uncertainties related to normalizations and shapes described previously in section~\ref{sec:systematics} 
 of background processes in the MD distribution are all taken into account.
 
 In most case, a common nuisance parameter is used for each source of systematic in all bins and all channels.
 The statistical uncertainties for simulated samples are uncorrelated among all bins, and the background uncertainties only applied to their corresponding backgrounds.
-For combination between two channels, the theoretical uncertainties between \llll and \llvv are uncorrelated due to different fiducial volumes definition.
+%For combination between two channels, the theoretical uncertainties between \llll and \llvv are uncorrelated due to different fiducial volumes definition.
 Furthermore, to be more conservative, the generator modelling uncertainty for QCD-$ZZjj$ production mentioned in section~\ref{sec:systematics}
 is separated to be two nuisance parameters in low and high MD region.
 
 \subsection{Result of statistical fit}
 
-The statistical fit is performed both in individual \llll channel, as well as the combination between \llll and \llvv channel to gain more statistic.
-The results of statistical fit for \llll channel and the combined channel are presented in table~\ref{tab:fit_result}.
-The \llvv analysis will not be talked about in this thesis, but more details can refer to \cite{ATLAS:2019vrv}.
+%The statistical fit is performed both in individual \llll channel, as well as the combination between \llll and \llvv channel to gain more statistic.
+The results of statistical fit for \llll final state are presented in table~\ref{tab:fit_result}. %and the combined channel are presented in table~\ref{tab:fit_result}.
+%The \llvv analysis will not be talked about in this thesis, but more details can refer to \cite{ATLAS:2019vrv}.
 To drive expected results, the observed data is used for QCD CR to extract normalization factor of QCD component ($\mu_{QCD}^{llll}$),
 while in SR, asimov data built from background prediction and signal model with SM assumed cross section is used.
+
 \begin{table}[!htbp]
 \begin{center}
 \begin{tabular}{c|c|c|c}
@@ -127,19 +96,21 @@ while in SR, asimov data built from background prediction and signal model with 
                  & $\mu_{\mathrm{EW}}$ &  $\mu^{\lllljj}_{\mathrm{QCD}}$   &  Significance Obs. (Exp.) \\
 \hline
 \lllljj          & $1.54 \pm 0.42$     &  $0.95 \pm 0.22$                  &  5.48 (3.90) $\sigma$     \\
-\hline
-Combined         & $1.35 \pm 0.34$     &  $0.96 \pm 0.22$                  &  5.52 (4.30) $\sigma$     \\
+%\hline
+%Combined         & $1.35 \pm 0.34$     &  $0.96 \pm 0.22$                  &  5.52 (4.30) $\sigma$     \\
 \hline
 \end{tabular}
 \end{center}
 \caption{
-Observed \muEW and \muQCD, as well as the observed and expected significance from the individual \lllljj channel, and the combined fits.
-The full set of systematic uncertainties is included.
+Observed \muEW and \muQCD, as well as the observed and expected significance from the individual \llll channel.% and the combined fits.
+The full set of systematic uncertainties are included.
 }
 \label{tab:fit_result}
 \end{table}
-For \llll channel, the background-only hypothesis is rejected at 5.5$\sigma$ (3.9$\sigma$) for data (expectation),
+
+As a conclusion, the background-only hypothesis is rejected at 5.5$\sigma$ (3.9$\sigma$) for data (expectation),
 which leads to the observation of EW-$ZZjj$ production.
+
 Figure~\ref{fig:fit_MD} shows the post-fit MD distributions for \llll channel in SR (left) and QCD CR (right).
 The EW-$ZZjj$ cross section measured in \llll channel is extracted to be $0.94 \pm 0.26$~fb.
 \begin{figure}[!htbp]
@@ -155,7 +126,42 @@ The EW-$ZZjj$ cross section measured in \llll channel is extracted to be $0.94 \
 \label{fig:fit_MD}
 \end{figure}
 
-Figure~\ref{fig:event_display} depicts the display of an event candidate of EW-$ZZjj$ production in $2e2\mu$ final state with two jets in forward and backward region, and with a MD value from 0.875 to 1.0.
+Figure~\ref{fig:scaled_mjj} shows the $\mjj$ distribution in SR (left) and QCD CR (right),
+where the normalization of EW and QCD processes are scaled according to their observed value in table~\ref{tab:fit_result}.
+High $\mjj$ region is more sensitive for EW-$ZZjj$ events detection from this figure.
+Figure~\ref{fig:scaled_mzz} shows the spectrum of invariant mass of \llll system ($\mzz$) in SR
+also with the normalization of EW and QCD processes scaled.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.32\textwidth]{figures/VBSZZ/fit/MJJ_4l_SR.pdf}
+\includegraphics[width=0.32\textwidth]{figures/VBSZZ/fit/MJJ_4l_QCD_CR.pdf}
+\end{center}
+\caption{Observed and expected \mjj distributions in SR (left) and QCD CR (right).
+        The error bands include the expected experimental and theoretical uncertainties.
+        The error bars on the data points show the statistical uncertainty.
+        The contributions from the QCD and EW production of $ZZjj$ events are scaled by 0.96 and 1.35, respectively,
+        corresponding to the observed normalization factors in the statistical fit.
+        The last bin includes the overflow events.
+        }
+\label{fig:scaled_mjj}
+\end{figure}
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.4\textwidth]{figures/VBSZZ/fit/MZZ_4l_SR.pdf}
+\end{center}
+\caption{Observed and expected $\mzz$ spectrum in SR.
+        The error bands include the expected experimental and theoretical uncertainties.
+        The error bars on the data points show the statistical uncertainty.
+        The contributions from the QCD and EW production of $ZZjj$ events are scaled by 0.96 and 1.35, respectively,
+        corresponding to the observed normalization factors in the statistical fit.
+        The last bin includes the overflow events.
+        }
+\label{fig:scaled_mzz}
+\end{figure}
+
+Figure~\ref{fig:event_display} is the display of one event candidate of EW-$ZZjj$ production in $2e2\mu$ final state with two jets in forward and backward region.
 \begin{figure}[!htbp]
 \begin{center}
 \includegraphics[width=1.0\textwidth]{figures/VBSZZ/fit/resize_340368_454611985_v3.pdf}

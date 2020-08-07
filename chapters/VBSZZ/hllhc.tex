@@ -1,21 +1,20 @@
 \section{Prospect study of EW-$ZZjj$ production in HL-LHC}
 
-\subsection{Introduction}
-The High-Luminosity Large Hadron Collider (HL-LHC) project aims to increase luminosity by a factor of 10 beyond the LHC’s design value 
+The High-Luminosity Large Hadron Collider (HL-LHC) project aims to increase the luminosity by a factor of 10 beyond the LHC’s design value 
 to increase the potential for discoveries after 2025.
 The designed luminosity will reach 3000~\ifb with the centre-of-mass energy of 14~\tev.
 
 As introduced in previous sections, with full run-2 data of 139~\ifb collected by ATLAS detector at the LHC, 
 the EW-$ZZjj$ production is the last channel of observation for VBS processes with massive boson 
 due to its very low cross section in $ZZ$ decay.
-So we expect that this channel will benefit significantly from the increased luminosity at the high-luminosity LHC (HL-HLC),
+So we expect that this channel will benefit significantly from the increased luminosity at the HL-LHC,
 and can be studied in great details for this known mechanism.
 
-In this section, a prospect study has been performed for EW-$ZZjj$ production at the HL-LHC in the \llll channel with the ATLAS detector.
-The study uses 3000~\ifb of simulated pp collisions at a centre-of-mass energy of 14~\tev~that is expected to be recorded by the ATLAS detector at HL-LHC.
+In this section, a prospect study is performed for EW-$ZZjj$ production at the HL-LHC in the \llll channel.
+The study uses 3000~\ifb of simulated pp collision data at a centre-of-mass energy of 14~\tev~ as expected to be recorded by the ATLAS detector at HL-LHC.
 All simulated events are produced at particle-level, 
-and the detector effects of lepton and jet reconstruction and identification are estimated by corrections, 
-assuming the mean number of interactions per bunch crossing ($<\mu>$) of 200.
+and the detector effects of leptons and jets reconstruction and identification are estimated by corrections
+assuming the mean number of interactions per bunch crossing (<$\mu$>) of 200.
 
 \subsection{The ATLAS detector at HL-LHC}
 
@@ -30,21 +29,21 @@ More details of expected performance of the upgraded ATLAS detector at the HL-LH
 \subsection{Simulation}
 
 The analysis is performed using particle-level events.
-The samples are generated at $\sqrt{s} = 14~\tev$~and with a fast simulation based on setting for ATLAS detector at the HL-LHC.
+The samples are generated at $\sqrt{s} = 14~\tev$~and with a fast simulation based on the setting for ATLAS detector at the HL-LHC.
 The signal in this analysis is EW-$ZZjj$ process, while only the dominant irreducible background of QCD-$ZZjj$ is considered.
 Both signal and background are generated using \textsc{Sherpa} with the NNPDF3.0NNLO PDF set.
 The signal sample is modelled with two jets at Matrix Element (ME) level.
-The background only considers the qq-initial process, in which events with up to one (three) outgoing partons are generated at NLO (LO) in perturbative QCD.
+The background is generated with up to one (three) outgoing partons at NLO (LO) in pQCD.
 As a quick study, other minor backgrounds such as fake backgrounds from \Zjet and top-quark processes, as well as Diboson without 4l final-state and Triboson processes are not considered into this analysis.
 Furthermore, for hard scattering events, the pile-up collisions are set with a mean value of 200 interactions per bunch crossing.
-In studies, signal and background yields are then scaled to an integrated luminosity of 3000~\ifb for HL-LHC.
+Signal and background yields are then scaled to an integrated luminosity of 3000~\ifb as expected at the HL-LHC.
 
 \subsection{Event selection}
 
 The analysis selection follows closely to the one in ATLAS run-2 analysis as described in section~\ref{sec:vbszz_selection}.
-Here are some changes according to the expectation of HL-LHC scenario for ATLAS detector:
+Here are some changes according to the expectation of the HL-LHC scenario for ATLAS detector:
 \begin{itemize}
-	\item Extend the lepton identification in forward with $|\eta| <$ 4.0
+	\item Extend the lepton (both electron and muon) identification in forward with $|\eta| <$ 4.0
 	\item Pile-up (PU) jet suppression is applied with a PU rejection factor of 50 for all PU jets in the region of $|\eta| <$ 3.8, based on the expected ATLAS detector performance at the HL-LHC.
 	\item The jets are required to have $\pT >$ 30 (70)~\gev~in the $|\eta| <$ 3.8 ($3.8 < |\eta| < 4.5)$ region.
 	\item For two selected jets, tight the $\mjj$ requirement to > 600~\gev, and require $\Delta \eta_{jj} >$ 2.
@@ -56,7 +55,7 @@ Table~\ref{tab:event_yield} summarized the number of selected signal and backgro
 In addition to the \textit{baseline} selection listed above, to compare the different detector scenarios at the HL-LHC, two alternative selections are also studied:
 \begin{itemize}
 	\item Reduce the lepton $\eta$ region to 2.7, to understand the effect due to forward lepton reconstruction and identification with the upgraded ATLAS detector.
-	\item Only apply the PU jet suppression with region $|\eta| < 2.4$, to measure the improvement of \textit{baseline} by extending the rejection range of PU jets at the HL-LHC.
+	\item Only apply the PU jet suppression with region $|\eta| < 2.4$, to measure the improvement of \textit{baseline} by extending the rejection range of PU jets at the HL-LHC with the installation of HGTD.
 \end{itemize}
 \begin{table}[htbp]
   \small
@@ -81,7 +80,7 @@ In addition to the \textit{baseline} selection listed above, to compare the diff
   }
   \label{tab:event_yield}
 \end{table}
-From this table, one can see the extended track coverage increases the \lllljj events by 15$~$30\%, via improving the lepton efficiency.
+From this table, one can see the extended track coverage increases the \lllljj events by 15 to 30\%, via improving the lepton efficiency.
 But the significance of searching for EW-$ZZjj$ process does not improve so much due to the large increment of background events.
 
 Figure~\ref{fig:kine} shows the kinematic distributions of di-jet invariant mass (\mjj), the $ZZ$ invariant mass (\mzz) and 
@@ -91,7 +90,7 @@ The ZZ centrality is defined as:
   ZZ~\text{centrality} = \frac{|y_{ZZ} - (y_{j1} + y_{j2})/2|}{|y_{j1} - y_{j2}|}
 \end{equation}
 To measure the event yield, the top panel shows the stack distribution for EW- and QCD-$ZZjj$ processes,
-while bottom panel is the ratio between EW and QCD.
+while bottom panel is the ratio between two processes.
 \begin{figure}[!htbp]
 \centering
 \subfloat[]{
@@ -123,12 +122,12 @@ normalized to 3000~\ifb{}.
 
 According to studies in section~\ref{sec:systematics}, the dominant systematic in \llll channel is from theoretical systematic for QCD-$ZZjj$ background process.
 Different sizes of systematics have been studied, at a factor of 5, 10 and 30\% on background modelling.
-The 5\% uncertainty is an optimal estimation when there is enough data events from QCD-enrich control region at the HL-LHC can be used to constrain the theoretical normalization on QCD-$ZZjj$ process.
+The 5\% uncertainty is an optimal estimation when there is enough data events from QCD-enriched control region at the HL-LHC that can be used to constrain the theoretical normalization on QCD-$ZZjj$ process.
 The 30\% one is a conservative estimation, in which the uncertainties are directly calculated from different PDF sets and QCD renormalization and factorization scales, following recommendation from the PDF4LHC mentioned in section~\ref{sec:systematics}.
 
-For experimental sources, the jet systematic has been checked following the setting provided by the HL-LHC in Ref.\cite{ATL-PHYS-PUB-2016-026},
+For experimental sources, the jet systematics have been checked following the setting provided by the HL-LHC in Ref.\cite{ATL-PHYS-PUB-2016-026},
 and the uncertainties are within 5\% level, which is smaller than run-2 measurement at 10\%.
-Figure~\ref{fig:jet_uncer} depicts the up and down variations for jet uncertainty provided by the HL-LHC performance tool as function of di-jet invariant mass.
+Figure~\ref{fig:jet_uncer} depicts the up and down variations for jet uncertainty provided by the HL-LHC performance tool as function of dijet invariant mass ($\mjj$).
 \begin{figure}
   \centering
   \includegraphics[width=0.42\textwidth]{figures/VBSZZ/hllhc/Uncer_baseline_TagJJM_ewk_linear.pdf}
@@ -140,12 +139,12 @@ Figure~\ref{fig:jet_uncer} depicts the up and down variations for jet uncertaint
 \end{figure}
 Therefore, a conservative 5\% uncertainty is used as experimental uncertainty.
 
-Since the final results rely greatly on the uncertainties, especially the theoretical uncertainties on QCD-$ZZjj$ production.
-So results with different uncertainty conditions will be shown as below:
+Since the final result relies greatly on the uncertainties, especially the theoretical uncertainties on QCD-$ZZjj$ production.
+So results with different uncertainty conditions are shown as below:
 \begin{itemize}
 	\item The case with statistical uncertainty of simulated samples only.
 	\item The case with statistical and experimental uncertainties (5\%)
-	\item The case with statistical, experimental and additional theoretical uncertainties at 5\%, 10\% and 30\% respectively.
+	\item The case with statistical, experimental and additional theoretical uncertainties at 5\%, 10\% and 30\% levels respectively.
 \end{itemize}
 Three different sources of uncertainties are treated as uncorrelated and summed up quadratically.
 
@@ -159,8 +158,8 @@ where $S$ presents the number of selected signal events,
 and $\sigma(B)_{stat.}$ and $\sigma(B)_{syst.}$ denote the statistical and systematic (exp. + theo.) uncertainties from background processes.
 The statistical uncertainty is computed from expected data yield with an integrated luminosity of 3000~\ifb.
 
-Base on baseline selection of $\mjj > 600~\gev$, a additional scan over different \mjj cuts are performed with a step of 50~\gev
-for luminosity of 3000~\ifb under different systematic conditions, as shown in figure~\ref{fig:mjj_scan}.
+Base on baseline selection of $\mjj > 600~\gev$, a additional scan over different \mjj cuts are also performed with a step of 50~\gev~
+under different systematic conditions, as shown in figure~\ref{fig:mjj_scan}.
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.48\textwidth]{figures/VBSZZ/hllhc/significance_noshape_0_noratio.pdf}
@@ -199,12 +198,12 @@ and $N_{QCD-ZZjj}$ and $N_{EW-ZZjj}$ are the number of predicted events of QCD-$
 The $C_{EW-ZZjj}$ factor represents the detector efficiency for EW-$ZZjj$ processes introduced in section~\ref{sec:cf}.
 The interference between EW- and QCD- $ZZjj$ processes is ignored due to its minor contribution.
 
-The number of expected integrated cross section as well as its uncertainty under different uncertainty conditions are shown in table~\ref{tab:xsec}
-in 3000~\ifb luminosity at 14~\tev.
+The number of expected integrated cross section as well as its uncertainty under different systematic conditions are shown in table~\ref{tab:xsec}
+with 3000~\ifb luminosity at 14~\tev.
 The statistical uncertainty is at 10\% level when with such large luminosity.
 The result is dominated by systematics and can reach 100\% level when theoretical modelling uncertainty is 30\% for QCD-$ZZjj$ processes.
 \begin{table}[htbp]
-  \small
+  \footnotesize
   \centering
   \begin{tabular}{c|c|c|c|c|c|c}
     \hline
@@ -215,8 +214,8 @@ The result is dominated by systematics and can reach 100\% level when theoretica
   \end{tabular}
   \caption{
   Summary of expected cross-section measured with different theoretical uncertainties.
-  The statistical uncertainty is computed from expected data yield with 3000~\ifb at 14~\tev.
-  Different uncertainties are treated as uncorrelated and quadratic sum is used.
+  The statistical uncertainty is computed from expected data yield with 3000~\ifb~ at 14~\tev.
+  Different uncertainties are treated as uncorrelated and summed quadratically.
   }
   \label{tab:xsec}
 \end{table}

@@ -1,25 +1,25 @@
 \subsection{Primary vertex}
 
-The primary vertex (PV) is reconstructed by using the reconstructed tracks introduced in previous section as inputs.
-The tracks to be considered for vertex reconstruction must satisfy the following criteria~\cite{ATL-PHYS-PUB-2015-026}:
+The reconstruction of primary vertex (PV) uses the reconstructed tracks introduced in previous section as inputs.
+The tracks must satisfy the following criteria~\cite{ATL-PHYS-PUB-2015-026}:
 \begin{itemize}
-	\item $p_{T} > 400$ MeV
+	\item $p_{T} > 400$ ~\mev
 	\item $|\eta| < 2.5$
 	\item Number of silicon hits 
 $\geq 
 \begin{cases}
-9&  \text{if} |\eta|\leq1.65\\
-11& \text{if} |\eta|>1.65
+9&  \text{if} |\eta| \le 1.65\\
+11& \text{if} |\eta| > 1.65
 \end{cases}$
-	\item IBL hits + B-layer hits \geq 1
+	\item IBL hits + B-layer hits $\ge$ 1
 	\item A maximum of 1 shared module (1 shared pixel hit or 2 shared SCT hits)
 	\item Pixel holes = 0
-	\item SCT holes \leq 1
+	\item SCT holes $\le$ 1
 \end{itemize}
 A candidate vertex is formed by requiring two tracks passing these selection criteria.
 
 The reconstruction of PV can be divided into two steps\cite{Aaboud:2016rmg}: vertex finding and vertex fitting.
-The first step represents the pattern recognition process, namely the association of reconstructed tracks to vertex candidates.
+The first step is the pattern recognition process, namely the association of reconstructed tracks to vertex candidates.
 The latter one works on the reconstruction of the actual vertex position and its covariance matrix.
 More details are described as below:
 

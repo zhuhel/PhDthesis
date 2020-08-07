@@ -4,10 +4,11 @@
 \label{sec:vbszz_data}
 
 The data sets for this analysis include the full run-2 pp collision data collected by the ATLAS experiment during the years from 2015 to 2018.
-Data event is only used if it passed the latest Good Run List (GRL) released by the Data Quality group from ATLAS experiment as listed below:
+Data event is only used if it passed the latest Good Run List (GRL) released by the Data Quality group from ATLAS experiment as listed below,
+corresponding to an integrated luminosity of $139.0~\pm~2.4$~\ifb.
 
 
-{\tiny
+{\footnotesize
 \begin{verbatim}
 data15_13TeV.periodAllYear_DetStatus-v89-pro21-02_Unknown_PHYS_StandardGRL_All_Good_25ns.xml
 data16_13TeV.periodAllYear_DetStatus-v89-pro21-01_DQDefects-00-02-04_PHYS_StandardGRL_All_Good_25ns.xml
@@ -20,28 +21,27 @@ data18_13TeV.periodAllYear_DetStatus-v102-pro22-04_Unknown_PHYS_StandardGRL_All_
 \subsection{MC simulations}
 \label{sec:mc}
 
-The EW-$ZZjj$ production (signal) is modelled using \MGMCatNLO~2.6.1~\cite{Alwall:2014hca} matrix elements (ME) calculated in the leading-order (LO) approximation
+The EW-$ZZjj$ production (signal) is modelled using \MGMCatNLO~2.6.1~\cite{Alwall:2014hca} with the matrix elements (ME) calculated in the leading-order (LO) approximation
 in perturbative QCD (pQCD) and with the NNPDF2.3LO~\cite{Ball:2012cx} parton distribution functions (PDF).
 The VBF Higgs process is also included.
 
 The QCD-$ZZjj$ production is modelled using \textsc{Sherpa} 2.2.2~\cite{Gleisberg:2008ta} with the NNPDF3.0NNLO~\cite{ball2015parton} PDF,
-in which events with up to one (three) outgoing partons are generated at NLO (LO) in pQCD.
+where events with up to one (three) outgoing partons are generated at NLO (LO) in pQCD.
 The production of $ZZjj$ from the gluon-gluon initial state with a four-fermion loop or with an exchange of the Higgs boson has an order of $\alpha_{S}^{4}$ in QCD,
 and is not included in the \textsc{Sherpa} simulation.
-A separate $gg$ induced $ZZ$ + 2jets sample is modelled using \textsc{Sherpa} 2.2.2 with the NNPDF3.0NNLO PDF,
+A separate $gg$ induced $ZZ$ + 2jets sample is modelled using \textsc{Sherpa} 2.2.2 with the NNPDF3.0NNLO PDF
 and with an additional 1.7 k-factor~\cite{PhysRevD.92.094028} being applied.
-
 Then the interference between EW- and QCD-$ZZjj$ is modelled with \MGMCatNLO~2.6.1 calculated at LO.
 
-The diboson productions from QCD $WW \rightarrow lvqq$ as well as QCD and EW $WZ \rightarrow llqq$ are modelled using \textsc{Sherpa} 2.2.2 with the NNPDF3.0NNLO PDF.
-The productions of semileptonic decays ($WW \rightarrow lvqq$ and $WZ \rightarrow qqll$) are modelled using \textsc{Powheg-Box}~v2~\cite{Frixione:2007nw} with the CT10 PDF~\cite{Lai:2010vv}.
+The diboson productions from QCD $WW \rightarrow \ell \nu qq$ as well as QCD and EW $WZ \rightarrow \ell\ell qq$ are modelled using \textsc{Sherpa} 2.2.2 with the NNPDF3.0NNLO PDF.
+The productions of semileptonic decays ($WW \rightarrow \ell\nu qq$ and $WZ \rightarrow qq\ell\ell$) are modelled using \textsc{Powheg-Box}~v2~\cite{Frixione:2007nw} with the CT10 PDF~\cite{Lai:2010vv}.
 %Other diboson processes are not included due to negligible contributions.
 The triboson production is modelled using \textsc{Sherpa} 2.2.2 with the NNPDF3.0NNLO PDF.
 
 For top-quark pair (\ttbar) production, the \textsc{Powheg-Box}~v2 is used with the CT10 PDF.
-The single top-quark production in $t$-channel, $s$-channel and $Wt$-channel were simulated using the \textsc{Powheg-Box}~v1 event generator~\cite{Alioli:2009je,Frederix:2012dh,Re:2010bp}.
-The productions of \ttbar~in association with vector boson(s) ($ttV$) is modelled with \MGMCatNLO~2.3.3 for $ttW$ and $ttZ$ with $Z \rightarrow \nu\nu/qq$ decays,
-with \textsc{Sherpa} 2.2.1 for $ttZ$ with the $Z$ to dilepton decays,
+The single top-quark production in $t$-channel, $s$-channel and $Wt$-channel are simulated using the \textsc{Powheg-Box}~v1 event generator~\cite{Alioli:2009je,Frederix:2012dh,Re:2010bp}.
+The productions of \ttbar~in association with vector boson(s) ($ttV$) are modelled with \MGMCatNLO~2.3.3 for $ttW$ and $ttZ$ with $Z \rightarrow \nu\nu/qq$ decays,
+with \textsc{Sherpa} 2.2.1 for $ttZ$ where the $Z$ decays to dilepton,
 and with \MGMCatNLO~2.2.2 for $ttWW$ respectively.
 
 The \Zjet processes are modelled using \textsc{Sherpa} 2.2.1 with the NNPDF3.0NNLO PDF, 
@@ -50,11 +50,11 @@ in which the ME is calculated for up to two partons with next-to-leading-order (
 For all the samples except those from \textsc{Sherpa}, 
 the parton showering is modelled with \textsc{Pythia8}~\cite{Sjostrand:2007gs} using the NNPDF2.3~\cite{Ball:2012cx} PDF set,
 and the A14 set of tuned parameters~\cite{ATL-PHYS-PUB-2014-021}.
-For \textsc{Sherpa} samples, the parton showering is simulated within the programme.
+While for \textsc{Sherpa} samples, the parton showering is simulated within the programme.
 
-All simulated events were processed with detector response simulated based on \textsc{Geant4} described in section~\ref{sec:simulation_framework}.
-In addition, simulated inelastic pp collisions were overlaid to model additional pp collisions in the same and neighbouring bunch crossings (pile-up),
+All simulated events are processed with detector response simulated based on \textsc{Geant4} described in section~\ref{sec:simulation_framework}.
+In addition, simulated inelastic pp collisions are overlaid to model additional pp collision in the same and neighbouring bunch crossings (pile-up),
 and reweighted to match the pile-up conditions in data.
-Moreover, all simulated events were processed using the same reconstruction algorithms as data.
-And the leptons' and jets' reconstruction, energy scale and resolution, and the leptons' identification, isolation, trigger efficiencies for simulated events,
-as described in section~\ref{sec:reconstruction}, were all corrected to match the data measurements.
+Moreover, all simulated events are processed using the same reconstruction algorithms as data.
+And the leptons and jets reconstruction, energy scale and resolution, and the leptons identification, isolation, trigger efficiencies for simulated events,
+as described in section~\ref{sec:reconstruction}, are all corrected to match the data measurements.

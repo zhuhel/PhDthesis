@@ -1,8 +1,8 @@
 \section{Signal modelling}
 \label{sec:signal_model}
 
-The parameterization based on simulated samples of \mfl distributions for signals are described in this section.
-Several signal models are studied in this analysis, including heavy Higgs like narrow-width signal (NWA) and large-width signal (LWA), as well as the modelling of Randall-Sundrum graviton (RSG) signal.
+The parameterization of \mfl distributions based on simulated samples for signals are described in this section.
+Several signal models are studied, including heavy Higgs like narrow-width signal (NWA) and large-width signal (LWA), as well as the modelling of Randall-Sundrum graviton (RSG) signal.
 
 %% ========================================================================================================================
 %% NWA
@@ -23,9 +23,9 @@ The two functions share the same central value $\mu$, while the resolution param
 In the Crystal Ball function, the parameters $\alpha_{\mathcal{C}}$ and $n_{\mathcal{C}}$ model the shape of non-Gaussian tail,
 and the fraction parameter $f_{\mathcal{C}}$ is used to ensure the relative normalization between two functions.
 
-The parameters are obtained by fitting to signal MC simulations combining the mc16a, mc16d and mc16e campaigns for each category separately at each mass points from 200~\gev to 2000~\gev,
+The parameters are obtained by fitting to signal MC simulations combining the mc16a, mc16d and mc16e campaigns for each category at each mass points from 200~\gev~ to 2000~\gev~ respectively,
 and the shape of ggF and VBF signals are found to be similar.
-Figure~\ref{fig:ggf_mass_signalParam_2mu2e} shows the \mfl distribution and fitted curves for ggF production at mass from 200~\gev to 2000~\gev in 2$e$2$\mu$ channel as examples.
+Figure~\ref{fig:ggf_mass_signalParam_2mu2e} shows the \mfl distribution and fitted curves for ggF production at mass from 200~\gev~ to 2000~\gev~ in 2$e$2$\mu$ channel as examples.
 
 \begin{figure}[htbp]
     \centering
@@ -49,8 +49,8 @@ Figure~\ref{fig:ggf_mass_signalParam_2mu2e} shows the \mfl distribution and fitt
     \label{fig:ggf_mass_signalParam_2mu2e}
 \end{figure}
 
-Then the $\mathcal{C}+\mathcal{G}$ parameters are fitted with a polynomial as functions of generated mass points (\mH) for samples, as an example shown in figure~\ref{fig:ggf_fitParams_interpolation_2mu2e} for 2$e$2$\mu$ channel.
-The fitting quality can be measured by the Pearson’s $\chi^2$, which is within 3 (2) for 2$e$2$\mu$ (4$e$ and 4$\mu$) channel.
+Then the $\mathcal{C}+\mathcal{G}$ parameters are fitted with a polynomial function as the function of generated mass points (\mH), as an example shown in figure~\ref{fig:ggf_fitParams_interpolation_2mu2e} for 2$e$2$\mu$ channel.
+The fitting quality can be measured by the Pearson's $\chi^2$, which is within 3 (2) for 2$e$2$\mu$ (4$e$ and 4$\mu$) channel.
 
 \begin{figure}[htbp]
     \centering
@@ -69,7 +69,7 @@ The fitting quality can be measured by the Pearson’s $\chi^2$, which is within
 In addition, possible difference on the signal yield extracted from parameterization and MC simulation is studied.
 Figure~\ref{fig:ggf_graph_YieldCheckAll} shows this difference by computing $\frac{N_{\text{reco}}-N_{\text{fit}}}{N_{\text{fit}}}$, where $N_{\text{reco}}$ denotes the total number of reconstructed events observed from MC simulation at that mass point
 and $N_{\text{fit}}$ depicts the number of events obtained from the fitted PDF.
-The differences are treated as an additional systematic uncertainty with the value of 2\% (1\%) for 2$e$2$\mu$ (4$e$ and 4$\mu$) channel in the analysis.
+The differences are treated as an additional systematic uncertainty with the value of 2\% (1\%) for 2$e$2$\mu$ (4$e$ and 4$\mu$) channel in statistical fit.
 
 \begin{figure}[htbp]
     \centering
@@ -82,7 +82,7 @@ The differences are treated as an additional systematic uncertainty with the val
     \label{fig:ggf_graph_YieldCheckAll}
 \end{figure}
 
-In summary, the final interpolated signal shapes for the ggF production mode are shown together in figure~\ref{fig:ggf_multipeak} for mass points with step of 100~\gev from 200~\gev to 3000~\gev.
+In summary, the final interpolated signal shapes for the ggF production mode are shown together in figure~\ref{fig:ggf_multipeak} for mass points with step of 100~\gev~ from 200~\gev~ to 3000~\gev.
 
 \begin{figure}[htbp]
     \centering
@@ -99,16 +99,15 @@ In summary, the final interpolated signal shapes for the ggF production mode are
 \subsection{Modelling of large-width signal}
 \label{sec:signal_lwa}
 
-The \mfl shape of heavy Higgs model in large-width (LWA) hypothesis can be described by a convolution of a truth distribution with a resolution from detector effect.
-The detector resolution effect can be modelled by the function described in NWA parameterization,
-as in NWA model the truth level width is negligible and the shape is dominant by detector effect.
+The \mfl shape of heavy Higgs model in large-width (LWA) hypothesis can be described by a convolution of a truth distribution and a resolution from detector effect.
+The detector resolution effect is the one modelled by the function described in NWA parameterization, as in NWA model the truth level width is negligible.
 
 The differential parton cross section for the heavy Higgs model can be written as~\cite{Goria:2011wa}:
 \begin{equation}
     \sigma_{gg \to H \to ZZ} (s) = \frac{1}{2s}  \int d \Omega \left | A_{gg \to H}(s,\Omega) \right |^2 \frac{1}{ \left | s - s_H \right |^2}  \left | A_{H \to ZZ}(s,\Omega) \right |^2
 \end{equation}
 where $A_{gg \to H}(s,\Omega)$ and $A_{H \to ZZ}(s,\Omega)$ are corresponding Higgs production and decay amplitudes,
-and $\frac{1}{s - s_H}$ dinotes the Higgs propagator and $\Omega$ represents the phase space of the process.
+and $\frac{1}{s - s_H}$ denotes the Higgs propagator and $\Omega$ represents the phase space of the process.
 
 Using the definition of a partial width,
 \begin{equation} \label{eq:PartialWidth}
@@ -169,9 +168,9 @@ The analytical shapes of truth level \mfl distribution of gg2VV MC samples is sh
 \end{figure}
 
 The reconstruction level signal shape can then be modelled by the analytical truth shape convoluted with detector effects modelled in section~\ref{sec:signal_nwa}.
-A comparison between the modelled shape and reconstruction level MC simulation for signal mass above 400~\gev (for ggF production in 2$e$2$\mu$ channel as an example) are shown in figure~\ref{fig:recoShape_2mu2e}, 
+A comparison between the modelled shape and reconstruction level MC simulation for signal mass above 400~\gev~ (for ggF production in 2$e$2$\mu$ channel as an example) are shown in figure~\ref{fig:recoShape_2mu2e}, 
 the shapes are well compatible between each other.
-This modelling is not valid for lower masses due to the rapid change of detector resolution and it is incorrect to assume a constant detector resolution under the peak.
+This modelling is not valid for lower masses due to the rapid change of detector resolution.
 
 \begin{figure}[!htbp]
     \centering
@@ -196,7 +195,7 @@ This modelling is not valid for lower masses due to the rapid change of detector
 There are three processes sharing the same $gg$ initial state and $ZZ$ final state:
 \begin{itemize}
 	\item The SM \ggZZ process with an amplitude $A_{B}$
-	\item The SM (light) Higgs at mass of around 125~\gev with an amplitude $A_{h}$
+	\item The SM (light) Higgs at mass of around 125~\gev~ with an amplitude $A_{h}$
 	\item The BSM heavy Higgs we are searching in this analysis with an amplitude $A_{H}$
 \end{itemize}
 The three processes can interfere with each other due to the same initial and final states.
@@ -216,10 +215,10 @@ The parton cross section for these processes can be written as:
 \end{equation}
 \endgroup
 
-The first term in equation~\ref{eq:xsec_parton_int} denotes the on-shell SM Higgs contribution at around 125~\gev, which is negligible in this analysis.
+The first term in equation~\ref{eq:xsec_parton_int} denotes the on-shell SM Higgs contribution, which is negligible in this analysis.
 The second term corresponds to the heavy Higgs contribution, whose line shape has been described in previous section.
 The third term is the \ggZZ continuum process, while the forth term is the interference between SM Higgs and \ggZZ continuum.
-The fifth and sixth terms are the interferences between heavy Higgs and \ggZZ continuum (H-B), and between heavy Higgs and SM Higgs (H-h) that this analysis is interested in.
+The fifth and sixth terms are the interferences between heavy Higgs and \ggZZ continuum (H-B), and between heavy Higgs and SM Higgs (H-h) that we are interested in.
 More details about the parameterization of these two interferences are described as below.
 
 \subsubsection{Interference between heavy Higgs and \ggZZ continuum}
@@ -315,7 +314,7 @@ So the truth lineshape of \mfl is token from:
 \begin{equation*}
         \mfl^{\text{Truth}} \sim \mathcal{L}_{gg} \cdot s^2 \cdot \frac{s(1 + s)(1 + 2s + 2s^2)}{(s^2 - \mG^2)^2 + \mG^2 \Gamma^2}
 \end{equation*}
-The truth-level signal model is extracted by fit to MC simulation at truth-level with the mass $\mG$ and width $\Gamma$ parameters floating at each mass points respectively.
+The truth-level signal model is extracted by fitting to MC simulation at truth-level with the mass $\mG$ and width $\Gamma$ parameters floating at each mass points respectively.
 And then the two parameters are parameterized as the function of \mH by a linear fit as shown in figure~\ref{fig:graviton_truth_param_vs_mG}.
 \begin{figure}[htbp]
         \centering

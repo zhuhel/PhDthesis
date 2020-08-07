@@ -4,49 +4,52 @@
 \subsection{Objects selection}
 \label{sec:hmhzz_objsel}
 
-Similar as described in section~\ref{sec:vbszz_selection}, the selection of this analysis relies on the definition of multiple objects: \textit{electrons}, \textit{Muons}, and \textit{jets}.
-Details of definitions for each objects are described as below:
+Similar to VBSZZ analysis in section~\ref{sec:vbszz_selection}, the selection of this analysis relies on the definition of multiple objects: \textit{electrons}, \textit{Muons}, and \textit{jets}.
+Details of definitions for each object are described as below:
 
 \textbf{Electron:}
-The reconstruction of electrons is described in section~\ref{sec:electron}.
-In this analysis, the electron candidates satisfying \textit{Loose} working point (WP) are selected,
+As described in section~\ref{sec:electron}, electrons are reconstructed from energy deposits in the EM calorimeter matched to a track in the inner detector.
+The electron candidates satisfying the \textit{Loose} criterion valuing by the likelihood-based (LH) method are selected,
 with a selection efficiency ranging from 90\% for transverse momentum $\pt = 20~\gev$ to 96\% for $\pt > 60~\gev$.
-Also, electrons are required to have $p_{T} > 7 \gev$ and $|\eta| < 2.47$.
+In addition, the electrons are required to have $p_{T} > 7~\gev$, $|\eta| < 2.47$ and $|z_{0} sin\theta|$ < 0.5 mm.
 
 \textbf{Muon:}
-To increase the acceptance range in reco-level for \lllljj channel, all four types of muons
+To increase the acceptance range in reco-level for \llll channel, all four types of muons
 (CB, ST, CT, ME muons, described in section~\ref{sec:muon}) are used.
-But at most one CT, ST or ME muon is allowed in one \llll quadruplet.
-The Muon candidates are required to pass $p_{T} > 5 \gev$ and $|\eta| < 2.7$,
-and satisfy the \textit{Loose} identification criterion with an efficiency of 98.5\%.
+The CT muons are required to pass $p_{T} > 15~\gev$ and $|\eta| < 0.1$, while the ST muons are also limited in $|\eta| < 0.1$ region.
+The ME muons are only used in the region of $2.5 < |\eta| < 2.7$.
+And at most one CT, ST or ME muon is allowed in one \llll quadruplet.
+The Muon candidates are required to pass $p_{T} > 5~\gev$ and $|\eta| < 2.7$,
+and satisfy the \textit{Loose} identification criterion with an efficiency of at least 98.5\%.
+The impact parameter requirements of $|d_{0}|$ < 1 mm and $|z_{0} sin\theta|$ < 0.5 mm are further applied.
 
 \textbf{Jets:}
-Jets are clustered using the anti-$k_t$ algorithm with radius parameter $R$ = 0.4 implemented in the \textsc{FastJet} package described in section~\ref{sec:jet}. 
-The particle flow (PFlow) objects~\cite{PERF-2015-09}, which are the ensemble of positive energy topo-clusters surviving the energy subtraction step at the PFlow algorithm within $|\eta| < 2.5$,
-and the selected tracks that are matched to a primary vertex, are used as inputs to the \textsc{FastJet} package.
-Before jet-finding, the topo-cluster $\eta$ and $\phi$ are recomputed pointing to the primary vertex position, instead of the centre of detector.
-For the region of $|\eta| > 2.5$ that outside the geometrical acceptance of the tracker, only the calorimeter information is available.
-Therefore, the topo-clusters, formed from calorimeter cells with significant energy depositions, are used as inputs to jet reconstruction.
-The jets used in this analysis are required to pass $\pt > 30~\GeV$ and $|\eta |<4.5$.
+Jets are clustered using the anti-$k_t$ algorithm with radius parameter $R$ = 0.4 implemented in the \textsc{FastJet} package as described in section~\ref{sec:jet}. 
+The `particle flow' (PFlow) objects~\cite{PERF-2015-09}, which combines measurements from both the tracker and the calorimeter, are used as inputs to the \textsc{FastJet} package.
+The energy deposited in the calorimeter by all charged particles is removed, and the jet reconstruction is performed on an ensemble of PFlow objects
+consisting of the remaining calorimeter energy and tracks which are matched to the hard interaction.
+This improves the accuracy of the charged-hadron measurement, while retaining the calorimeter measurements of neutral-particle energies. 
+Compared to only using topological clusters, jets reconstructed with the particle flow algorithm with $\pt > 30~\gev$ have approximately 10\% better transverse momentum resolution.
+The jets used in this analysis are then required to have $\pt > 30~\GeV$ and $|\eta | < 4.5$.
 To further reduce the effects of pile-up jets, a jet vertex tagger (JVT) is applied to jets with $p_{T} <$ 60~\gev~and $|\eta| < 2.4$.
 
 \textbf{Overlap removal:}
 As the selected jet and lepton candidates can be reconstructed from same detector information, an overlap-removal procedure is applied.
 For electron and muon sharing the same ID track, the electron is selected in the case that the muon is calorimeter-tagged and does not have a MS track, or is a segment-tagged muon, otherwise the muon is selected.
-The jet overlapping with electron (muon) within a cone of size of $\Delta R\equiv \sqrt{(\Delta \eta)^2 + (\Delta \phi)^2}= 0.2(0.1)$ are removed.
+The jet overlapping with electron (muon) within a cone of size of $\Delta R\equiv \sqrt{(\Delta \eta)^2 + (\Delta \phi)^2}= 0.2 (0.1)$ are removed.
 
 %% ========================================================================
 \subsection{Event selection}
 \label{sec:hmhzz_eventsel}
 
-First of all, the four-lepton events are required to pass single or multi-lepton triggers, with the multi-lepton ones including electron(s)-muon(s) triggers.
-Due to the increasing of peak luminosity and pile-up, the \pt and \et thresholds of triggers increase slight during the data-taking periods from 2015 to 2018.
-Table~\ref{tab:hmhzz_triggers} summarizes the triggers used for \lllljj channel. 
+First of all, the four-lepton events are required to pass single or multi-lepton triggers.
+Due to the increasing of peak luminosity and pile-up, the \pt and \et thresholds of triggers increase slightly during the data-taking periods from 2015 to 2018.
+Table~\ref{tab:hmhzz_triggers} summarizes the triggers used for \llll channel. 
 The overall trigger efficiency for selected signal events passing final selection is around 98\%.
 
 \begin{table}[!htbp]
 \begin{center}
-\caption{Summary of the $\pt$ ($E_T$) trigger thresholds (in GeV) employed for the muon (electron) trigger selection in the year of 2015, 2016, 2017, and 2018.}
+\caption{Summary of the $\pt$ ($E_T$) trigger thresholds (in~\gev) employed for the muon (electron) trigger selection in the year of 2015, 2016, 2017, and 2018.}
 \label{tab:hmhzz_triggers}
 \adjustbox{max width=\textwidth}{%
 \vspace{0.2cm}
@@ -102,18 +105,18 @@ trielectron&        $e17\_2e9$&
 \end{center}
 \end{table}
 
-The \llll quadruplets are formed by two opposite-sign, same-flavour (OSSF) lepton pairs ($l^{+}l^{-}$), selected as described in section~\ref{sec:hmhzz_objsel}.
-The $\pT$ threshold of first three leading muons are required to be 20, 15 and 10~\gev.
-If there are more than one combination of lepton pairing in quadruplet, the pairing is selected by keeping it with the lepton pairs closest (leading pair, refers as $m_{12}$) and second closest (sub-leading pair, refers as $m_{34}$) to Z boson mass.
-The mass of leading pair is required to satisfy $50 < m_{12} < 106~\gev$, while the sub-leading pair is required to be less than 115~\gev and larger than a threshold that is $12~\gev$ for $\mfl \leq 140~\gev$, rises linearly from $12~\gev$ to $50~\gev$ with \mfl in the interval of [$140~\gev$, $190~\gev$] and is fixed to $50~\gev$ for $\mfl > 190~\gev$. 
+The \llll quadruplets are formed by two opposite-sign, same-flavour (OSSF) lepton pairs ($\ell^{+}\ell^{-}$).
+The $\pT$ threshold of first three leading leptons are required to be 20, 15 and 10~\gev.
+If there are more than one combination of lepton pairing in quadruplet, the pairing is selected by keeping it with the mass of lepton pairs closest (leading pair, refers as $m_{12}$) and second closest (sub-leading pair, refers as $m_{34}$) to Z boson mass.
+The mass of leading pair is required to satisfy $50 < m_{12} < 106~\gev$, while the sub-leading pair is required to be less than 115~\gev~ and larger than 50~\gev. 
 
 The two lepton pairs in quadruplet are required to have angular separation with $\Delta R > 0.1$.
-To suppress the contribution from $J/\psi \rightarrow ll$ decays, for $4\mu$ and $4e$ quadruplets, the event is rejected if any opposite-sign same-flavour lepton pair is found with mass below 5~\gev.
-If there are more than one quadruplets from different channels in event at the point, the quadruplet with highest expected signal rate is selected in the order of $4\mu$, $2e2\mu$, $4e$.
+To suppress the contribution from $J/\psi \rightarrow \ell\ell$ decays, for $4\mu$ and $4e$ quadruplets, the events are rejected if any opposite-sign same-flavour lepton pair is found with mass below 5~\gev.
+If there are more than one quadruplets from different channels in event at this point, the one with highest expected signal rate is selected in the order of $4\mu$, $2e2\mu$, $4e$.
 The transverse impact-parameter significance ($|d_0|/\sigma_{d_0}$) for muons (electrons) is than required to be smaller than 3 (5) to suppress the backgrounds from heavy-flavour hadrons.
 
-In addition, the track- (\pt) and calorimeter-based isolation criteria is required for all electrons and muons to further suppress the reducible backgrounds of \Zjet and \ttbar.
-For lepton isolation selection, the two track- and calorimeter-based variables, $E_{T}^{topocone}$ and $p_{T}^{varcone}$ as described in section~\ref{sec:muon} (section~\ref{sec:electron}) for muons (electrons), are vulnerable to pileup.
+In addition, the track- and calorimeter- based isolation criteria is required for all electrons and muons to further suppress the reducible backgrounds of \Zjet and \ttbar.
+For lepton isolation selection, the two track- and calorimeter- based variables, $E_{T}^{topocone}$ and $p_{T}^{varcone}$ as described in section~\ref{sec:muon} (section~\ref{sec:electron}) for muons (electrons), are vulnerable to pileup.
 For track-based variable, this is because of additional tracks in the event.
 The definition of $p_{T}^{varcone}$ attempts to limit the tracks used in the calculation to those from the vertex via a loose cut of $|z_0\sin(\theta)| < 3$,
 which proved to be too loose in new pile-up regime 2017 and 2018 datasets.
@@ -125,24 +128,24 @@ The new variable is named as ptvarcone[cone]$\_$TightTTVA$\_$pt[\pt cut], where 
 For calorimeter-based variable, the calculation of $E_{T}^{topocone}$ corrects the pile-up effects by subtracting an average pileup contribution computed over the whole detector.
 But with the increasing of energy density of pile-up events, the root mean square (RMS) of $E_{T}^{topocone}$ variable increases,
 which leads to the increment of possibility that the pile-up fluctuations are not be accounted for correctly.
-One possible solution is using particle-flow (PFlow) method to calculate the calorimeter isolation.
+One possible solution is that use particle-flow (PFlow) method to calculate the calorimeter isolation.
 As part of PFlow reconstruction process, it assigns the clusters to tracks which improves the track-cluster association for better determination of the raw value of the \et in the cone.
 And using PFlow jets to calculate the pileup correction provides a further improvement.
 So a resulting variable named neflowisol[cone] is used.
-Finally, a requirement of isolation, called \textit{FixedCutPFlowLoose}, which gives better performance in high piup-up condition is applied to electrons and muons:\\
-(max(ptcone20\_TightTTVA\_pt500, ptvarcone30\_TightTTVA\_pt500) + 0.4 \times neflowisol20) / \pt < 0.16
+Finally, a requirement of isolation, called \textit{FixedCutPFlowLoose}, which gives better performance in high piup-up condition is applied to electrons and muons as: \\
+	( max ( ptcone20\_TightTTVA\_pt500, ptvarcone30\_TightTTVA\_pt500 ) + 0.4 \times neflowisol20 ) / \pt < 0.16
 
 On the top of impact parameter cut and lepton isolation cut, the four-lepton candidates are also required to originate from a common vertex to reduce \Zjet and \ttbar backgrounds.
 This is ensured by applying a vertex fit $\chi^2$ cut of 4 ID tracks of lepton candidates satisfying $\chi^2 / N_{dof} < 6~(9)$ for events in 4$\mu$ (4$e$ and 2$e$2$\mu$) channel(s).
 
-To improve the mass resolution, the QED process of final state radiation (FSR) photons in $Z$ boson decays are token into account in the reconstruction of Z bosons.
-The Four-momentum of any reconstructed photon that is consistent with having been radiated from lepton(s) in leading pair are added into final state.
+To improve the mass resolution, the QED process of final state radiation (FSR) photons in $Z$ boson decays are taken into account in the reconstruction of Z bosons.
+The four-momentum of any reconstructed photon that is consistent with having been radiated from lepton(s) in leading pair are added into final state.
 Moreover, the four-momenta of leptons in both (leading and sub-leading) pairs are recomputed by performing a Z-mass-constrained kinematic fit,
-whieh uses a Breit–Wigner Z boson line-shape and Gaussian function with width set to the expected lepton resolution per lepton to model the momentum response function.
+whieh uses a Breit–Wigner $Z$ boson line-shape and Gaussian function with width set to the expected lepton resolution per lepton to model the momentum response function.
 The Z-mass-constrained mass improves the $\mfl$ resolution by up to 15\% depending on $m_{H}$.
 
 In summary, table~\ref{tab:hmhzz_selections} lists a comprehensive object and event level selection as described above.
-Table~\ref{tab:hmhzz_cutflow} shows the cutflow of NWA ggF signal samples at several different mass points as examples.
+Table~\ref{tab:4l_cutflow_ggH600} to ~\ref{tab:4l_cutflow_VBFH1000} shows the cutflow of NWA ggF and VBF signal at the mass points of 600 and 1000~\gev~ as examples.
 
 \begin{table}[!htbp]
   \centering
@@ -185,8 +188,8 @@ Table~\ref{tab:hmhzz_cutflow} shows the cutflow of NWA ggF signal samples at sev
       \textsc{Selection}      & \multicolumn{3}{l}{opposite-charge leptons fulfilling the following requirements:} \\
       & \multicolumn{3}{l}{- \pt~thresholds for three leading leptons in the quadruplet: $20, 15\text{ and } 10$~\GeV} \\
       & \multicolumn{3}{l}{- Maximum one calo-tagged or stand-alone muon or silicon-associated forward per quadruplet} \\
-      & \multicolumn{3}{l}{- Leading di-lepton mass requirement: $50 < m_{12} < 106$~GeV} \\
-      & \multicolumn{3}{l}{- Sub-leading di-lepton mass requirement: $m_{\textrm{threshold}}< m_{34} < 115$~\GeV} \\
+      & \multicolumn{3}{l}{- Leading di-lepton mass requirement: $50 < m_{12} < 106$~\GeV} \\
+      & \multicolumn{3}{l}{- Sub-leading di-lepton mass requirement: $50 < m_{34} < 115$~\GeV} \\
       & \multicolumn{3}{l}{- $\Delta R(\ell,\ell')>0.10$ for all leptons in the quadruplet} \\
       & \multicolumn{3}{l}{- Remove quadruplet if alternative same-flavour opposite-charge} \\
       & \multicolumn{3}{l}{di-lepton gives $m_{\ell\ell} < 5$~\GeV} \\
@@ -212,37 +215,133 @@ Table~\ref{tab:hmhzz_cutflow} shows the cutflow of NWA ggF signal samples at sev
 
 \begin{table}[htbp]
   \centering
-  \caption{Cutflow table for NWA ggF signal samples at different mass points. $N_{\text{event}}$ represents the
-  number of MC events selected after each cut is applied. The proportion of events selected relative to the initial
-  number of events is also included.}
-  \label{tab:hmhzz_cutflow}
+  \caption{Cutflow table for a narrow-width ggF signal sample at $\mH = 600~\GeV$. $N_{\text{event}}$ denotes the number
+  of events selected after each cut is applied, normalized to $139~\ifb$, according to the expected upper limit on the
+  cross section. The acceptances (the proportion of events selected relative to the initial number of events) are also
+  included.}
+  \label{tab:4l_cutflow_ggH600}
 
   \adjustbox{max width=\textwidth}{%
   \begin{tabular}{
-      l
-      S[table-format=6] S[table-format=3.2] !{\quad}
-      S[table-format=6] S[table-format=3.2] !{\quad}
-      S[table-format=6] S[table-format=3.2] !{\quad}
-      S[table-format=6] S[table-format=3.2]}
+      l S[table-format=2.2] S[table-format=4.1] S[table-format=3.2] S[table-format=1.3]}
     \toprule
 
-    \multirow{2}[3]{*}{Cut} & \multicolumn{2}{c}{$\mH = 400~\GeV$} & \multicolumn{2}{c}{$\mH = 600~\GeV$} & \multicolumn{2}{c}{$\mH = 1000~\GeV$} & \multicolumn{2}{c}{$\mH = 2000~\GeV$}  \\
-    \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
-    ~ & {$N_{\text{event}}$}  & {Rel. [\%]}  & {$N_{\text{event}}$}  & {Rel. [\%]}  & {$N_{\text{event}}$}  & {Rel. [\%]}   & {$N_{\text{event}}$}  & {Rel. [\%]}    \\
+    ~ & {$N_{\text{event}}$}  & {$N_{\text{event}}$/BR($ZZ\to\llll$)} & {Acc. [\%]}  & {Acc. $\cdot$ BR($ZZ\to\llll$) $\cdot$ 1000}  \\
     \midrule
-    Initial              & 150000 & 100.00   &   150000 & 100.00   &   149000 & 100.00   &   120000 & 100.00   \\
-    Lepton selection     &  47422 &  31.61   &    52345 &  34.90   &    56932 &  38.21   &    48644 &  40.54   \\
-    SFOS                 &  44086 &  29.39   &    48247 &  32.16   &    51701 &  34.70   &    43228 &  36.02   \\
-    Kinematic cuts       &  44024 &  29.35   &    48215 &  32.14   &    51677 &  34.68   &    43197 &  36.00   \\
-    $Z_1$ Mass           &  43857 &  29.24   &    47975 &  31.98   &    51368 &  34.48   &    42749 &  35.62   \\
-    $Z_2$ Mass           &  39359 &  26.24   &    42834 &  28.56   &    45602 &  30.61   &    37479 &  31.23   \\
-    $J/\psi$ Veto        &  39354 &  26.24   &    42828 &  28.55   &    45597 &  30.60   &    37477 &  31.23   \\
-    $\Delta R$           &  39346 &  26.23   &    42823 &  28.55   &    45588 &  30.60   &    37473 &  31.23   \\
-    Isolation            &  37088 &  24.73   &    40753 &  27.17   &    43615 &  29.27   &    35971 &  29.98   \\
-    Impact parameters    &  36461 &  24.31   &    40186 &  26.79   &    43066 &  28.90   &    35610 &  29.68   \\
-    Vertex requirement   &  36372 &  24.25   &    40100 &  26.73   &    42967 &  28.84   &    35529 &  29.61   \\
-    Trigger              &  36333 &  24.22   &    40076 &  26.72   &    42952 &  28.83   &    35503 &  29.59   \\
-    ``Badjet'' veto      &  36202 &  24.13   &    39908 &  26.61   &    42779 &  28.71   &    35350 &  29.46   \\
+    Initial              &  17.902  &  3964.3  &  100.00  &  4.516  \\
+    Lepton selection     &   6.247  &  1383.4  &   34.90  &  1.576  \\
+    SFOS                 &   5.758  &  1275.1  &   32.16  &  1.453  \\
+    Kinematic cuts       &   5.754  &  1274.2  &   32.14  &  1.452  \\
+    $Z_1$ Mass           &   5.726  &  1267.9  &   31.98  &  1.444  \\
+    $Z_2$ Mass           &   5.112  &  1132.0  &   28.56  &  1.290  \\
+    $J/\psi$ Veto        &   5.111  &  1131.9  &   28.55  &  1.289  \\
+    $\Delta R$           &   5.111  &  1131.7  &   28.55  &  1.289  \\
+    Isolation            &   4.864  &  1077.0  &   27.17  &  1.227  \\
+    Impact parameters    &   4.796  &  1062.1  &   26.79  &  1.210  \\
+    Vertex requirement   &   4.786  &  1059.8  &   26.73  &  1.207  \\
+    Trigger              &   4.783  &  1059.1  &   26.72  &  1.207  \\
+    ``Badjet'' veto      &   4.763  &  1054.7  &   26.61  &  1.201  \\
+    \bottomrule
+  \end{tabular}
+  }
+\end{table}
+
+
+\begin{table}[htbp]
+  \centering
+  \caption{Cutflow table for a narrow-width ggF signal sample at $\mH = 1000~\GeV$. $N_{\text{event}}$ denotes the number
+  of events selected after each cut is applied, normalized to $139~\ifb$, according to the expected upper limit on the
+  cross section. The acceptances (the proportion of events selected relative to the initial number of events) are also
+  included.}
+  \label{tab:4l_cutflow_ggH1000}
+
+  \adjustbox{max width=\textwidth}{%
+  \begin{tabular}{
+      l S[table-format=2.2] S[table-format=4.1] S[table-format=3.2] S[table-format=1.3]}
+    \toprule
+
+    ~ & {$N_{\text{event}}$}  & {$N_{\text{event}}$/BR($ZZ\to\llll$)} & {Acc. [\%]}  & {Acc. $\cdot$ BR($ZZ\to\llll$) $\cdot$ 1000}  \\
+    \midrule
+    Initial              &  5.603  &  1240.8  &  100.00  &  4.516  \\
+    Lepton selection     &  2.141  &   474.1  &   38.21  &  1.725  \\
+    SFOS                 &  1.944  &   430.5  &   34.70  &  1.567  \\
+    Kinematic cuts       &  1.943  &   430.3  &   34.68  &  1.566  \\
+    $Z_1$ Mass           &  1.932  &   427.8  &   34.48  &  1.557  \\
+    $Z_2$ Mass           &  1.715  &   379.7  &   30.61  &  1.382  \\
+    $J/\psi$ Veto        &  1.715  &   379.7  &   30.60  &  1.382  \\
+    $\Delta R$           &  1.714  &   379.6  &   30.60  &  1.382  \\
+    Isolation            &  1.640  &   363.2  &   29.27  &  1.322  \\
+    Impact parameters    &  1.620  &   358.6  &   28.90  &  1.305  \\
+    Vertex requirement   &  1.616  &   357.8  &   28.84  &  1.302  \\
+    Trigger              &  1.615  &   357.7  &   28.83  &  1.302  \\
+    ``Badjet'' veto      &  1.609  &   356.2  &   28.71  &  1.297  \\
+    \bottomrule
+  \end{tabular}
+  }
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Cutflow table for a narrow-width VBF signal sample at $\mH = 600~\GeV$. $N_{\text{event}}$ denotes the number
+  of events selected after each cut is applied, normalized to $139~\ifb$, according to the expected upper limit on the
+  cross section. The acceptances (the proportion of events selected relative to the initial number of events) are also
+  included.}
+  \label{tab:4l_cutflow_VBFH600}
+
+  \adjustbox{max width=\textwidth}{%
+  \begin{tabular}{
+      l S[table-format=2.2] S[table-format=4.1] S[table-format=3.2] S[table-format=1.3]}
+    \toprule
+
+    ~ & {$N_{\text{event}}$}  & {$N_{\text{event}}$/BR($ZZ\to\llll$)} & {Acc. [\%]}  & {Acc. $\cdot$ BR($ZZ\to\llll$) $\cdot$ 1000}  \\
+    \midrule
+    Initial              &  12.143  &  2688.9  &  100.00  &  4.516  \\
+    Lepton selection     &   4.307  &   953.7  &   35.47  &  1.602  \\
+    SFOS                 &   3.975  &   880.2  &   32.74  &  1.478  \\
+    Kinematic cuts       &   3.972  &   879.6  &   32.71  &  1.477  \\
+    $Z_1$ Mass           &   3.953  &   875.4  &   32.56  &  1.470  \\
+    $Z_2$ Mass           &   3.545  &   785.0  &   29.19  &  1.318  \\
+    $J/\psi$ Veto        &   3.545  &   785.0  &   29.19  &  1.318  \\
+    $\Delta R$           &   3.544  &   784.9  &   29.19  &  1.318  \\
+    Isolation            &   3.418  &   756.9  &   28.15  &  1.271  \\
+    Impact parameters    &   3.368  &   745.9  &   27.74  &  1.253  \\
+    Vertex requirement   &   3.362  &   744.5  &   27.69  &  1.250  \\
+    Trigger              &   3.360  &   744.0  &   27.67  &  1.250  \\
+    ``Badjet'' veto      &   3.340  &   739.7  &   27.51  &  1.242  \\
+    \bottomrule
+  \end{tabular}
+  }
+\end{table}
+
+
+\begin{table}[htbp]
+  \centering
+  \caption{Cutflow table for a narrow-width VBF signal sample at $\mH = 1000~\GeV$. $N_{\text{event}}$ denotes the number
+  of events selected after each cut is applied, normalized to $139~\ifb$, according to the expected upper limit on the
+  cross section. The acceptances (the proportion of events selected relative to the initial number of events) are also
+  included.}
+  \label{tab:4l_cutflow_VBFH1000}
+
+  \adjustbox{max width=\textwidth}{%
+  \begin{tabular}{
+      l S[table-format=2.2] S[table-format=4.1] S[table-format=3.2] S[table-format=1.3]}
+    \toprule
+
+    ~ & {$N_{\text{event}}$}  & {$N_{\text{event}}$/BR($ZZ\to\llll$)} & {Acc. [\%]}  & {Acc. $\cdot$ BR($ZZ\to\llll$) $\cdot$ 1000}  \\
+    \midrule
+    Initial              &  3.827  &  847.4  &  100.00  &  4.516  \\
+    Lepton selection     &  1.474  &  326.5  &   38.53  &  1.740  \\
+    SFOS                 &  1.351  &  299.1  &   35.30  &  1.594  \\
+    Kinematic cuts       &  1.350  &  299.0  &   35.28  &  1.593  \\
+    $Z_1$ Mass           &  1.341  &  297.0  &   35.04  &  1.583  \\
+    $Z_2$ Mass           &  1.195  &  264.6  &   31.23  &  1.410  \\
+    $J/\psi$ Veto        &  1.195  &  264.6  &   31.23  &  1.410  \\
+    $\Delta R$           &  1.195  &  264.6  &   31.22  &  1.410  \\
+    Isolation            &  1.161  &  257.1  &   30.34  &  1.370  \\
+    Impact parameters    &  1.148  &  254.1  &   29.99  &  1.354  \\
+    Vertex requirement   &  1.146  &  253.8  &   29.95  &  1.352  \\
+    Trigger              &  1.145  &  253.6  &   29.93  &  1.352  \\
+    ``Badjet'' veto      &  1.139  &  252.2  &   29.77  &  1.344  \\
     \bottomrule
   \end{tabular}
   }
@@ -252,25 +351,25 @@ Table~\ref{tab:hmhzz_cutflow} shows the cutflow of NWA ggF signal samples at sev
 
 \subsection{Event categorizations}
 To improve the sensitivity of search in both VBF and ggF production mode in NWA model, events are classified into the VBF- and ggF- enriched categories.
-With the increment of statistic with full run-2 data, a deep neural network (DNN-) based classifier has been studied, 
-while in the meantime the traditional cut-based classifier is also used as cross check.
+With the statistic increasing in full run-2 data, a multivariate (MVA) based classifier has been studied for NWA signal, 
+while in the meantime the traditional cut-based classifier is also used as a model-independent result for all three (NWA, LWA, graviton) models.
 
 \subsubsection{Cut-based categorization}
-There are four categories in total: one VBF-enriched category and three ggF-enriched ones with different lepton-flavor channels.
+There are four categories in total: one VBF-enriched category and three ggF-enriched categories.
 The categorization is defined based on kinematic cuts:
 \begin{itemize}
-	\item VBF-enriched category: Events have at least two selected jets as defined in section~\ref{sec:hmhzz_objsel}, with the two leading jets being separated by $|\Delta \eta_{jj}| > 3.3$ and invariant mass satisfying $\mjj > 400~\gev$;
-	\item ggF-enriched categories: The remaining events that are not classified into VBF-enriched category. Then events are categorized into three channels based on lepton-flavor, namely ggF\_2$e$2$\mu$, ggF\_4$e$ and ggF\_4$\mu$. 
+	\item VBF-CBA-enriched category: Events have at least two selected jets as defined in section~\ref{sec:hmhzz_objsel}, with the two leading jets being separated by $|\Delta \eta_{jj}| > 3.3$ and invariant mass satisfying $\mjj > 400~\gev$;
+	\item ggF-CBA-enriched categories: The remaining events that are not classified into VBF-enriched category. Then events are categorized into three channels based on lepton-flavor, namely ggF\_2$e$2$\mu$, ggF\_4$e$ and ggF\_4$\mu$. 
 \end{itemize}
 
-\subsubsection{DNN-based categorization}
-In order to target different production modes, two types of classifiers, one dedicate to VBF production while the other one for ggF, have been trained.
-Details of two classifiers are described as below.
+\subsubsection{MVA-based categorization}
+In order to target different production modes, two types of classifiers, one dedicate to VBF production while the other one for ggF, have been trained using deep neural network technique.
+Details of two classifiers are described as below:
 
-\textbf{DNN models} \\
+\textbf{DNN models} 
+
 Figure~\ref{fig:dnn_arch} shows the architecture of VBF (left) and ggF (right) network.
-The VBF network includes three parts: two recurrent networks (RNNs) and one multilayer perceptron (MLP).
-One RNN (and another one) takes the \pt and \eta of \pt-ordered four leptons (two leading jets) as input features, which intends to study the time relationship from particle decay between leptons (jets).
+The VBF network includes three parts: two recurrent neural networks (RNNs) and one multilayer perceptron (MLP).
 The ggF network consists of one RNN and one MLP.
 
 \begin{figure}[htbp]
@@ -281,12 +380,12 @@ The ggF network consists of one RNN and one MLP.
         \label{fig:dnn_arch}
 \end{figure}
 
-For training, the VBF and ggF signal samples at the masses of 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1200, 1400~\gev are used with positive label.
+For training, the VBF and ggF signal samples at the masses of 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1200, 1400~\gev~ are used with positive label.
 The VBF (ggF) signals are only used for VBF (ggF) classifier.
-The background (with negative labels) uses simulated samples of QCD and EW \qqZZ processes as well as \ggZZ process summed according to their cross section.
-In addition to the selections described in section~\ref{sec:hmhzz_eventsel}, the events used for VBF network are required to have $N_\mathrm{jets} \geq 2$, while $N_\mathrm{jets} < 2$ is required to events for ggF network.
+The background including simulated samples of QCD and EW \qqZZ processes as well as \ggZZ process summed according to their cross section are signed with negative labels.
+In addition to the selections described in section~\ref{sec:hmhzz_eventsel}, the events used for VBF network are required to have $N_\mathrm{jets} \geq 2$, while $N_\mathrm{jets} < 2$ is required for events in ggF network.
 
-In order to assign equivalent importance to signals and background, during the training, signal events are reweighted to follow the \mfl distribution from background, as shown in figure~\ref{fig:dnn_rwt_vbf} (figure~\ref{fig:dnn_rwt_ggf}) before (left) and after(right) reweighting for VBF (ggF) samples.
+In order to assign equivalent importance to signals with different mass assumptions, during the training, signal events are reweighted to follow the \mfl distribution from background, as shown in figure~\ref{fig:dnn_rwt_vbf} (figure~\ref{fig:dnn_rwt_ggf}) before (left) and after(right) reweighting for VBF (ggF) samples.
 
 \begin{figure}[htbp]
         \centering
@@ -307,55 +406,70 @@ In order to assign equivalent importance to signals and background, during the t
 %After all these preparation, then the training is performed over 20 epochs with batch size of 512 (256) for VBF (ggF) network.
 
 
-\textbf{Input features} \\
-Table~\ref{tab:dnn_features_vbf} (table~\ref{tab:dnn_features_ggf}) lists the input features used for VBF (ggF) network during the training.
-For VBF network, one RNN (the other one) takes the \pt and \eta of \pt-ordered four leptons (two leading jets) as input features, which intends to study the time relationship from particle decay between leptons (jets).
-For ggF network, the only one RNN model takes as input features of the \pt and \eta of \pt-ordered four leptons.
+\textbf{Input features}
 
-\begin{table}[htbp]
-        \centering
-        \caption{Input features for the VBF network.}
-        \label{tab:dnn_features_vbf}
-        \begin{tabular}{c | c}
-                \toprule
-                Variable & Description \\
-                \midrule
-                $m_{4\ell}$ & 4$\ell$ invariant mass \\
-                $m_{jj}$ & dijet invariant mass \\
-                $p_\mathrm{T}^{jj}$ & dijet transverse momentum\\
-                $\Delta\eta_{H,j}$ & difference in pseudorapidities between the 4$\ell$ system and the leading jet \\
-                $\min \Delta R _{jZ}$ & minimum angular separation between one of the two $\ell\ell$ pairs and a jet\\
-                $p_\mathrm{T}^j$ & transverse momenta of the two leading jets \\
-                $\eta^j$ & pseudorapidities of the two leading jets \\
-                $p_\mathrm{T}^\ell$ & transverse momenta of the four leptons \\
-                $\eta^\ell$ & pseudorapidities of the four leptons  \\
-                \bottomrule
-        \end{tabular}
+Table~\ref{tab:dnn_features_VBF} (table~\ref{tab:dnn_features_ggF}) lists the input features used for VBF (ggF) network during the training.
+For VBF network, one RNN (the other one) takes the \pt and $\eta$ of \pt-ordered four leptons (two leading jets) as input features, which intends to study the time relationship from particle decay between leptons (jets).
+For ggF network, the only one RNN model takes the \pt and $\eta$ of \pt-ordered four leptons as inputs.
+
+\begin{table}
+\caption{
+Input features used in the ``VBF-classifier'' for the \llll analysis.
+The RNN stands for the recurrent neural network and MLP for the multilayer perceptron.
+\label{tab:dnn_features_VBF}}
+\centering
+\begingroup
+\setlength{\tabcolsep}{10pt}
+\renewcommand{\arraystretch}{1.0}
+\begin{tabularx}{\textwidth}{ccX}
+\toprule
+Model &    Inputs                                & Description \\ \hline
+\multirow{4}{*}{RNN}    & $\pt^{\text{j0}, \text{j1}}$            & transverse momenta of the two leading jets \\
+                        & $\eta^{\text{j0}, \text{j1}}$           & pseudorapidity of the two leading jets \\
+                        & $\pt^{\ell0, \ell1, \ell2, \ell3}$      & transverse momenta of the four leptons \\
+                        & $\eta^{\ell0, \ell1, \ell2, \ell3}$     & pseudorapidity of the four leptons \\
+                        \midrule
+\multirow{5}{*}{MLP}    & \mfl                          & invariant mass of the four lepton system \\
+                        & \mjj                          & invariant mass of the two leading jet system \\
+                        & $\pt^{\text{jj}}$             & transverse momentum of the two leading jet system \\
+                        & $\Delta\eta_{\text{H,j}}$     & difference in pseudorapidity between the four lepton system and the leading jet \\
+                        & min$\Delta R_{\text{jZ}}$     & minimum distance between one of the two lepton pairs and a jet \\
+
+\bottomrule
+\end{tabularx}
+\endgroup
 \end{table}
 
-\begin{table}[htbp]
-        \centering
-        \caption{Input features for the ggF network.}
-        \label{tab:dnn_features_ggf}
-        \begin{tabular}{c | c}
-                \toprule
-                Variable & Description \\
-                \midrule
-                $m_{4\ell}$ & 4$\ell$ invariant mass \\
-                $\cos\theta_1$ & decay angle of the leading $Z$ \\
-                $\cos\theta_2$ & decay angle of the sub-leading $Z$ \\
-                $\cos\theta^*$ & production angle of the $ZZ$ system \\
-                $\Delta R _{jH}$ & angular separation between the 4$\ell$ system and the leading jet\\
-                $\phi$ & azimuthal angle of the $ZZ$ system \\
-                $p_\mathrm{T}^{4\ell}$ & transverse momentum of the $4\ell$ system \\
-                $\eta^{4\ell}$ & pseudorapidity of the $4\ell$ system \\
-                $p_\mathrm{T}^j$ & transverse momentum of up to one jet \\
-                $\eta^j$ & pseudorapidity of up to one jet \\
-                $p_\mathrm{T}^\ell$ & transverse momenta of the four leptons \\
-                $\eta^\ell$ & pseudorapidities of the four leptons  \\
-                \bottomrule
-        \end{tabular}
-\end{table}
+\begin{table}
+    \caption{
+    Input features used in the ``ggF-classifier'' for the \llll analysis.
+    The RNN stands for the recurrent neural network and MLP for the multilayer perceptron.
+    \label{tab:dnn_features_ggF}}
+    \centering
+\begingroup
+\setlength{\tabcolsep}{10pt}
+\renewcommand{\arraystretch}{1.0}
+\begin{tabularx}{\textwidth}{ccX}
+\toprule
+Model & Inputs                                & Description \\ \hline
+\multirow{2}{*}{RNN}    & $\pt^{\ell0, \ell1, \ell2, \ell3}$      & transverse momenta of the four leptons \\
+                        & $\eta^{\ell0, \ell1, \ell2, \ell3}$     & pseudorapidity of the four leptons \\
+\midrule
+\multirow{9}{*}{MLP}    & \mfl                & invariant mass of the four lepton system \\
+                        & $\pt^{4\ell}$       & transverse momentum of the four lepton system \\
+                        & $\eta^{4\ell}$      & pseudorapidity of the four lepton system \\
+                        & $\cos\theta^*$      & production angle of the leading $Z$ defined in the four lepton rest frame \\
+                        & $\cos\theta_{1}$    & angle between the negative final state lepton and the direction of flight of leading $Z$ in the $Z$ rest frame \\
+                        & $\cos\theta_{2}$    & angle between the negative final state lepton and the direction of flight of sub-leading $Z$ in the $Z$ rest frame \\
+                        & $\Phi$              & angle between the decay planes of the four final state leptons expressed in the four lepton rest frame \\
+                        & $\pt^{\text{j0}}$   & transverse momentum of the leading jet \\
+                        & $\eta^{\text{j0}}$  & pseudorapidity of the leading jet \\
+
+\bottomrule
+    \end{tabularx}
+    \endgroup
+    \end{table}
+
 
 %Figure~\ref{fig:dnn_vbf_distribution} (figure~\ref{fig:dnn_ggf_distribution}) shows the distributions of input features with events before training reweighting for VBF (ggF) network of background and 4 signal samples at mass points of 300, 700, 1400 and 2000~\gev.
 %
@@ -413,19 +527,29 @@ For ggF network, the only one RNN model takes as input features of the \pt and \
 %        \label{fig:dnn_ggf_distribution}
 %\end{figure}
 
-\textbf{Evaluation of models} \\
-Figure~\ref{fig:dnn_output_score} shows the classifier response output of background samples (QCD and EW \qqZZ and \ggZZ) as well as VBF (left) and ggF (right) signal sample at 700~\gev.
+\textbf{Evaluation of models} 
+
+Figure~\ref{fig:dnn_output_score} shows the output of ``ggF-classifier'' and ``VBF-classifier'' for data, SM backgrounds and an example signal at 600~\gev.
+The ggF and VBF signals cross section are set to be one hundred times of their observed upper limit described in section~\ref{sec:hmhzz_spin0nwa} for ggF output
+and fifty times of the observed upper limit for VBF output for best visibility.
 
 \begin{figure}[htbp]
-        \includegraphics[width=0.48\textwidth]{figures/HMHZZ/selection/vbf_input/clf_output.pdf}
-        \includegraphics[width=0.48\textwidth]{figures/HMHZZ/selection/ggf_input/clf_output.pdf}
+        \subfloat[]{\includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/4l_DNN_scores_ggF_incl.pdf}}
+        \subfloat[]{\includegraphics[width=0.48\textwidth]{figures/HMHZZ/results/4l_DNN_scores_VBF_incl.pdf}}
         \centering
-        \caption{VBF (left) and ggF (right) output of the background samples (filled) and the $700~\gev$ signal sample (black).}
+        \caption{The output score of ``ggF-classifier'' (a) and  ``VBF-classifer'' (b) with the events passing the common event selections  
+        for the data, the SM backgrounds and an example of a NWA signal with a mass of $600~\gev{}$.
+        For the ``VBF-classifier'', an additional requirement of at least two jets in the event is applied.
+        The signals cross section are set to one hundred times of the observed limit for the ``ggF-classifier'' 
+        and fifty times of the observed limit for the ``VBF~-classifer''.
+        The $ZZ$ backgrounds are scaled by the normalisation factors shown in Table~\ref{tab:muZZ_bonly_dnn}.
+        The lower panels show the ratio of data to prediction.
+        Only statistical and experimental systematic uncertainties are included.}
         \label{fig:dnn_output_score}
 \end{figure}
 
-Then the optimal cut at DNN output score is chosen based on an overall good performance of classifier to have a large significance improvement while retaining a high signal efficiency.
-Figure~\ref{fig:dnn_significance} shows the significance improvements of DNN-based cuts when comparing with cut-based one at different VBF (left) and ggF (right) mass samples,
+Then the optimal cut at output score from each classifier is chosen based on an overall good performance of classifier to have a large significance improvement while retaining a high signal efficiency.
+Figure~\ref{fig:dnn_significance} shows the significance improvements of MVA-based cuts when comparing with cut-based one at different VBF (left) and ggF (right) mass samples,
 where the significance is calculated as:
 \begin{equation}
 Z = \sqrt{2\left(n\ln \left[ \frac{nb+\sigma^2}{b^2+n\sigma^2}\right]
@@ -437,48 +561,48 @@ Cut at 0.5 (0.8) for VBF (ggF) classifier is chosen as shown in solid lines.
         \includegraphics[width=0.48\textwidth]{figures/HMHZZ/selection/VBF_significance_improvement.pdf}
         \includegraphics[width=0.48\textwidth]{figures/HMHZZ/selection/ggf_significance_improvement.pdf}
         \centering
-        \caption{Significance improvements of the DNN-based over the cut-based categorization of the VBF (ggF) category for VBF (ggF) signal samples between 300 and 2000~\gev for seven different cuts on the VBF (ggF) DNN score. 
-	The optimal cut of 0.8 (0.5) for VBF (ggF) DNN is chosen by a solid line, while other alternative cuts are plotted with dashed lines. 
-	For VBF category, results at 2000~\gev for cuts of 0.8 and 0.9 are missing due to a lack of background events passing this tight selection.}
+        \caption{Significance improvements of the MVA-based over the cut-based categorization of the VBF (ggF) category for VBF (ggF) signal samples from 300 to 2000~\gev~ for seven different cuts on the VBF (ggF) output score. 
+	The optimal cut of 0.8 (0.5) for VBF (ggF) score is chosen as the solid line, while other alternative cuts are plotted with dashed lines. 
+	For VBF category, results at 2000~\gev~ for cuts of 0.8 and 0.9 are missing due to a lack of background events passing this tight selection.}
         \label{fig:dnn_significance}
 \end{figure}
 
-Then the events passing VBF classifier are categorized into VBF-enriched category.
-Otherwise, the events failing VBF classifier but passing ggF classifier are categorized into ggF-enriched category, which is further split into 3 channels.
-All remaining events are sorted into one additional category called 'rest'.
-Thus there are five categories defined in DNN-based categorization, named: VBF, ggF\_2$e$2$\mu$, ggF\_4$e$, ggF\_4$\mu$ and rest.
-In summary, cuts applied in categorization are defined as follow, and these phase spaces are also illustrated in figure~\ref{fig:hmhzz_dnncate}.
+Then the events passing VBF classifier are categorized into VBF-MVA-enriched category.
+Otherwise, the events failing VBF classifier but passing ggF classifier are categorized into ggF-MVA-high category, which is further split into 3 channels.
+All remaining events are sorted into one additional ggF-MVA-low category.
+Thus there are five categories defined in MVA-based categorization.
+In summary, cuts applied in categorization are defined as follow, and these different phase spaces are also illustrated in figure~\ref{fig:hmhzz_dnncate}.
 
 \begin{itemize}
-	\item VBF-enriched category: Events have at least two selected jets ($\Njets \geq 2$), and with \DNNVBF > 0.8;
-	\item ggF-enriched categories: $(\Njets \geq 2 \:\&\&\: \DNNVBF \leq 0.8 \:\&\&\: \DNNggF > 0.5) \:||\: (\Njets < 2 \:\&\&\: \DNNggF > 0.5)$; 
-	\item rest category: All remaining events that fail VBF and ggF cuts mentioned above.
+	\item VBF-MVA-enriched category: Events have at least two selected jets ($\Njets \geq 2$), and with \DNNVBF > 0.8;
+	\item ggF-MVA-high categories: $(\Njets \geq 2 \:\&\&\: \DNNVBF \leq 0.8 \:\&\&\: \DNNggF > 0.5) \:||\: (\Njets < 2 \:\&\&\: \DNNggF > 0.5)$; 
+	\item ggF-MVA-low category: All remaining events that fail VBF and ggF cuts mentioned above.
 \end{itemize}
 
 \begin{figure}[h]
 \centering
-\subfloat[]{\includegraphics[width=0.43\textwidth]{figures/HMHZZ/selection/classifier_diagram_c1_njets_lt2.eps}}
-\subfloat[]{\includegraphics[width=0.43\textwidth]{figures/HMHZZ/selection/classifier_diagram_c1_njets_gt2.eps}}\\
-\caption{Illustration of the DNN-based VBF and ggF event classification for events with (a) $\Njets < 2$ and (b) $\Njets \geq 2$.}
+\subfloat[]{\includegraphics[width=0.43\textwidth]{figures/HMHZZ/selection/classifier_diagram_c1_njets_lt2.pdf}}
+\subfloat[]{\includegraphics[width=0.43\textwidth]{figures/HMHZZ/selection/classifier_diagram_c1_njets_gt2.pdf}}\\
+\caption{Illustration of the MVA-based VBF and ggF event classification for events with (a) $\Njets < 2$ and (b) $\Njets \geq 2$.}
 \label{fig:hmhzz_dnncate}
 \end{figure}
 
 \subsection{Signal acceptance} 
 \label{sec:hmhzz_signal_acc}
 The signal acceptance is defined as the ratio of events passing all analysis selection in each category to the total number of simulated events in whole phase space.
-In denominator, the events with $\tau$ final states are not token into account.
+In denominator, the events with $\tau$ final states are not taken into account.
 And the contribution of $\tau$-lepton decay to electrons and muons final states is found to be negligible.
 
-Figure~\ref{fig:hmhzz_acc_dnn} and ~\ref{fig:hmhzz_acc_cut} show the acceptance of NWA signal in DNN- and Cut- based categorization, estimated by merging the three signal MC campaigns, mc16a, mc16d and mc16e.
+Figure~\ref{fig:hmhzz_acc_dnn} and ~\ref{fig:hmhzz_acc_cut} show the acceptance of NWA signals in DNN- and Cut- based categorization, estimated by merging the three signal MC campaigns, mc16a, mc16d and mc16e.
 A 3-rd order polynomial fit is applied for each category.
 
 \begin{figure}[h]
 \centering
 \subfloat[]{\includegraphics[width=0.43\textwidth]{figures/HMHZZ/selection/acc_dnn_ggF.pdf}}
 \subfloat[]{\includegraphics[width=0.43\textwidth]{figures/HMHZZ/selection/acc_dnn_VBF.pdf}}\\
-\caption{NWA acceptance as a function of $m_{H}$ for the DNN-based categorization for the samples of
-(a) ggF production mode;
-(b) VBF production mode. 
+\caption{NWA acceptance as a function of $m_{H}$ for the MVA-based categorization for the samples of
+(a) ggF production;
+(b) VBF production. 
 }
 \label{fig:hmhzz_acc_dnn}
 \end{figure}
