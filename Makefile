@@ -59,7 +59,7 @@ save:
 clean : FORCE_MAKE
 	$(LATEXMK) -c $(MAIN).tex
 	$(LATEXMK) -c $(NAME).dtx
-	texlua test/build.lua clean
+	# texlua test/build.lua clean
 
 distclean :
 	$(LATEXMK) -C $(MAIN).tex
