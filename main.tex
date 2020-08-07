@@ -6,7 +6,7 @@
 % doctor|master|bachelor [academic|professional] [chinese|english] [print|pdf]
 % [super|numebers|authoryear]
 
-\title{利用ATLAS探测器上ZZ 玻色子到全轻子通道的衰变事例进行电弱对称性破缺的研究}
+\title{基于ATLAS探测器上ZZ玻色子到全轻子通道的衰变事例对标准模型ZZ过程和寻找重共振态衰变到双Z玻色子过程的研究}
 \author{祝鹤龄}
 \major{粒子与原子核物理}
 \supervisor{赵政国}
@@ -16,7 +16,7 @@
 % \secretlevel{秘密}        % 绝密|机密|秘密，注释本行则不保密
 % \secretyear{20}           % 保密年限
 
-\entitle{Study of Electroweak Symmetry Breaking in ZZ Production in Purely Leptonic Decay with ATLAS Detector}
+\entitle{Studies of Standard Model ZZ Production and Search for heavy ZZ resonances in Purely Leptonic Decay with ATLAS Detector}
 \enauthor{Heling Zhu}
 \enmajor{Particle and Nuclear Physics}
 \ensupervisor{Zhengguo Zhao}
@@ -36,6 +36,8 @@
 \usepackage{amsthm}
 \usepackage{hyperref}
 \usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{bigstrut}
 
 %% sepecial defination for ATLAS
 \usepackage{main-defs}
@@ -54,29 +56,31 @@
 \newcommand\real{\mathbf{R}}
 \newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{\nolinkurl{#1}}}
 
+% Added by Tao for testing
+% \setmainfont{TeX Gyre Termes}
+% \setsansfont{TeX Gyre Heros}
+% \setCJKmainfont[AutoFakeBold,ItalicFont=FandolKai]{FandolSong}
+% \setCJKfamilyfont{zhkai}[AutoFakeBold]{FandolKai}
+% \setCJKsansfont[AutoFakeBold]{FandolHei}
+% \setCJKfamilyfont{zhsong}[AutoFakeBold]{FandolSong}
+% \setCJKfamilyfont{zhhei}[AutoFakeBold]{FandolHei}
+% \setmonofont[Scale=MatchLowercase]{DejaVu Sans Mono}
 
 %\geometry{left=2cm,right=2cm}
 \begin{document}
 
 \maketitle
-\makestatement
+%\makestatement
 
 \frontmatter
 \input{chapters/abstract}
 \input{chapters/acknowledgments}
 \tableofcontents
-% \listoffigures
-% \listoftables
+\listoffigures
+\listoftables
 
+\makededicate
 \newpage
-\newenvironment{dedication}
-     {\vspace{6ex}\begin{quotation}\begin{center}\begin{em}}
-     {\par\end{em}\end{center}\end{quotation}}
-\begin{dedication}
-\begin{center}
-test
-\end{center}
-\end{dedication}
 
 \mainmatter
 \input{chapters/intro}
@@ -85,6 +89,7 @@ test
 \input{chapters/simulation}
 \input{chapters/vbszz}
 \input{chapters/hmhzz}
+\input{chapters/summary}
 \bibliography{bib/reference}
 
 \appendix

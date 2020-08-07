@@ -86,7 +86,16 @@
 \fi
 \RequirePackage{natbib}
 \RequirePackage{notoccite}
-\newcommand\ustc@strifeq{\csname str_if_eq_x:nnTF\endcsname}
+% \newcommand\ustc@strifeq{\csname str_if_eq_x:nnTF\endcsname}
+\newcommand\ustc@strifeq[4]{%
+  \edef\ustc@tmp@a{#1}%
+  \edef\ustc@tmp@b{#2}%
+  \ifx\ustc@tmp@a\ustc@tmp@b
+    #3%
+  \else
+    #4%
+  \fi
+}
 \newcommand\ustc@fontset{\csname g__ctex_fontset_tl\endcsname}
 \ustc@strifeq{\ustc@fontset}{fandol}{
   \setmainfont[
@@ -452,10 +461,10 @@
       \includegraphics[height=4.1cm]{figures/ustc_logo_fig.pdf}%
     \fi\par
     \vskip 0.9cm%
-    \parbox[t][3.5cm][c]{\textwidth}{%
-      \centering\sffamily\bfseries\fontsize{26\bp@}{50\bp@}\selectfont
+    \parbox[t][3.0cm][c]{\textwidth}{%
+      \centering\sffamily\bfseries\fontsize{24\bp@}{40\bp@}\selectfont
       \ustc@title\par}\par
-    \vskip 0.6cm%
+    \vskip 1.6cm%
     {\fontsize{16\bp@}{31\bp@}\selectfont
       \begin{tabular}{@{}l@{\hspace{\ccwd}}l@{}}%
         \textsf{作者姓名：} & \ustc@author \\
@@ -484,7 +493,7 @@
     \vskip 0.5cm%
     {\sffamily\fontsize{20\bp@}{30\bp@}\selectfont
       \ustc@enuniversityname\par}%
-    {\sffamily\fontsize{26\bp@}{30\bp@}\selectfont
+    {\sffamily\fontsize{24\bp@}{30\bp@}\selectfont
       \ustc@enthesisname\par}%
     \ifustc@academic\else
       {\fontsize{16\bp@}{32\bp@}\selectfont
@@ -499,7 +508,7 @@
     \fi\par
     \vskip 0.5cm%
     \parbox[t][4.5cm][c]{\textwidth}{%
-      \centering\sffamily\bfseries\fontsize{26\bp@}{30\bp@}\selectfont
+      \centering\sffamily\bfseries\fontsize{26\bp@}{40\bp@}\selectfont
       \ustc@entitle\par}\par
     \vskip 1.6cm%
     {\fontsize{16\bp@}{30\bp@}\selectfont
@@ -572,6 +581,17 @@
     签字日期：\ustc@underline{}\par
   \end{titlepage}%
 }
+\newcommand\makededicate{%
+  \begin{titlepage}%
+  \hspace{0pt}
+  \vfill
+  \centering\sffamily \textit{Dedicated to my mother!} \par
+  \centering\sffamily \textit{献给我的母亲！}
+  \vfill
+  \hspace{0pt}
+  \end{titlepage}%
+}
+
 \ifustc@bachelor
   \renewcommand\makestatement{}
 \fi
@@ -743,7 +763,7 @@
   \fi
 }{
   \par\null\par\noindent\hangindent=4\ccwd\relax
-  \textbf{关键词}：\ustc@keywords
+  %\textbf{关键词}：\ustc@keywords
   \ustc@setdefaultlanguage
 }
 \newenvironment{enabstract}{%
@@ -755,7 +775,7 @@
   \fi
 }{
   \par\null\par\noindent\hangindent=5.3em\relax
-  \textbf{Key Words}: \ustc@enkeywords
+  %\textbf{Key Words}: \ustc@enkeywords
   \ifustc@graduate
     \cleardoublepage
   \fi
