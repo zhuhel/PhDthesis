@@ -15,7 +15,7 @@ First of all, events are produced by MC generators in standard HepMC format and 
 During the simulation, particles are propagated through the full ATLAS detector whose configurations can be set by users via GEANT4 toolkit.
 The energies deposited in the sensitive regions of the detector are recorded as \textit{hits} that contains the total energy deposition,
 position and time, and are written to a simulation hit file.
-In the meatime, the events in "truth" format are also recorded to contain the history of the interactions from the generator, including incoming and outgoing particles.
+In the meatime, the events in ``truth" format are also recorded to contain the history of the interactions from the generator, including incoming and outgoing particles.
 Simulated Data Objects (SDOs) are created from truth, which are maps between hits in sensitive portions of the detector and truth information of particles in simulation.
 The files are then sent to digitization, with constructs ``digits" inputs and be written into Raw Data Object (RDO) file used for reconstruction.
 
@@ -25,12 +25,12 @@ More details are given as below:
 \textbf{Event generation}
 
 As shown in figure~\ref{fig:mc_event_structure}~\cite{Hoche:2014rga}, at hardon colliders, multiple scattering and rescattering effects arise, which needs to be simulated by Monte Carlo (MC) event generators to reflect the full complexity of those event structures.
-Several MC event generators can be used to generate events originally in HepMC format.
+Several MC event generators can be used to generate events in HepMC format.
 The events can be filtered at generation time with some certain requirements (eg. decay channel or missing energy above a certain threshold).
-The generator is responsible for any prompt decays (e.g. W or Z bosons) but stores any "stable" particle expected to propagate through a part of the detector. 
+The generator is responsible for any prompt decays (e.g. W or Z bosons) and stores any ``stable" particle expected to propagate through a part of the detector. 
 During the generation steps, any interactions with detector are ignored and only immediate decays are considered.
 
-There are several MC generators that have been widely used with general purpose, which include \textsc{Sherpa}~\cite{Gleisberg_2009}, \textsc{Herwig++}~\cite{Bahr2008}, \textsc{PowhegBox}~\cite{Nason:2004rx}, \textsc{MC@NLO}~\cite{Frixione_2002} and \textsc{Pythia8}~\cite{Sjostrand:2007gs}.
+There are several MC generators that have been widely used with general purpose, including \textsc{Sherpa}~\cite{Gleisberg_2009}, \textsc{Herwig++}~\cite{Bahr2008}, \textsc{PowhegBox}~\cite{Nason:2004rx}, \textsc{MC@NLO}~\cite{Frixione_2002} and \textsc{Pythia8}~\cite{Sjostrand:2007gs}.
 
 \begin{figure}[!htb]
   \centering
@@ -43,9 +43,9 @@ There are several MC generators that have been widely used with general purpose,
 
 GEANT4 is used as standard simulation toolkit for the ATLAS experiment, which transports physics particles through the detector's geometry.
 During the generation level, the entire connected chain of the HepMC event is stored as the Monte Carlo truth. 
-Only the stable particles are read into GEANT4 for further simulation and selection, while transformations can be applied to these events to select certain processes.
+Only the stable particles are read into GEANT4 for further simulation and selection, and transformations can be applied to these events to select certain processes.
 During the simulation, many secondary tracks can be produced, therefore only information from the interactions of interest are stored, including the incoming particles, step sequence, vertex as well as outgoing particles.
-The output of GEANT4 is called \textit{hit file}, which contains metadata describing the configuration of the simulation during the run, all truth information requested and a collection of hits for each subdetector.
+The output of GEANT4 is called \textit{hit file}, which contains metadata describing the configuration of the simulation during the run, all requested truth information and a collection of hits for each subdetector.
 
 Since the standard ATLAS detector simulation cost very large computing resources to accurately model the complex detector geometry and physics descriptions, some fast simulation programss are developed according to different user purpose.
 Some popular fast-sim toolkits include \textit{Fast G4 Simulation}~\cite{Barberio:2007gba}, \textit{ATLFAST-I}~\cite{Richter-Was:683751} and \textit{ATLFAST-II}~\cite{Edmonds:1091969}.
@@ -53,8 +53,8 @@ Some popular fast-sim toolkits include \textit{Fast G4 Simulation}~\cite{Barberi
 \textbf{Digitization}
 
 The hit outputs from simulated events, including hard scattering signal, minimum bias, beam halo, beam gas and cavern background events, are then sent into digitization procedure, converted into detector response called ``digits".
-Before converted into detector signal as `digits' formart, each type of event can be overlaid at a user-specified rate.
-Those overlay, called ``pile-up", can be done during degitization to save the CPU time.
+Before converted into detector signal as ``digits" formart, each type of event can be overlaid at a user-specified rate.
+Those overlay, called ``pile-up", can be done during digitization to save the CPU time.
 At this stage, the detector noise and the first level trigger that implemented with hardware on the real detector are added into events.
 The digitization firstly constructs ``digits" inputs to the readout drivers (RODs) in the detector electronics.
 Then the ROD functionality is emulated, and the output digits are written out as Raw Data Object (RDO) file.
