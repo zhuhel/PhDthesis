@@ -2,16 +2,16 @@
 
 The High-Luminosity Large Hadron Collider (HL-LHC) project aims to increase the luminosity by a factor of 10 beyond the LHC’s design value 
 to increase the potential for discoveries after 2025.
-The designed luminosity will reach 3000~\ifb with the centre-of-mass energy of 14~\tev.
+The expected luminosity will reach 3000~\ifb~with the centre-of-mass energy of 14~\tev.
 
 As introduced in previous sections, with full run-2 data of 139~\ifb collected by ATLAS detector at the LHC, 
-the EW-$ZZjj$ production is the last channel of observation for VBS processes with massive boson 
-due to its very low cross section in $ZZ$ decay.
+the EW-$ZZjj$ production is the last channel of observation for VBS processes with massive bosons 
+due to its very low cross section in $ZZ$ channel.
 So we expect that this channel will benefit significantly from the increased luminosity at the HL-LHC,
 and can be studied in great details for this known mechanism.
 
-In this section, a prospect study is performed for EW-$ZZjj$ production at the HL-LHC in the \llll channel.
-The study uses 3000~\ifb of simulated pp collision data at a centre-of-mass energy of 14~\tev~ as expected to be recorded by the ATLAS detector at HL-LHC.
+In this section, a prospective study is performed for EW-$ZZjj$ production at the HL-LHC in the \llll channel.
+The study uses 3000~\ifb of simulated pp collision data at a centre-of-mass energy of 14~\tev~ as expected to be recorded by the ATLAS detector at the HL-LHC.
 All simulated events are produced at particle-level, 
 and the detector effects of leptons and jets reconstruction and identification are estimated by corrections
 assuming the mean number of interactions per bunch crossing (<$\mu$>) of 200.
@@ -22,41 +22,41 @@ As the expectation of HL-LHC, the new Inner Tracker (ITk)~\cite{Collaboration:22
  will extend the tracking acceptance capability of ATLAS detector to pseudorapidity ($|\eta|$) up to 4.0.
 By including a forward muon trigger, the upgraded Muon Spectrometer~\cite{Collaboration:2285580} is also expected to provide 
 muon identification capabilities to $|\eta|$ up to 4.0.
-In addition, the new high granularity timing detector (HGTD)~\cite{Collaboration:2623663} that designed to mitigate the pile-up (PU) effects 
+In addition, the new high granularity timing detector (HGTD)~\cite{Collaboration:2623663} designed to mitigate the pile-up (PU) effects 
 is also expected to be installed in the forward region of $2.4 < |\eta| < 4.0$.
 More details of expected performance of the upgraded ATLAS detector at the HL-LHC has been reported in Ref.~\cite{ATL-PHYS-PUB-2016-026}.
 
 \subsection{Simulation}
 
 The analysis is performed using particle-level events.
-The samples are generated at $\sqrt{s} = 14~\tev$~and with a fast simulation based on the setting for ATLAS detector at the HL-LHC.
+The samples are generated at $\sqrt{s} = 14~\tev$. %and with a fast simulation based on the setting for ATLAS detector at the HL-LHC.
 The signal in this analysis is EW-$ZZjj$ process, while only the dominant irreducible background of QCD-$ZZjj$ is considered.
 Both signal and background are generated using \textsc{Sherpa} with the NNPDF3.0NNLO PDF set.
 The signal sample is modelled with two jets at Matrix Element (ME) level.
 The background is generated with up to one (three) outgoing partons at NLO (LO) in pQCD.
-As a quick study, other minor backgrounds such as fake backgrounds from \Zjet and top-quark processes, as well as Diboson without 4l final-state and Triboson processes are not considered into this analysis.
+As a quick study, other minor backgrounds such as fake backgrounds from \Zjet and top-quark processes, as well as Diboson without 4l final-state and Triboson processes are not considered in this analysis.
 Furthermore, for hard scattering events, the pile-up collisions are set with a mean value of 200 interactions per bunch crossing.
-Signal and background yields are then scaled to an integrated luminosity of 3000~\ifb as expected at the HL-LHC.
+Signal and background yields are then scaled to an integrated luminosity of 3000~\ifb~as expected at the HL-LHC.
 
 \subsection{Event selection}
 
 The analysis selection follows closely to the one in ATLAS run-2 analysis as described in section~\ref{sec:vbszz_selection}.
 Here are some changes according to the expectation of the HL-LHC scenario for ATLAS detector:
 \begin{itemize}
-	\item Extend the lepton (both electron and muon) identification in forward with $|\eta| <$ 4.0
+	\item Extend the lepton (both electron and muon) identification to $|\eta| <$ 4.0
 	\item Pile-up (PU) jet suppression is applied with a PU rejection factor of 50 for all PU jets in the region of $|\eta| <$ 3.8, based on the expected ATLAS detector performance at the HL-LHC.
 	\item The jets are required to have $\pT >$ 30 (70)~\gev~in the $|\eta| <$ 3.8 ($3.8 < |\eta| < 4.5)$ region.
-	\item For two selected jets, tight the $\mjj$ requirement to > 600~\gev, and require $\Delta \eta_{jj} >$ 2.
+	\item For two selected jets, tighten the $\mjj$ requirement to be $\mjj > 600$~\gev, and require $\Delta \eta_{jj} >$ 2.
 \end{itemize}
-In addition, a fiducial volume, which is used to study the expected precision of the cross-section measurements,
+In addition, a fiducial volume, used to study the expected precision of the cross-section measurements,
  is defined at particle-level with the same kinematic requirements listed above.
 
 Table~\ref{tab:event_yield} summarized the number of selected signal and background events normalized to 3000~\ifb.
 In addition to the \textit{baseline} selection listed above, to compare the different detector scenarios at the HL-LHC, two alternative selections are also studied:
-\begin{itemize}
+\begin{enumerate}
 	\item Reduce the lepton $\eta$ region to 2.7, to understand the effect due to forward lepton reconstruction and identification with the upgraded ATLAS detector.
 	\item Only apply the PU jet suppression with region $|\eta| < 2.4$, to measure the improvement of \textit{baseline} by extending the rejection range of PU jets at the HL-LHC with the installation of HGTD.
-\end{itemize}
+\end{enumerate}
 \begin{table}[htbp]
   \small
   \centering
@@ -158,7 +158,7 @@ where $S$ presents the number of selected signal events,
 and $\sigma(B)_{stat.}$ and $\sigma(B)_{syst.}$ denote the statistical and systematic (exp. + theo.) uncertainties from background processes.
 The statistical uncertainty is computed from expected data yield with an integrated luminosity of 3000~\ifb.
 
-Base on baseline selection of $\mjj > 600~\gev$, a additional scan over different \mjj cuts are also performed with a step of 50~\gev~
+Based on baseline selection of $\mjj > 600~\gev$, an additional scan over different \mjj cuts is also performed with a step of 50~\gev~
 under different systematic conditions, as shown in figure~\ref{fig:mjj_scan}.
 \begin{figure}[!htbp]
 \centering
@@ -198,7 +198,7 @@ and $N_{QCD-ZZjj}$ and $N_{EW-ZZjj}$ are the number of predicted events of QCD-$
 The $C_{EW-ZZjj}$ factor represents the detector efficiency for EW-$ZZjj$ processes introduced in section~\ref{sec:cf}.
 The interference between EW- and QCD- $ZZjj$ processes is ignored due to its minor contribution.
 
-The number of expected integrated cross section as well as its uncertainty under different systematic conditions are shown in table~\ref{tab:xsec}
+The value of expected integrated cross section as well as its uncertainty under different systematic conditions are shown in table~\ref{tab:xsec}
 with 3000~\ifb luminosity at 14~\tev.
 The statistical uncertainty is at 10\% level when with such large luminosity.
 The result is dominated by systematics and can reach 100\% level when theoretical modelling uncertainty is 30\% for QCD-$ZZjj$ processes.

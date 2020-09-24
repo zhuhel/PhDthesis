@@ -1,0 +1,17 @@
+\section{The CLs upper limit}
+
+For a signal hypothesized value $\mu$, one can compute the probability that this hypothesis (called S+B hypothesis) gives a \textbf{greater} test statistic value than the observed one $q_{obs}$:
+\begin{equation}
+    P_{s+b} = \int_{q_{obs}}^{\infty} f(q_{\mu}|\mu) d q_{\mu}
+\end{equation}
+In the meantime, the probability that the background-only hypothesis gives a \textbf{smaller} test statistic than observed data can be calculated as:
+\begin{equation}
+    1 - P_{b} = \int_{-\infty}^{q_{obs}} f(q_{\mu}|0) d q_{\mu}
+\end{equation}
+Then we define the CLs of a hypothesiszed value $\mu$ as:
+\begin{equation}
+    CLs = \frac{p_{s+b}}{1-p_{b}}
+\end{equation}
+
+Usually under the circumstance that no significance derivation between data and background-only hypothesis is found,
+one would like to find the upper limit of signal strength $\mu$ by requiring its $CLs = 95\%$, namely 95\% CL upper limit. 

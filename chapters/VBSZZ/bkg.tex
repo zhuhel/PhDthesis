@@ -3,7 +3,7 @@
 
 Table~\ref{tab:yield_prefit} summarizes the background yields for $ZZjj \rightarrow \lllljj$ process in 139~\ifb.
 Uncertainties on the predictions include both statistical and systematic components.
-"Others" includes minor contributions from non-$ZZ$ processes including \Zjet, top-quark, triboson and $ttV$ processes.
+``Others" includes minor contributions from non-$ZZ$ processes including \Zjet, top-quark, triboson and $ttV$ processes.
 Details of estimation for each source are described as below.
 
 \begin{table}[!htbp]
@@ -44,9 +44,9 @@ Uncertainties on the predictions include both statistical and systematic compone
 The QCD-$ZZjj$ production, which include both $qq$ and $gg$ initial processes, is the irreducible background in the search of EW-$ZZjj$ production.
 A QCD-enriched control region, named as QCD CR, is defined to constrain the normalization of $ZZ$ background by reverting either the $\mjj$ or $\dyjj$ requirements as:
 \begin{equation}
-	\mjj < 300~\GeV{} or \dyjj < 2 
+    \mjj < 300~\GeV{} \text{OR} \dyjj < 2 
 \end{equation}
-Then this normalization factor is included into statistical fit as a float parameter to properly treat the uncertainty correlations between SR and CR, 
+Then this normalization factor is included into statistical fit as a free parameter to properly treat the uncertainty correlations between SR and CR, 
 while the shapes are taken from MC simulation.
 Table~\ref{tab:yield_qcdcr} shows the event yields of each background components in this CR.
 Uncertainties are statistical one only.
@@ -98,7 +98,7 @@ The distributions of invariant mass of \llll and dijet in QCD CR are shown in fi
 \subsection{Reducible backgrounds}
 
 Backgrounds from \Zjet, top-quark and $WZ$ processes called reducible backgrounds can be estimated by data-driven method.
-These events usually contain two or three leptons from Z/W decays, together with heavy-flavor jets or misidentified components of jets reconstructed as leptons called "fake leptons".
+These events usually contain two or three leptons from Z/W decays, together with heavy-flavor jets or misidentified components of jets reconstructed as leptons called ``fake leptons".
 A \textit{fake factor} method is used to estimate these backgrounds, where the lepton misidentification is measured in data 
 with the region enhances contributions from \Zjet and top-quark processes.
 The method is described as below:
@@ -109,7 +109,7 @@ The \textit{fake factor} is defined as:
 	\mathcal{F} = \mathcal{N}_{good} / \mathcal{N}_{pool}
 \end{equation}
 where $\mathcal{N}_{good}$ refers to the number of good leptons passing all SR selection, while $\mathcal{N}_{pool}$ denotes the number of poor leptons passing most SR selection but fail one certain requirement.
-	\item Define a fake control region, where one or two lepton(s) pass \textit{poor} requirement while all the other leptons are required to have SR selection.
+	\item Define a fake control region, where one or two lepton(s) pass \textit{poor} requirement while all the other leptons are required to pass SR selection.
 	\item The number of fake events are calculated as:
 \begin{equation}
 	\mathcal{N}_{fake} = \left( N_{gggp} - N_{gggp}^{ZZ} \right) \times \mathcal{F} - \left( N_{ggpp} - N_{ggpp}^{ZZ} \right) \times \mathcal{F}^{2}
@@ -125,8 +125,8 @@ The dedicated \Zjet and \ttbar dominant regions are defined to calculate the fak
 
 \subsubsection{Fake factor for \Zjet}
 
-Fake factor for \Zjet background is calculated in \Zjet enriched region, where events with one SFOS lepton pair around $Z$ mass associated with two jets are selected.
-The value of fake factor is driven from data, and as a function of $p_{T}$ and $\eta$ as shown in figure~\ref{fig:fake_zjet_el} for electrons and figure~\ref{fig:fake_zjet_mu} for muons.
+Fake factor for \Zjet background is calculated in \Zjet enriched region, where events with one OSSF lepton pair around $Z$ mass associated with two jets are selected.
+The value of fake factor is drived from data, and is a function of $p_{T}$ and $\eta$ as shown in figure~\ref{fig:fake_zjet_el} for electrons and figure~\ref{fig:fake_zjet_mu} for muons.
 During calculation, the contributions from non-\Zjet backgrounds (\ttbar, $ZZ$, $WZ$) have been subtracted from data.
 The values calculated directly from \Zjet MC are also shown in plots for comparison.
 \begin{figure}[!htb]
@@ -147,7 +147,7 @@ The values calculated directly from \Zjet MC are also shown in plots for compari
 
 \subsubsection{Fake factor for \ttbar}
 
-The fake factor for \ttbar are calculated in \ttbar dominant region by selecting one $e\mu$-pair with additional two jets.
+The fake factor for \ttbar are calculated in \ttbar dominant region by selecting the events that have one $e\mu$-pair with additional two jets.
 For events with three leptons, $m_{T}^{W} <$ 60~\gev~ cut is applied to reject the contribution from \ttbar + W events.
 The $m_{T}^{W}$ is defined as below:
 \begin{equation}
@@ -172,6 +172,7 @@ The non-\ttbar contributions including \Zjet, $ZZ$ and $WZ$, are subtracted from
   \label{fig:fake_tt_mu}
 \end{figure}
 
+\iffalse
 \subsubsection{Combination}
 
 The fake factors calculated from each dedicated region are then combined together according to their contributions in fake control region described previously.
@@ -185,13 +186,14 @@ Figure~\ref{fig:fake_mjj} shows the \mjj distribution with data and major fake b
 The ratios between $\Zjet$ and $\ttbar$ ($\Zjet / \ttbar$) in each individual channel are: 2.59, 0.95, 0.74.}
   \label{fig:fake_mjj}
 \end{figure}
+\fi
 
 \subsubsection{Systematics of fake estimation and results}
 \label{sec:fake_syst}
 
 The systematics of fake factor method can be measured by varying the parameters and selection requirements in fake factor calculation.
 In addition, due to the very limited data statistic in \llll channel, to be more conservative, 
-the difference between data measurement and MC simulation are also considered as another systematics component.
+the difference between data measurement and MC simulation are also considered as additional systematics component.
 The sources of systematics that have been included are listed as below:
 \begin{itemize}
 	\item Variations of isolation cut for the poor lepton definition up and down scaled by a factor of two.
@@ -222,9 +224,8 @@ together with their statistical uncertainties.
         \end{tabular}
         }
     \caption{
-    Fake background estimations in the SR. For the nominal value the 2D fake factor together with the \Zjet and \ttbar combination applied.
+    Fake background estimations in the SR. For nominal value, the 2D fake factor together with the \Zjet and \ttbar combination applied.
     The other lines show the estimations with different uncertainty variations.
     }
     \label{tab:fake_uncer}
 \end{table}
-

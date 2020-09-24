@@ -2,12 +2,12 @@
 
 \subsection{MD discriminant}
 
-To further separate the EW-$ZZjj$ component from QCD-$ZZjj$, a MD based on Gradient Boosted Decision Tree (BDTG) algorithm~\cite{Coadou_BDT} 
+To further separate the EW-$ZZjj$ component from QCD-$ZZjj$, a MD based on Gradient Boosted Decision Tree (BDT) algorithm~\cite{Coadou_BDT} 
 is trained with simulated events via TMVA framework\cite{Speckmayer_2010}.
-For \llll channel, training is performed between EW (signal) and QCD (background) processes.
-Twelve event kinematic variables sensitive to the characteristics of the EW signal is used as input features in training. 
-Table~\ref{tab:bdt_features} lists those input variables with the order of their ranking provided by TMVA tool.
-The jet-related information provides larger sensitivity.
+Training is performed between EW (signal) and QCD (background) processes.
+Twelve event kinematic variables sensitive to the characteristics of the EW signal are used as input features in training. 
+Table~\ref{tab:bdt_features} lists those input variables with the order of their importance in BDT response provided by TMVA tool.
+One can see the jet-related information provides larger sensitivity.
 Then the MD distributions in both SR and QCD CR region are used for statistical fit.
 
 \begin{table}[h]
@@ -39,10 +39,11 @@ Rank & Variables                    & Description 			\\ \hline
 \end{center}
 \end{table}
 
-\subsection{Profile likelihood ratio method}
+\iffalse
+\subsection{Statistical procedure}
 
 To examine the compatibility between data and the signal-plus-background hypothesis, 
-a test statistic is driven by using the profile likelihood ratio method.
+a test statistic is based on the profile likelihood ratio method.
 %The likelihood function is the product of all the Poisson probability density functions built in individual MD bins given as:
 The binned likelihood function is given as
 \begin{equation}
@@ -64,6 +65,7 @@ Signal-like data distributions are more likely to have a low test-statistic ($q_
 while the contributions of background-like data have a larger $q_\mu$.
 Under the background-only hypothesis, the compatibility of the observed (Asimov) data with the prediction 
 is calculated to obtain the observed (expected) significance respectively.
+\fi
 
 \subsection{Fitting procedure}
 
@@ -75,16 +77,16 @@ The signal strength of EW-$ZZjj$ production ($\mu_{EW}$) is taken as parameter o
 The effects of the uncertainties related to normalizations and shapes described previously in section~\ref{sec:systematics} 
 of background processes in the MD distribution are all taken into account.
 
-In most case, a common nuisance parameter is used for each source of systematic in all bins and all channels.
+In most case, a common nuisance parameter is used for each source of systematic in all bins and all categories.
 The statistical uncertainties for simulated samples are uncorrelated among all bins, and the background uncertainties only applied to their corresponding backgrounds.
 %For combination between two channels, the theoretical uncertainties between \llll and \llvv are uncorrelated due to different fiducial volumes definition.
 Furthermore, to be more conservative, the generator modelling uncertainty for QCD-$ZZjj$ production mentioned in section~\ref{sec:systematics}
 is separated to be two nuisance parameters in low and high MD region.
 
-\subsection{Result of statistical fit}
+\subsection{Result of fit}
 
 %The statistical fit is performed both in individual \llll channel, as well as the combination between \llll and \llvv channel to gain more statistic.
-The results of statistical fit for \llll final state are presented in table~\ref{tab:fit_result}. %and the combined channel are presented in table~\ref{tab:fit_result}.
+The results of fitting to \llll final state are presented in table~\ref{tab:fit_result}. %and the combined channel are presented in table~\ref{tab:fit_result}.
 %The \llvv analysis will not be talked about in this thesis, but more details can refer to \cite{ATLAS:2019vrv}.
 To drive expected results, the observed data is used for QCD CR to extract normalization factor of QCD component ($\mu_{QCD}^{llll}$),
 while in SR, asimov data built from background prediction and signal model with SM assumed cross section is used.
@@ -108,7 +110,7 @@ The full set of systematic uncertainties are included.
 \label{tab:fit_result}
 \end{table}
 
-As a conclusion, the background-only hypothesis is rejected at 5.5$\sigma$ (3.9$\sigma$) for data (expectation),
+As a conclusion, the background-only hypothesis is rejected at 5.5$\sigma$ (3.9$\sigma$) for observed (expected) data,
 which leads to the observation of EW-$ZZjj$ production.
 
 Figure~\ref{fig:fit_MD} shows the post-fit MD distributions for \llll channel in SR (left) and QCD CR (right).
@@ -118,7 +120,7 @@ The EW-$ZZjj$ cross section measured in \llll channel is extracted to be $0.94 \
 \includegraphics[width=0.42\textwidth]{figures/VBSZZ/fit/BDT_4l_SR_postFit.pdf}
 \includegraphics[width=0.42\textwidth]{figures/VBSZZ/fit/BDT_4l_QCD_CR_postFit.pdf}
 \end{center}
-\caption{Observed and expected multivariate discriminant distributions after the statistical fit in the \llll SR (left) and QCD CR (right).
+\caption{Observed and post-fit expected multivariate discriminant distributions after the statistical fit in the \llll SR (left) and QCD CR (right).
         The error bands include the experimental and theoretical uncertainties,
         as well as the uncertainties in \muEW and \muQCD.
         The error bars on the data points show the statistical uncertainty on data.
@@ -137,7 +139,7 @@ also with the normalization of EW and QCD processes scaled.
 \includegraphics[width=0.32\textwidth]{figures/VBSZZ/fit/MJJ_4l_SR.pdf}
 \includegraphics[width=0.32\textwidth]{figures/VBSZZ/fit/MJJ_4l_QCD_CR.pdf}
 \end{center}
-\caption{Observed and expected \mjj distributions in SR (left) and QCD CR (right).
+\caption{Observed and post-fit expected \mjj distributions in SR (left) and QCD CR (right).
         The error bands include the expected experimental and theoretical uncertainties.
         The error bars on the data points show the statistical uncertainty.
         The contributions from the QCD and EW production of $ZZjj$ events are scaled by 0.96 and 1.35, respectively,
@@ -151,7 +153,7 @@ also with the normalization of EW and QCD processes scaled.
 \begin{center}
 \includegraphics[width=0.4\textwidth]{figures/VBSZZ/fit/MZZ_4l_SR.pdf}
 \end{center}
-\caption{Observed and expected $\mzz$ spectrum in SR.
+\caption{Observed and post-fit expected $\mzz$ spectrum in SR.
         The error bands include the expected experimental and theoretical uncertainties.
         The error bars on the data points show the statistical uncertainty.
         The contributions from the QCD and EW production of $ZZjj$ events are scaled by 0.96 and 1.35, respectively,

@@ -3,25 +3,25 @@
 \subsection{Data samples}
 \label{sec:vbszz_data}
 
-The data sets for this analysis include the full run-2 pp collision data collected by the ATLAS experiment during the years from 2015 to 2018.
-Data event is only used if it passed the latest Good Run List (GRL) released by the Data Quality group from ATLAS experiment as listed below,
+The datasets for this analysis include the full run-2 pp collision data collected by the ATLAS experiment during the years from 2015 to 2018.
+Data event is only used if it passed the latest Good Run List (GRL) released by the Data Quality group from ATLAS experiment,
 corresponding to an integrated luminosity of $139.0~\pm~2.4$~\ifb.
 
 
-{\footnotesize
-\begin{verbatim}
-data15_13TeV.periodAllYear_DetStatus-v89-pro21-02_Unknown_PHYS_StandardGRL_All_Good_25ns.xml
-data16_13TeV.periodAllYear_DetStatus-v89-pro21-01_DQDefects-00-02-04_PHYS_StandardGRL_All_Good_25ns.xml
-data17_13TeV.periodAllYear_DetStatus-v99-pro22-01_Unknown_PHYS_StandardGRL_All_Good_25ns_Triggerno17e33prim.xml
-data18_13TeV.periodAllYear_DetStatus-v102-pro22-04_Unknown_PHYS_StandardGRL_All_Good_25ns_Triggerno17e33prim.xml
-\end{verbatim}
-}
+%{\footnotesize
+%\begin{verbatim}
+%data15_13TeV.periodAllYear_DetStatus-v89-pro21-02_Unknown_PHYS_StandardGRL_All_Good_25ns.xml
+%data16_13TeV.periodAllYear_DetStatus-v89-pro21-01_DQDefects-00-02-04_PHYS_StandardGRL_All_Good_25ns.xml
+%data17_13TeV.periodAllYear_DetStatus-v99-pro22-01_Unknown_PHYS_StandardGRL_All_Good_25ns_Triggerno17e33prim.xml
+%data18_13TeV.periodAllYear_DetStatus-v102-pro22-04_Unknown_PHYS_StandardGRL_All_Good_25ns_Triggerno17e33prim.xml
+%\end{verbatim}
+%}
 
 %% =======================================================
 \subsection{MC simulations}
 \label{sec:mc}
 
-The EW-$ZZjj$ production (signal) is modelled using \MGMCatNLO~2.6.1~\cite{Alwall:2014hca} with the matrix elements (ME) calculated in the leading-order (LO) approximation
+The EW-$ZZjj$ production is modelled using \MGMCatNLO~2.6.1~\cite{Alwall:2014hca} with the matrix elements (ME) calculated in the leading-order (LO) approximation
 in perturbative QCD (pQCD) and with the NNPDF2.3LO~\cite{Ball:2012cx} parton distribution functions (PDF).
 The VBF Higgs process is also included.
 
@@ -52,7 +52,7 @@ the parton showering is modelled with \textsc{Pythia8}~\cite{Sjostrand:2007gs} u
 and the A14 set of tuned parameters~\cite{ATL-PHYS-PUB-2014-021}.
 While for \textsc{Sherpa} samples, the parton showering is simulated within the programme.
 
-All simulated events are processed with detector response simulated based on \textsc{Geant4} described in section~\ref{sec:simulation_framework}.
+All simulated events are processed with detector response simulation based on \textsc{Geant4} described in section~\ref{sec:simulation_framework}.
 In addition, simulated inelastic pp collisions are overlaid to model additional pp collision in the same and neighbouring bunch crossings (pile-up),
 and reweighted to match the pile-up conditions in data.
 Moreover, all simulated events are processed using the same reconstruction algorithms as data.
