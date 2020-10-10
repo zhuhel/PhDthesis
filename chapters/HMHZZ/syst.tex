@@ -1,8 +1,7 @@
 \section{Systematic uncertainties}
 \label{sec:hmhzz_sys}
 
-This section describes the sources and value of theoretical and experimental systematic uncertainties considered in this analysis.
-In addition, as mentioned in previous sections, the uncertainties of irreducible background modelling, reducible background shape smoothing procedure and signal yield difference between simulation and parameterization are all taken into account.
+This section describes the sources and values of theoretical and experimental systematic uncertainties considered in this analysis.
 
 %% =========================================================================================================================
 \subsection{Theoretical uncertainties}
@@ -25,7 +24,8 @@ variations of the renormalization and factorization scale factors, up and down b
 The parton showering uncertainties are estimated by comparing events with different setting via \textsc{Pythia8}.
 
 Systematic uncertainties are studied for both cut- and MVA- based event categorizations, 
-in two different categories: the inclusive ggF-CBA-enriched and VBF-CBA-enriched category for cut-based analysis and in three different categories: inclusive ggF-MVA-high, ggF-MVA-low and VBF-MVA-enriched category for MVA-based one.
+for cut-based analysis in two different categories: the inclusive ggF-CBA-enriched and VBF-CBA-enriched category,
+and for MVA-based one in three different categories: inclusive ggF-MVA-high, ggF-MVA-low and VBF-MVA-enriched category.
 This section shows the MVA-based results as an example.
 
 Table~\ref{tab:acc-ggF-dnn} and ~\ref{tab:acc-VBF-dnn} show the theoretical uncertainties mentioned above for ggF and VBF signal respectively in MVA-based categorization.
@@ -104,7 +104,7 @@ and the acceptance originating from the event selection.
 
 The PDF and QCD scale uncertainties are considered by using the same method as described for signal.
 The parton showering uncertainties for those \textsc{Sherpa} samples are evaluated by varying the resummation scale by a factor of 2, 
-changing the CKKW setting and using different showering option, following the PMG recommendation in ref.~\cite{twiki_pmgsyst},
+changing the CKKW setting and using different showering option, following the PMG recommendation in Ref.~\cite{twiki_pmgsyst},
 and the quadratic sum between the uncertainties in different kinds of showering option is taken as final result of uncertainties.
 Moreover, the shape uncertainty associated with electroweak higher-order correction for \qqZZ process is also taken into account.
 
@@ -136,12 +136,14 @@ Table~\ref{tab:acc-all-qqZZ_MVA} summarizes the acceptance uncertainties of PDF,
 \subsection{Experimental systematics}
 
 The signal and background predictions used in this analysis are also affected by various sources of experimental systematic uncertainties.
-Similar as described in section~\ref{sec:vbszz_exp_uncer}, the dominant experimental uncertainties in this analysis come from the energy/momentum scales 
+Similar as described in section~\ref{sec:vbszz_exp_uncer}, the dominant experimental uncertainties in this analysis also come from the energy/momentum scales 
 and reconstruction and identification efficiencies of the leptons and jets, as well as the luminosity uncertainty.
 The systematic uncertainties are calculated using the recommendations from the Combined Performance (CP) groups of ATLAS experiment.
-Table~\ref{tab:np_list} summarizes the experimental systematics considered in this analysis that affect either the normalization of total event yield or the shape of \mfl distribution.
-The impact of those systematics in statistical fit are studied in section~\ref{sec:hmhzz_result_4l}.
+In addition, as mentioned in previous sections, the uncertainties of irreducible background modelling, reducible background shape smoothing procedure and signal yield difference between simulation and parameterization are all taken into account.
+%Table~\ref{tab:np_list} summarizes the experimental systematics considered in this analysis that affect either the normalization of total event yield or the shape of \mfl distribution.
+The impact of a few largest systematics and their value from statistical fit are studied in section~\ref{sec:hmhzz_result_4l}.
 
+\iffalse
 \begin{table}
   \centering
   \caption{
@@ -208,4 +210,4 @@ The impact of those systematics in statistical fit are studied in section~\ref{s
   \end{spacing}
   \label{tab:np_list}
 \end{table}
-
+\fi

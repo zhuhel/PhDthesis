@@ -49,7 +49,7 @@ Figure~\ref{fig:ggf_mass_signalParam_2mu2e} shows the \mfl distribution and fitt
     \label{fig:ggf_mass_signalParam_2mu2e}
 \end{figure}
 
-Then the $\mathcal{C}+\mathcal{G}$ parameters are fitted with a polynomial function as the function of generated mass points (\mH), as an example shown in figure~\ref{fig:ggf_fitParams_interpolation_2mu2e} for 2$e$2$\mu$ channel.
+Then the $\mathcal{C}+\mathcal{G}$ parameters are fitted with a polynomial function as the function of generated mass points (\mH), as an example shown in figure~\ref{fig:ggf_fitParams_interpolation_2mu2e} for ggF production in 2$e$2$\mu$ channel.
 The fitting quality can be measured by the Pearson's $\chi^2$, which is within 3 (2) for 2$e$2$\mu$ (4$e$ and 4$\mu$) channel.
 
 \begin{figure}[htbp]
@@ -68,7 +68,7 @@ The fitting quality can be measured by the Pearson's $\chi^2$, which is within 3
 
 In addition, possible difference on the signal yield extracted from parameterization and MC simulation is studied.
 Figure~\ref{fig:ggf_graph_YieldCheckAll} shows this difference by computing $\frac{N_{\text{reco}}-N_{\text{fit}}}{N_{\text{fit}}}$, where $N_{\text{reco}}$ denotes the total number of reconstructed events observed from MC simulation at that mass point
-and $N_{\text{fit}}$ depicts the number of events obtained from the fitted PDF.
+and $N_{\text{fit}}$ depicts the number of events obtained from the fitted pdf.
 The differences are treated as an additional systematic uncertainty with the value of 2\% (1\%) for 2$e$2$\mu$ (4$e$ and 4$\mu$) channel in statistical fit.
 
 \begin{figure}[htbp]
@@ -202,15 +202,15 @@ The three processes can interfere with each other due to the same initial and fi
 The parton cross section for these processes can be written as:
 
 \begingroup
-\small
+%\small
 \begin{equation} \label{eq:xsec_parton_int}
 \begin{split}
     \sigma_{gg \to (X) \to ZZ} (s) &= \frac{1}{2s}  \int d \Omega \left | A_h(s,\Omega) + A_H(s,\Omega) + A_B(s,\Omega) \right |^2 \\
     &= \frac{1}{2s}  \int d \Omega  \left (  \left | A_h(s,\Omega)  \right |^2 +  \left | A_H(s,\Omega)  \right |^2 +  \left | A_B(s,\Omega)  \right |^2  \right )  + \\
     &+ \frac{1}{s}  \int d \Omega  \big( Re \left [ A_h(s,\Omega) \cdot A^*_B(s,\Omega)  \right ] \\
     &+ Re \left [ A_H(s,\Omega) \cdot A^*_B(s,\Omega)  \right ] + Re \left [ A_H(s,\Omega) \cdot A^*_h(s,\Omega)  \right ]  \big) \\
-    &+ \frac{1}{s} \mathrm{Re} \left [ \frac{1}{s-s_H}  \int d \Omega \cdot A_H^P(s,\Omega)  \cdot A_H^D(s,\Omega) \cdot A^*_B(s,\Omega)  \right ] \\
-    &+ \frac{1}{s} \int d \Omega \cdot \mathrm{Re} \left [A_H^P(s,\Omega)\cdot  \frac{1}{s-s_H}   \cdot A_H^D(s,\Omega) \cdot A_h^{P*}(s,\Omega)\cdot  \frac{1}{(s-s_h)^*}   \cdot A_h^{D*}(s,\Omega)   \right ]
+    %&+ \frac{1}{s} \mathrm{Re} \left [ \frac{1}{s-s_H}  \int d \Omega \cdot A_H^P(s,\Omega)  \cdot A_H^D(s,\Omega) \cdot A^*_B(s,\Omega)  \right ] \\
+    %&+ \frac{1}{s} \int d \Omega \cdot \mathrm{Re} \left [A_H^P(s,\Omega)\cdot  \frac{1}{s-s_H}   \cdot A_H^D(s,\Omega) \cdot A_h^{P*}(s,\Omega)\cdot  \frac{1}{(s-s_h)^*}   \cdot A_h^{D*}(s,\Omega)   \right ]
 \end{split}
 \end{equation}
 \endgroup
@@ -223,9 +223,11 @@ More details about the parameterization of these two interferences are described
 
 \subsubsection{Interference between heavy Higgs and \ggZZ continuum}
 
-The parton cross section of this interference term has been written down in equation~\ref{eq:xsec_parton_int}.
+The parton cross section of this interference term can be expressed as:
+\begin{equation}
+	\sigma_{gg} (s) = \frac{1}{s} \mathrm{Re} \left [ \frac{1}{s-s_H}  \int d \Omega \cdot A_H^P(s,\Omega)  \cdot A_H^D(s,\Omega) \cdot A^*_B(s,\Omega)  \right ]
+\end{equation}
 By assuming that this function has a smooth behaviour, it can be replaced with complex polynomial:
-
 \begin{equation}
     \int d \Omega \cdot A_H^P(s,\Omega)  \cdot A_H^D(s,\Omega) \cdot A^*_B(s,\Omega)  \approx  (a_0 + a_1 \cdot \sqrt{s} + \dots) + i \cdot (b_0 + b_1 \cdot \sqrt{s} + \dots)
 \end{equation}
@@ -256,12 +258,17 @@ Figure~\ref{fig:HB_Int_2mu2e} shows the distributions of interference function o
 
 \subsubsection{Interference between heavy Higgs and SM Higgs}
 
-The parton cross section of this interference term has been written down in equation~\ref{eq:xsec_parton_int}.
+The parton cross section of this interference term can be written as:
+\begingroup
+\small
+\begin{equation}
+	\sigma_{gg} (s) = \frac{1}{s} \int d \Omega \cdot \mathrm{Re} \left [A_H^P(s,\Omega)\cdot  \frac{1}{s-s_H}   \cdot A_H^D(s,\Omega) \cdot A_h^{P*}(s,\Omega)\cdot  \frac{1}{(s-s_h)^*}   \cdot A_h^{D*}(s,\Omega)   \right ]
+\end{equation}
 By assuming the production and decay amplitudes are the same for heavy Higgs boson and SM Higgs boson, the cross section function can be simplified to:
-
 \begin{equation}
     \sigma_{gg} (s) = \frac{1}{s}  \int d \Omega \cdot \mathrm{Re} \left [\frac{1}{s-s_H} \cdot  \frac{1}{(s-s_h)^*} \right ] \cdot \left | A_{gg \to H}(s,\Omega) \right |^2 \left | A_{H \to ZZ}(s,\Omega) \right |^2
 \end{equation}
+\endgroup
 
 Taking into account Equation~\ref{eq:PartialWidth}:
 
@@ -287,7 +294,7 @@ Same as previous procedure, the parton cross section can be transformed to a had
 The modelling procedure of interference is the same as the way for large-width signal described in section~\ref{sec:signal_lwa}.
 The truth line shape is measured as analytical function from equation~\ref{eq:HhInterference}, and then convolute with detector effect from NWA parameterization to get the reconstruction level shape.
 
-For LWA signal model, these two interferences are carefully token into account, and the integration of the pure LWA signal with the interferences is used for further studies.
+For LWA signal model, these two interferences are carefully taken into account, and the integration of the pure LWA signal with the interferences is used for further studies.
 Figure~\ref{fig:LWASignalModel} shows the signal model for large-width scenario at mass points of 400~\gev, 600~\gev, 800~\gev, for three different signal widths: 5\%, 10\%, 15\%, with and without interference.
 Additionally, the contribution of the interference between heavy Higgs and SM Higgs (H-h) is shown together with the one between heavy Higgs and SM \ggZZ background (H-b).
 One can see the interference effect on signal shape becomes less important when going to higher mass.
@@ -309,8 +316,8 @@ In this configuration, the width of signal is expected to be about 6\% of its ma
 
 The reconstructed \mfl lineshape of graviton is also built by convolving the truth-level lineshape with a detector resolution function,
 where the detector resolution effect is modelled by a Gaussian + Crystal Ball function, whose parameters are taken from the NWA signal parameterization in section~\ref{sec:signal_nwa}.
-And for truth-level shape, for graviton, it's modelled as the product of a relativistic Breit-Wigner (RBW) term, a term corresponding to the squared matrix element of the production process and a parton luminosity term $\mathcal{L}$ as given in ~\cite{Bijnens_2001}.
-So the truth lineshape of \mfl is token from:
+And the truth-level shape is modelled as the product of a relativistic Breit-Wigner (RBW) term, a term corresponding to the squared matrix element of the production process and a parton luminosity term $\mathcal{L}$ as given in ~\cite{Bijnens_2001}.
+So the truth lineshape of \mfl is taken from:
 \begin{equation*}
         \mfl^{\text{Truth}} \sim \mathcal{L}_{gg} \cdot s^2 \cdot \frac{s(1 + s)(1 + 2s + 2s^2)}{(s^2 - \mG^2)^2 + \mG^2 \Gamma^2}
 \end{equation*}
@@ -326,7 +333,7 @@ And then the two parameters are parameterized as the function of \mH by a linear
 \end{figure}
 
 The final signal model is obtained by convolving the truth-level lineshape with the detector resolution function.
-To verify the result, figure~\ref{fig:graviton_reco_shape_2mu2e} compares the \mfl lineshape from parameterization with the one observed from reconstructed-level MC simulation in 2$e$2$\mu$ channel at masses of 600~\gev, 1600~\gev and 2000~\gev as examples.
+To verify the result, figure~\ref{fig:graviton_reco_shape_2mu2e} compares the \mfl lineshape from parameterization with the one observed from reconstructed-level MC simulation in 2$e$2$\mu$ channel at masses of 600~\gev, 1600~\gev~and 2000~\gev~as examples.
 
 \begin{figure}[htbp]
     \centering

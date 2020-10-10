@@ -1,11 +1,12 @@
 \section{Test statistic}
+\label{sec:teststat}
 
-To test the level of agreement between the data and the hypothesized value $\mu$, a test statistic $t_{\mu}$ can be defined as:
+To test the level of agreement between the data and the hypothesized value $\mu$, a test statistic $t_{\mu}$ can be defined as~\cite{Cowan:2010js}:
 \begin{equation}
     t_{\mu} = -2 ln \lambda (\mu)
 \end{equation}
 From the definition of $\lambda(\mu)$ in equation~\ref{eq:lambda}, one can see that $0 \le \lambda \le 1$,
-and a $\lambda$ with value close to 1 implies good agreement between data and $\mu$.
+while a $\lambda$ with value close to 1 implies good agreement between data and $\mu$.
 Thus, smaller value of $t_{\mu}$ means the increase of compatibility between data and $\mu$.
 To quantify the level of disagreement, one can calculate the $p$-value as:
 \begin{equation}
@@ -13,7 +14,7 @@ To quantify the level of disagreement, one can calculate the $p$-value as:
 \end{equation}
 in which $t_{\mu, obs}$ is the value of test statistic from observed data, 
 and $f(t_{\mu}|\mu)$ is the pdf of $t_{\mu}$ under the assumption of hypothesized value $\mu$.
-This is a one-side $p$-value with its corresponding observed significance, $Z$, can be defined as:
+This is a one-side $p$-value with its corresponding observed significance, $Z$, is defined as:
 \begin{equation}
     Z = \Phi^{-1}(1-2p_{\mu})
 \end{equation}
@@ -26,16 +27,16 @@ when the rejection of background-only hypothesis has a significance of at least 
 \includegraphics[width=1.0\textwidth]{figures/Statistic/test_statistic_pvalue_Z.png}
 \end{center}
 \caption{(a) Illustration of the relationship between the observed $t_{\mu}$ and its $p$-value. 
-         (b) The relationship between $p$-value and the observed significance $Z$, where $\phi(x)$ is a standard normal distribution.
+         (b) The relationship between $p$-value and the observed significance $Z$, where $\phi(x)$ is the standard normal distribution.
         }
 \label{fig:pvalue_Z}
 \end{figure}
 
 In most cases, one assumes that the presence of a new signal can only increase the event rate comparing to the background only model,
-then the signal strength $\mu \ge 0$.
-And for the case of discovery, the hypothesis of a positive signal strength should be tested against to the background-only (null) hypothesis by using the test statistic called $p_0$:
-\begin{equation}
-    p_0 = 
+which means the signal strength cannot be a negative value ($\mu \ge 0$).
+And for the case of discovery, the hypothesis of a positive signal strength should be tested against to the background-only (null) hypothesis by using the test statistic called $q_0$:
+\begin{equation} \label{eq:q0}
+    q_0 = 
     \begin{cases}
         -2 ln(\lambda(0)) &\hat{\mu} \ge 0 \\
         0                 &\hat{\mu} < 0

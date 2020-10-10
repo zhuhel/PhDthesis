@@ -6,15 +6,15 @@ The likelihood function is defined as the product of a set of the probability de
 \end{equation}
 where $\theta_{1}$, ..., $\theta_{M}$ are the nuisance parameters that can be written as $\pmb{\theta}$,
 and $x_{1}$, ..., $x_{N}$ denote the observables of dataset. 
-Usually one measures the variable $x$ by constructing a histogram $\pmb{n} = (n_{1}, ..., n_{N})$~\cite{Cowan:2010js}.
-The expectation value of the ith bin $n_{i}$ can be written as:
+Usually one measures the variable $x$ by constructing a histogram $\pmb{n} = (n_{1}, ..., n_{N})$.
+The expectation value of the ith bin $n_{i}$ is written as~\cite{Cowan:2010js}:
 \begin{equation}\label{eq:discri}
     E[n_{i}] = \mu s_{i} + b_{i}
 \end{equation}
 where $\mu$ is the signal strength, $s_{i}$ and $b_{i}$ are the number of signal and background events in that bin.
-In addition to the histogram $\pmb{n}$, in some cases, one would like to use subsidiary measurements to help further constrain the nuisance parameters.
+In addition to the histogram $\pmb{n}$, in some cases, one would like to use subsidiary measurements to further constrain the nuisance parameters.
 For instance, due to the lack of background simulation or the mismodelling issue of one MC sample, one can choose a control region and construct another histogram $\pmb{m} = (m_{1}, ..., m_{M})$ to constrain the contribution of one certain background in data.
-For this measurement, the expectation value of the ith bin $m_{i}$ can be written as:
+For this measurement, the expectation value of the ith bin $m_{i}$ is written as:
 \begin{equation}\label{eq:cr}
     E[m_i] = u_i(\pmb{\theta})
 \end{equation}
@@ -26,9 +26,9 @@ by combining the equation~\ref{eq:discri} and ~\ref{eq:cr}, one can get the like
     \prod_{k=1}^{M} \frac{u_k^{m_k}}{m_k !} e^{-u_k}
 \end{equation}
 
-Then to test the hypothesized value of $\mu$, the profile likelihood ratio is defined as:
+Then the profile likelihood ratio is defined to test the hypothesized value of $\mu$:
 \begin{equation} \label{eq:lambda}
     \lambda (\mu) = \frac{\mathcal{L}(\mu, \pmb{\hat{\hat{\theta}}})}{\mathcal{L}(\hat{\mu}, \pmb{\hat{\theta}})}
 \end{equation}
-where numerator denotes to a local maximum-likelihood for a specific $\mu$, $\pmb{\hat{\hat{\theta}}}$ is the value of $\pmb{\theta}$ that maximizes the numerator.
+where numerator denotes the local maximum-likelihood for a specific $\mu$, $\pmb{\hat{\hat{\theta}}}$ is the value of $\pmb{\theta}$ that maximizes the numerator.
 And the denominator is the global maximum-likelihood with the $\hat{\mu}$ and $\pmb{\hat{\theta}}$ as their best fit value.
