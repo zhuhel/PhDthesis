@@ -2,18 +2,18 @@
 
 \textbf{Luminosity}
 
-In beam–beam collisions, the event rate for a process is given by~\cite{Evans_2008}:
+In beam–beam collisions, the event rate for a process is written as~\cite{Evans_2008}:
 \begin{equation}
 	N = \mathcal{L} \sigma
 \end{equation}
 where $\sigma$ is the cross section of the process, and $\mathcal{L}$ is the luminosity.
-For the studies of rare events, $\mathcal{L}$ must be as high as possible.
-The luminosity only depends on the beam parameters, and can be written as:
+To study rare events, $\mathcal{L}$ must be as high as possible.
+The luminosity only depends on the beam parameters as:
 \begin{equation} \label{eq:lumi}
 	\mathcal{L} = \frac{ N_{b}^{2} n f_{r} \gamma}{4\pi \epsilon_{n} \beta^{*}}
 \end{equation}
-where $N_{b}$ denotes the number of particles per bunch, $n$ is the number of bunches per beam,
-$f_{r}$ is the revolution frequency, $\gamma$ represents relativistic $\gamma$ factor, 
+in which $N_{b}$ represents the number of particles per bunch, $n$ denotes the number of bunches per beam,
+$f_{r}$ is the revolution frequency, and $\gamma$ is relativistic $\gamma$ factor, 
 $\epsilon_{n}$ is the normalized transverse emittance and $\beta^{*}$ denotes the $\beta$ function at the collision point.
 To reduce the beam-beam interaction effects, the bunches must have a crossing angle,
 which produces a geometrical luminosity reduction factor $F$:
@@ -36,26 +36,25 @@ For most physics analysis, the data with good quality (require to satisfy \texti
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=0.6\textwidth]{figures/Detector/intlumivstimeRun2DQall.pdf}
-  \caption{Integrated luminosity in ATLAS.}
+  \caption{Integrated luminosity vs delivered month from 2015 to 2018 in ATLAS experiment.}
   \label{fig:lumi_vs_time}
 \end{figure}
 
 \textbf{Pile-up}
 
 In collisions, multiple interactions can happen in one single bunch crossing, which is called ``\textit{pile-up}".
-The variable $\left< \mu \right>$, representing the average number of interactions per bunch crossing, 
-is defined to describe pile-up effect:
+The variable $\left< \mu \right>$, representing the average number of interactions per bunch crossing that used to describe pile-up effect, is defined as:
 \begin{equation}
 	\left< \mu \right> = \frac{L_{tot}\sigma}{f_{r}n_{bunch}}
 \end{equation}
-where $L_{tot}$ is the instantaneous luminosity, $\sigma$ is the inelastic cross section,
-$f_{r}$ is the LHC revolution frequency and $n_{bunch}$ is the number of colliding bunches.
-Normally, with increasing luminosity, the pile-up becomes more significant.
+where $L_{tot}$ is the instantaneous luminosity, $\sigma$ denotes the inelastic cross section,
+$f_{r}$ represents the LHC revolution frequency and $n_{bunch}$ is the number of colliding bunches.
+Usually, with increasing luminosity, the pile-up becomes more significant.
 Figure~\ref{fig:run2_mu} shows the luminosity-weighted distribution of the mean number of interactions per crossing
 for pp collision data from 2015 to 2018 (full run-2), the challenge of pile-up increased in each year.
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=0.6\textwidth]{figures/Detector/mu_2015_2018.pdf}
-  \caption{Number of Interactions per Crossing from 2015-2018 in ATLAS.}
+  \caption{Number of interactions per crossing weighted bt luminosity from 2015 to 2018 in ATLAS experiment.}
   \label{fig:run2_mu}
 \end{figure}

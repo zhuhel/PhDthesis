@@ -1,13 +1,12 @@
 \subsection{Detector overview}
 
-ATLAS (A Toroidal LHC ApparatuS) is the largest volume detector ever constructed for a particle collider.
+ATLAS is the world's largest volume particle detector.
 It is a cylinder with 46 meters long, 25 meters in diameter, and sits in a cavern 100 meters below ground.
 The detector contains about 3000 km of cables and it weights 7000 tonnes.
 
-This paragraph briefly summarizes the coordinate system and nomenclature used to describe the ATLAS detector \cite{Collaboration_2008}.
-As depicted in figure~\ref{fig:coordinate}, we define the nominal interaction point as the origin of the coordinate system, the beam direction as the \textit{z}-axis and the \textit{x-y} plane is transverse to the beam direction.
-The positive \textit{x}-axis is defined to be the direction pointing to the center of the LHC ring, 
-while the positive \textit{y}-axis is pointing upwards.
+The coordinate system and nomenclature used to describe the ATLAS detector \cite{Collaboration_2008} is depicted in figure~\ref{fig:coordinate}. We define the nominal interaction point as the origin of the coordinate system, the beam direction as the \textit{z}-axis and the \textit{x-y} plane is transverse to the beam direction.
+The positive \textit{x}-axis is given as the direction from interaction point to the centre of the LHC ring, 
+while the positive \textit{y}-axis points upward.
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=0.9\textwidth]{figures/Detector/Coordinate_system_atlas.png}
@@ -15,25 +14,35 @@ while the positive \textit{y}-axis is pointing upwards.
   \label{fig:coordinate}
 \end{figure}
 There are two sides of detector A and C, in which A (C) -side is in the positive (negative) \textit{z} direction.
-The azimuthal angle $\phi$ is measured as usual around the beam axis, while the polar angle $\theta$ is the angle from the beam axis.
-In physics analysis, we usually use the pseudorapidity instead of $\theta$ angle, which is designed as $\eta = - ln \left[ tan\left( \frac{\theta}{2}\right) \right]$. 
+The polar angle $\theta$ is measured from the beam axis, while the azimuthal angle $\phi$ is obtained around the beam axis.
+In physics analysis, we usually use the pseudorapidity $\eta$ designed as:
+\begin{equation}
+    \eta = - ln \left[ tan\left( \frac{\theta}{2}\right) \right]
+\end{equation}
+instead of $\theta$ angle. 
+And for massive objects (eg. jets), the rapidity is used:
+\begin{equation}
+    y = \frac{1}{2} ln \left[ \frac{E+p_{z}}{E-p_{z}} \right]
+\end{equation}
 
-For massive objects (eg. jets), the rapidity $y = \frac{1}{2} ln \left[ \frac{E+p_{z}}{E-p_{z}} \right]$ is used.
 In addition, the transverse momentum $p_{T}$, transverse energy $E_{T}$ and the missing transverse energy $E_{T}^{miss}$ are defined in \textit{x-y} plane.
-The $\Delta R$, a commonly used distance measurement, is defined in the pseudorapidity-azimuthal angle space as $\Delta R = \sqrt{ \Delta\eta^{2} + \Delta\phi^{2}}$.
+The $\Delta R$, a commonly used distance measurement, is defined in the pseudorapidity-azimuthal angle space as:
+\begin{equation}
+    \Delta R = \sqrt{ \Delta\eta^{2} + \Delta\phi^{2}}.
+\end{equation}
 
 The overall ATLAS layout is shown in figure~\ref{fig:atlas_layout}, which is forward-backward symmetric with respect to the interaction point.
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=1.0\textwidth]{figures/Detector/atlas_layout.jpg}
-  \caption{Cut-away view of the ATLAS detector \cite{Pequenao:1095924}.}
+  \caption{Layout view of the ATLAS detector \cite{Pequenao:1095924}.}
   \label{fig:atlas_layout}
 \end{figure}
-The magnet configuration comprises a thin superconducting solenoid surrounding the inner-detector cavity, 
-and three large superconducting toroids (one barrel and two end-caps) arranged with an eight-fold azimuthal symmetry around the calorimeters.
+The magnet configuration has a thin superconducting-solenoid surrounding the inner-detector, 
+and three large superconducting-toroids (one barrel and two end-caps) around the calorimeters.
 
-\textbf{The inner detector}, which is the innermost part of ATLAS, is immersed in a 2 T solenoidal magnetic field.
-It's used for pattern recognition, momentum and vertex measurements and electron identification, with the combination of tracking system.
+\textbf{The inner detector}, which is the innermost part of ATLAS, is surrounded by a 2 T solenoidal magnetic field.
+It's used for pattern recognition, momentum and vertex measurements and electron identification, with the combination of tracking system in the region of $\eta$ up to 2.5.
 
 \textbf{The calorimeter} is outside the solenoid, for electromagnetic and hadronic energy measurements.
 The high granularity liquid-argon (LAr) electromagnetic sampling calorimeters is used to measure energy and position with range up to $|\eta| < 3.2$ for electrons and photons.

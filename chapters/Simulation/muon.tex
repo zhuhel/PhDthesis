@@ -1,8 +1,8 @@
 \subsection{Muon}
 \label{sec:muon}
 
-Muons are distinctive signatures in final states of many physics analyses at the LHC includng the Higgs analyses, SM measurements, BSM searches and so on. 
-High performance of muon reconstruction and identifications are crucial.
+Muons are important final state signatures of many physics analyses at the LHC, such as the Higgs analyses, studies of SM, BSM searches and so on. 
+Thus, high performance of muon reconstruction and identifications are crucial.
 This section briefly describes some more details of the \textit{reconstruction}, \textit{identification} and \textit{isolation} of muon.
 
 \textbf{Muon reconstruction}
@@ -13,9 +13,9 @@ The combined ID-MS reconstruction is developed according to several algorithm ba
 Four different muon types are defined~\cite{Aad:2016jkr}:
 \begin{itemize}
 	\item \textbf{Combined (CB) muons:} a combined track is formed by using the reconstructed tracks performed independently in ID and MS with a global refit. To improve the fit quality, the hits from MS may be added to or removed from the track. The outside-in pattern recognition is utilized for the reconstruction of most muons, in which the muons are first reconstructed in MS and then extrapolated inward to match the ID track. In the meantime, the inside-out pattern is also used as a complementary method.
-	\item \textbf{Segment-tagged (ST) muons:} a reconstructed track in ID is defined as muon, if it can be associated with at least one track segment in MDT or CSC chambers. These ST muons are used when they can only pass across one layer of MS chambers due to their low $p_{T}$ or falling into regions with less MS acceptance.
-	\item \textbf{Calorimeter-tagged (CT) muons:} a reconstructed track in ID is categorized as muon if it's matched to the energy deposit in calorimeter which is recognized with a minimum-ionizing particle. This CT muons have lowest purity amount all types of muons, but it covers the region where ATLAS muon spectrometer is only partially constructed. For the region of $|\eta| < 0.1$ and $15 GeV < p_{T} < 100 GeV$, the identification of CT muons are optimal.
-	\item \textbf{Extrapolated (ME) muons:} the muon is reconstructed based only on the MS track and a loose requirement of originating from the interaction point. In general, this type of muon needs to pass at least two (three) layers of MS chambers to provide a track measurement in barrel (forward) region. ME muons are designed to extend the acceptance for muon reconstruction into the region $2.5 < |\eta| < 2.7$ where ID doesn't cover.
+	\item \textbf{Segment-tagged (ST) muons:} a reconstructed track in ID is regarded as muon, if it can be associated with at least one track segment in MDT or CSC chambers. These ST muons are used when muons can only pass across one layer of MS chambers due to their low $p_{T}$ or falling into regions with less acceptance.
+	\item \textbf{Calorimeter-tagged (CT) muons:} a reconstructed track in ID is categorized as CT muon if it's matched to the energy deposit in calorimeter which is recognized with a minimum-ionizing particle. This CT muons have lowest purity amount all types of muons, but it covers the region where ATLAS muon spectrometer is only partially constructed. For the region of $|\eta| < 0.1$ and $15 GeV < p_{T} < 100 GeV$, the identification of CT muons is optimal.
+	\item \textbf{Extrapolated (ME) muons:} the ME muons are reconstructed based only on the MS track and a relative loose requirement of originating from the interaction point. In general, this type of muon needs to pass at least two (three) layers of MS chambers to provide a track measurement in barrel (forward) region. ME muons are designed to extend the reconstruction acceptance to the region of $2.5 < |\eta| < 2.7$ where ID measurement doesn't cover.
 \end{itemize}
 
 Before collecting those muons for physics analyses, overlap removals are performed between different muon types with the priority of CB > ST > CT, when two types of muons share the same ID track.
@@ -23,14 +23,14 @@ Besides, the overlaps with ME muons are resolved by analyzing the track hit cont
 
 \textbf{Muon identification}
 
-After reconstruction, the muon identification is then performed to further discriminate between signal and background, especially to suppress backgrounds from pion and kaon decays by requiring prompt muons with high efficiency and guaranteeing a robust momentum measurement.
+After reconstruction, the muon identification is then performed to further separate the signal and background, especially to suppress backgrounds from pion and kaon decays by requiring prompt muons with high efficiency and guaranteeing a robust momentum measurement.
 The muon identification is defined by using the fit quality of combined track. 
 The variables utilized in judgement for CB tracks include:
 \begin{itemize}
 	\item \textit{q/p significance}, the absolute difference between q/g (charge over momentum) of muons measured in ID and MS divided quadratic sum of their corresponding uncertainties;
-	\item \textit{$\rho'$}, the absolute value of difference between the $p_{T}$ (transverse momentum) measured in ID and MS, divided by the $p_{T}$ of combined track;
+	\item \textit{$\rho'$}, the absolute value of difference between the $p_{T}$ measured in ID and MS, divided by the $p_{T}$ of combined track;
 	\item \textit{Nomalized $\chi^{2}$} of the combined track fit;
-	\item \textit{Number of hits in ID and MS}
+	\item \textit{Hit numbers in ID and MS}
 \end{itemize}
 In addition, some new variables used for \textit{LowPt} muon working point what will be described later~\cite{Zheng:2649299}:
 \begin{itemize}
@@ -49,7 +49,7 @@ In the range of $|\eta| < 2.5$, around 97.5\% Loose muons are CB muons, and abou
 Furthermore, a loose cut on the compatibility between measured momentum in ID and MS is applied to reduce the fake muons from hadrons misidentification. Besides, the q/p-significance is required to be less than 7.
 	\item \textit{Tight:} this working point is used to maximize the purity of muons but with sacrifice of some selection efficiency. Only CB muons with hits in $\geq 2$ stations of MS and passing Medium criteria are selected.
 In addition, the normalized $\chi^{2}$ of combined track fit should be smaller than 8. Then, a two-dimensional cut of q/p-significance and $\rho'$ is adopted as a function of muon $p_{T}$ to ensure tighter background rejection for momentum below 20 GeV, in which the fake rate is usually higher.
-	\item \textit{High-$p_{T}$:} this set of selections aims to maximize the momentum resolution for tracks with $p_{T} > 100 GeV$ region. The selection is especially optimized for searching high-mass $Z'$ and $W'$ resonances. CB muons satisfying Medium selection and with $\geq 3$ hits in 3 MS stations are chosen. The specific region in MS where alignment is suboptimal are removed as a precaution.
+	\item \textit{High-$p_{T}$:} this set of selections aims to maximize the momentum resolution for tracks with $p_{T} > 100 GeV$ region. The selection is especially optimized for searching high-mass $Z'$ and $W'$ resonances. The CB muons satisfying Medium selection and with $\geq 3$ hits in 3 MS stations are chosen. The specific region in MS where alignment is suboptimal are removed as a precaution.
 	\item \textit{Low-$p_{T}$:} this type of muon is newly designed for physics analyses with ATLAS software release version 21. It's designed to obtain a optimal muon identification with very low transverse momentum of $3 GeV < p_{T} < 5 GeV$, which is crucial for B-physics measurement in ATLAS. 
 	In this muon requirement, only CB muons are used. In the range of $|\eta| < 1.3$, it requests muons hit at least one MS station; in $1.3 < |\eta| < 1.55$, a least two MS stations are required; while in region of $|\eta| > 1.55$, \textit{Medium WP} is required. In addition, cuts are applied to suppress fakes as: |MBS| < 3.0, |SNS| < 3.0 and |SCS| < 3.0.
 \end{itemize}
@@ -63,7 +63,7 @@ For \textit{LowPt}, $J/\Psi \rightarrow \mu\mu$ events with $3 GeV < p_{T} < 10 
   \includegraphics[width=0.42\textwidth]{figures/Simulation/muon_id_med.png} \\
   \includegraphics[width=0.42\textwidth]{figures/Simulation/muon_id_tight.png}
   \includegraphics[width=0.42\textwidth]{figures/Simulation/muon_id_highpT.png}
-  \caption{Muon reconstruction efficiency as a function of $\eta$ for: Medium (and Loose), Tight and High-$p_{T}$ working points.}
+  \caption{Muon reconstruction efficiency as functions of $\eta$ for: Medium (and Loose), Tight and High-$p_{T}$ working points.}
   \label{fig:muon_id_eff}
 \end{figure}
 
@@ -79,8 +79,9 @@ For \textit{LowPt}, $J/\Psi \rightarrow \mu\mu$ events with $3 GeV < p_{T} < 10 
 Similar to electron, the muon isolation is used to further distinguish the prompt muon from non-prompt backgrounds.
 There are also two types of isolation variables for muon:
 \begin{itemize}
-	\item \textbf{Calorimeter-based variable:} $E_{T}^{topocone20}$. It's defined as the sum of the transverse energy of topological clusters within a cone of size $\Delta R = 0.2$ around the candidate muon, after subtracting the contribution from the energy deposit of the muon itself and correcting for pile-up effects. The contributions from pile-up and underlying events are computed using the ambient energy-density technique\cite{CACCIARI2008119} and are corrected on an event-by-event basis.
-	\item \textbf{Tracked-based variable:} $p_{T}^{varcone30}$. It's computed as the scalar sum of the transverse momenta of the tracks with $p_{T} > 1 GeV$ in a cone size of $\Delta R = min (10 GeV/p_{T}^{\mu}, 0.3)$ around the candidate muon whose transverse momenta is $p_{T}^{\mu}$ after excluding the muon track itself. This $p_{T}$-dependent cone size can help to improve the performance for muons produced in the decay of particles with a large transverse momentum.
+	\item \textbf{Calorimeter-based variable:} $E_{T}^{topocone20}$. It's defined as the sum of the transverse energy of topological clusters within a cone of $\Delta R = 0.2$ around the candidate, after the correction of pile-up effects and the subtraction of the energy deposit contribution from muon itself.
+        The contributions from pile-up and underlying events are computed using the ambient energy-density technique~\cite{CACCIARI2008119} and are corrected on an event-by-event basis.
+	\item \textbf{Tracked-based variable:} $p_{T}^{varcone30}$. It's computed from the scalar sum of the transverse momenta of the tracks with $p_{T} > 1 GeV$ in a cone with size of $\Delta R = min (10 GeV/p_{T}^{\mu}, 0.3)$ around the candidate muon whose transverse momenta is $p_{T}^{\mu}$ and exclude the muon track candidate itself. This $p_{T}$-dependent cone size can help to improve the performance for muons produced in the decay of particles with a large transverse momentum.
 \end{itemize}
 
 Then the isolation selections are applied based on \textit{relative isolation variables}, 

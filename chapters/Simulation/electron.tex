@@ -14,9 +14,9 @@ More details of electron \textit{reconstruction}, \textit{identification} and \t
 
 \textbf{Electron reconstruction} 
 
-Several steps are proceeded for electron reconstruction in the central region of ATLAS detector ($|\eta| < 2.47$):
+Several steps are proceeded for electron reconstruction in the region of $|\eta| < 2.47$ in ATLAS detector:
 \begin{enumerate}
-	\item \textbf{Seed-cluster reconstruction:} A sliding window with size of $3 \times 5$ in unit of $\Delta\eta^{tower} \times \Delta\phi^{tower} = 0.025 \times 0.025$ in $\eta \times \phi$ space is utilized to search for electron cluster seeds with total cluster transverse energy greater than 2.5 GeV. Then a clustering algorithm\cite{Lampl:1099735} is applied to form the clusters around the seeds, which can take advantage of removing the duplications. The kinematics of clusters are then reconstructed by using an extended window depending on the cluster position. The efficiency of cluster search is from about $95\%$ at $E_{T} = 7 GeV$ to $99\%$ for $E_{T} \geq 15 GeV$.
+	\item \textbf{Seed-cluster reconstruction:} A sliding window of $3 \times 5$ in unit of $\Delta\eta^{tower} \times \Delta\phi^{tower} = 0.025 \times 0.025$ in $\eta \times \phi$ space is utilized to search for electron cluster seeds with total cluster transverse energy greater than 2.5 GeV. Then a clustering algorithm\cite{Lampl:1099735} is applied to form the clusters around the seeds, which can take advantage of removing the duplications. The kinematics of clusters are then reconstructed by using an extended window depending on the cluster position. The efficiency of cluster search is from about $95\%$ at $E_{T} = 7 GeV$ to $99\%$ for $E_{T} \geq 15 GeV$.
 	\item \textbf{Track reconstruction:} The track reconstruction can be divided into two steps: pattern recognition and track fit. The standard pattern recognition in ATLAS uses pion hypothesis for energy loss caused by interactions with detector material. If a track seed with $p_{T}$ > 1~\gev~ cannot be successfully extended to a full track required at least seven hits using this pion hypothesis, but still falls inside one of the EM cluster region of interest, as a second attempt, the pattern recognition using electron hypothesis is then used to allow larger energy loss.
 Depending on the pattern used in previous stage, the track candidates are then fitted with either the pion hypothesis or the electron hypothesis by using ATLAS Global $\chi^{2}$ Track Fitter\cite{Cornelissen_2008}. If a track candidate fails the fit by using pion hypothesis, it can be refit with the electron hypothesis again. In this method, a specific electron-oriented algorithm is integrated into the ATLAS standard track reconstruction, which improves the performance for electron and as well as maintain minimal interference with the main track reconstruction. 
 	\item \textbf{Electron specific track fit:} Once the tracks are obtained, they are loosely matched to EM cluster using the distance in $\eta$ and $\phi$ between the position of track (after extrapolation) in calorimeter's middle layer and the cluster barycentre. The matching conditions take into account the energy loss of bremsstrahlung and the number of precise hits in silicon detector.
@@ -43,7 +43,7 @@ as well as variables measuring bremsstrahlung effects for distinguishing signal 
 Taking the advantage of new IBL in run-2, the number of hits in this innermost pixel layer is utilized for discriminating between electrons and converted photons.
 In addition, a likelihood method based on the TRT high-threshold hits is adopted to compensate the lower transition radiation absorption probability of the argon.
 
-The baseline identification algorithm introduced for ATLAS run-2 data analysis is the likelihood-based (LH) method, which uses a MVA technique to simultaneously evaluate several properties of electron candidates when making a decision.
+The baseline identification algorithm introduced in ATLAS run-2 is the likelihood-based (LH) method, making use of a MVA technique to simultaneously evaluate several properties of electron candidates when making a decision.
 The LH method utilizes the probability density functions (PDFs) of signal and background as the input discriminating variables.
 Based on these PDFs, it can calculate overall probabilities of the object to be signal or background.
 Then the probabilities of signal and background are combined together into a discriminant $d_{\mathcal{L}}$:
@@ -57,7 +57,7 @@ Three levels of working points (WPs) for electron identification are provided: \
 Samples selected by a looser WP are subsets of a tighter one, for example, the electrons passing Medium can all be selected by Loose.
 The identification efficiency varies as function of transverse energy ($E_{T}$) as shown in figure~\ref{fig:ele_IDeff}.
 For evaluations, the electron candidates from MC simulation of $Z \rightarrow ee$ decays (di-jet) are used as signal (background).
-Depending on the working point, the signal (background) efficiencies for reconstructed electron candidates at $E_{T} = 25 GeV$ are in the range of 78 to 90\% (0.3 to 0.8\%), and increase (decrease) with $E_{T}$.
+Depending on the working point, the signal (background) efficiencies for reconstructed electron candidates at $E_{T} = 25 GeV$ are from 78 to 90\% (0.3 to 0.8\%), and increase (decrease) with $E_{T}$.
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=0.9\textwidth]{figures/Simulation/ele_id_eff.png}
@@ -71,7 +71,9 @@ In addition to the identification criteria, most analyses have electron isolatio
 To quantify the energy of particles around the electron candidate, the isolation variables can help to separate the prompt electron from other non-isolated electrons, like the electrons from converted photons or from heavy flavour hadron decays.
 There are two kinds of discriminating variables that have been designed:
 \begin{itemize}
-	\item \textbf{Calorimeter-based variable:} $E_{T}^{topocone20}$. It's defined as the sum of transverse energies of topological clusters\cite{Aad:2016upy}, calibrated at EM scale within a cone of $\Delta R = 0.2$ around the  candidate electron cluster. It only considers the clusters with positive reconstructed energy. In addition, a correction as a function of $(E_{T}, \eta)$ values is applied to account for the electron energy leakage outside the cluster.
+	\item \textbf{Calorimeter-based variable:} $E_{T}^{topocone20}$. 
+        It's computed from the sum of transverse energies of topological clusters~\cite{Aad:2016upy}, and calibrated at EM scale in a cone of $\Delta R = 0.2$ around the candidate electron cluster. 
+        It only considers the clusters with positive reconstructed energy. In addition, a correction as a function of $(E_{T}, \eta)$ values is applied to account for the electron energy leakage outside the cluster.
 	\item \textbf{Track-based variable:} $p_{T}^{varcone20}$. It's calculated as the sum of transverse momentum of all satisfied tracks within a cone of $\Delta R = min(0.2, 10 GeV/E_{T})$ around the candidate electron track. To calculate the sum, it requires the tracks are originating from the reconstruction PV of hard collision, and exclude the associated tracks of electron itself.
 \end{itemize}
 Based on the values of $E_{T}^{topocone20}/p_{T}$ and $p_{T}^{varcone20}/p_{T}$, a serious of working points with different selection requirements are defined.
@@ -84,7 +86,7 @@ The distribution of two discriminating variables are shown in figure~\ref{fig:el
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=0.9\textwidth]{figures/Simulation/ele_iso.png}
-  \caption{Distributions of $E_{T}^{cone0.2}$ (left) and $p_{T}^{varcone0.2}$ (right) for electrons from $ZZ \rightarrow ee$ events in data and MC simulation. The simulated events (full histograms) are normalized to data.}
+  \caption{$E_{T}^{cone0.2}$ (left) and $p_{T}^{varcone0.2}$ (right) distribution for electrons from $ZZ \rightarrow ee$ events in data and MC simulation. The simulated events (full histograms) are normalized to data.}
   \label{fig:ele_iso}
 \end{figure}
 

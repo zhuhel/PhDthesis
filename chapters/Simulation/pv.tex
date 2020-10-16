@@ -18,25 +18,25 @@ $\geq
 \end{itemize}
 A candidate vertex is formed by requiring two tracks passing these selection criteria.
 
-The reconstruction of PV can be divided into two steps\cite{Aaboud:2016rmg}: vertex finding and vertex fitting.
-The first step is the pattern recognition process, namely the association of reconstructed tracks to vertex candidates.
-The latter one works on the reconstruction of the actual vertex position and its covariance matrix.
+The reconstruction of PV can be described into two steps~\cite{Aaboud:2016rmg}: vertex finding and vertex fitting.
+The first step is associating the reconstructed tracks to vertex candidates, namely the pattern recognition process.
+The latter one works on the reconstruction of vertex position and its covariance matrix.
 More details are described as below:
 
 First of all, a set of tracks passing the selection criteria mentioned above is selected.
-Then a seed position for the first vertex is chosen.
-This seed position is determined by beam spot in the transverse plane.
-The starting point for x- and y- coordinates are directly from the centre of the beam spot,
-while the one for z-coordinate is calculated as the mode of z-coordinates of tracks at their respective points with closest approach to the reconstructed centre of the beam spot. 
+Then a seed position, determining by beam spot in the transverse plane, for the first vertex is chosen.
+The starting point for x- and y- coordinates are directly chosen as the centre of the beam spot,
+while the one for z-coordinate is computed as the mode of tracks' z-coordinates at their respective points with closest approach to the reconstructed centre of the beam spot. 
 
 After determining the seed position, the iterative primary vertex finding procedure starts.
 An vertex fitting algorithm is adopted to find the optimal vertex position by performing an iterative $\chi^{2}$ minimization,
 in which the seed position is used as the start point and the reconstructed tracks are used as input measurements.
-For this fitting procedure, the input tracks are assigned weights to reflect their compatibility with the vertex estimation, and the vertex position is re-calculated based on these weighted tracks.
-Then the iterative procedure is repeated by re-calculating the track weight according to the new vertex position.
-After the last iteration, the final weight of each track used in vertex fit is estimated. 
+For this fitting procedure, the weights reflecting the input tracks and the vertex estimation's compatibility are assigned, 
+and the vertex positions are re-calculated based on these weighted tracks.
+Then the iterative procedure is repeated by recalculating the track weight according to the new vertex position.
+After the iterations, the final weights tracks used in vertex fit are given. 
 And those incompatible tracks ($> 7~\sigma$) are then rejected from this vertex candidate and moved back to the unused pool for next vertex finding.
-Then iteration procedure describes above are repeated again by using the remaining tracks, until no un-associated tracks are left or no additional vertex can be found in remaining tracks.
+Then iteration procedure describes above are repeated again by using the remaining tracks in pool, until no un-associated tracks are left or no additional vertex can be found in remaining tracks.
 
 At the end, the vertices with at least two associated tracks passing through are treated as possible PV candidates.
 And the output of this vertex reconstruction algorithm is the information of three dimensional vertex positions and their covariance matrices.
