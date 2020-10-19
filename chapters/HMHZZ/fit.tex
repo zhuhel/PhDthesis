@@ -44,23 +44,58 @@ At the end, the upper limit on production cross-section $\sigma_{\mathrm{ggF(VBF
 and maximising the likelihood function with respect to nuisance parameters.
 %The test statistics $q_\mu$ is used to set upper limits following \cite{CowanTestStatistics}. 
 The $CLs$ method described in section~\ref{sec:CLs} is used to obtain exclusion limits.
-%In order to measure the compatibility of the data with the background-only hypothesis ($\sigma_{\matnrm{ggF}}=\sigma_{\mathrm{VBF}}=0$), the test statistic $q_{0}$ is used as introduced in section~\ref{sec:teststat}.
+%In order to measure the compatibility of the data with the background-only hypothesis ($\sigma_{\mathrm{ggF}}=\sigma_{\mathrm{VBF}}=0$), the test statistic $q_{0}$ is used as introduced in section~\ref{sec:teststat}.
 
 \subsection{Fit to likelihood function under background-only hypothesis for MVA-based analysis}
 
 Both MVA- and cut-based analysis are studied by performing likelihood fit to the (pseudo-) data under the background-only hypothesis and under different signal models.
-Due to the same background estimation and modelling procedures, as well as the same method of systematic measurements,
-this section only shows the results of background-only fits for MVA-based analysis under the model of heavy Higgs resonance with narrow-width as an example.
-The final results of interpretation in both MVA- and cut- based analysis in all signal models described in section~\ref{sec:signal_model} will be presented in next section.
+First of all, table~\ref{tab:postfit_4lyields} (table~\ref{tab:postfit_4lyields_cut}) summaries the expected and observed number of events in MVA (Cut) -based analysis for region of $\mfl > 200~\gev~$ together with their systematic uncertainties after background-only fit.
+The normalization of $ZZ$ background is taken from data for one category each, as shown in table~\ref{tab:muZZ_bonly_dnn} (table~\ref{tab:muZZ_bonly_cut}) in MVA (Cut) -based analysis.
 
-First of all, table~\ref{tab:postfit_4lyields} summarized the expected and observed number of events for region of $\mfl > 200~\gev~$ together with their systematic uncertainties after background-only fit.
-The post-fit \mfl spectrum in each category is shown in figure~\ref{fig:m4l_postfit}.
+\begin{table}[htbp]
+  \centering
+    \caption{$ZZ$ normalization factor in each category, obtained from a likelihood fit to the data under the background-only hypothesis in \textbf{MVA-based} analysis.}
+  \label{tab:muZZ_bonly_dnn}
+  \small
+  \begin{spacing}{1.0}
+  \begin{tabular}{ccc}
+    \toprule
+    Normalization factor  & Fitted value \\
+    \midrule
+    $\mu_{ZZ}^{ggF-MVA-high}$  & 1.07 $\pm$ 0.05 \\
+    \hline
+    $\mu_{ZZ}^{ggF-MVA-low}$   & 1.12 $\pm$ 0.03 \\
+    \hline
+    $\mu_{ZZ}^{VBF-MVA-enriched}$  & 0.9 $\pm$ 0.3 \\
+    \bottomrule
+  \end{tabular}
+  \end{spacing}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+    \caption{$ZZ$ normalization factor in each category, obtained from a likelihood fit to the data under the background-only hypothesis in \textbf{Cut-based} analysis.}
+  \label{tab:muZZ_bonly_cut}
+  \small
+  \begin{spacing}{1.0}
+  \begin{tabular}{ccc}
+    \toprule
+    Normalization factor  & Fitted value \\
+    \midrule
+    $\mu_{ZZ}^{ggF-CBA-enriched}$  & 1.10 $\pm$ 0.02 \\
+    \hline
+    $\mu_{ZZ}^{VBF-CBA-enriched}$  & 1.1 $\pm$ 0.2 \\
+    \bottomrule
+  \end{tabular}
+  \end{spacing}
+\end{table}
+
 
 \begin{table}[tbp]
     \caption{\label{tab:postfit_4lyields}
       Expected and observed numbers of events for $\mfl > 200~\gev{}$, 
       together with their systematic uncertainties, 
-      for three MVA-based categories.
+      for three \textbf{MVA-based} categories.
       The expected number of events, as well as their uncertainties, are obtained
       from a likelihood fit to the data under the background-only hypothesis.
       The uncertainties of the $ZZ$ normalisation factors, presented in table~\ref{tab:muZZ_bonly_dnn},
@@ -72,7 +107,7 @@ The post-fit \mfl spectrum in each category is shown in figure~\ref{fig:m4l_post
     \resizebox{\textwidth}{!}{
       \begin{tabular}{l r@{ $\pm$ }l r@{ $\pm$ }l r@{ $\pm$ }l r@{ $\pm$ }l r@{ $\pm$ }l }
         \toprule
-        \multirow{2}{*}{Process} & \multicolumn{2}{c}{VBF-enriched category} & \multicolumn{6}{c}{ggF-enriched categories}  & \multicolumn{2}{c}{the ``rest'' category} \\
+        \multirow{2}{*}{Process} & \multicolumn{2}{c}{VBF-MVA-enriched} & \multicolumn{6}{c}{ggF-MVA-high}  & \multicolumn{2}{c}{ggF-MVA-low} \\
         & \multicolumn{2}{c}{} & \multicolumn{2}{c}{$4\mu$ channel} & \multicolumn{2}{c}{$2e2\mu$ channel} & \multicolumn{2}{c}{$4e$ channel}  & \multicolumn{2}{c}{} \\ 
         \midrule
   
@@ -90,6 +125,48 @@ The post-fit \mfl spectrum in each category is shown in figure~\ref{fig:m4l_post
       \end{tabular}
     }
 \end{table}
+
+\begin{table}[tbp]
+    \caption{\label{tab:postfit_4lyields_cut}
+      Expected and observed numbers of events for $\mfl > 200~\gev{}$, 
+      together with their systematic uncertainties, 
+      for two \textbf{Cut-based} categories.
+      The expected number of events, as well as their uncertainties, are obtained
+      from a likelihood fit to the data under the background-only hypothesis.
+      The uncertainties of the $ZZ$ normalisation factors, presented in table~\ref{tab:muZZ_bonly_cut},
+      are also taken into account.
+    }
+    \centering
+
+    \footnotesize
+    \resizebox{\textwidth}{!}{
+      \begin{tabular}{l r@{ $\pm$ }l r@{ $\pm$ }l r@{ $\pm$ }l r@{ $\pm$ }l r@{ $\pm$ }l }
+        \toprule
+        \multirow{2}{*}{Process} & \multicolumn{2}{c}{VBF-CBA-enriched} & \multicolumn{6}{c}{ggF-CBA-enriched} \\
+        & \multicolumn{2}{c}{} & \multicolumn{2}{c}{$4\mu$ channel} & \multicolumn{2}{c}{$2e2\mu$ channel} & \multicolumn{2}{c}{$4e$ channel} \\ 
+        \midrule
+  
+        \qqZZ	        &	48	&	8	&	860	&	18	&1360	&	28	&	515	&	11	\\
+        \ggZZ	        &	13	&	4	&	114	&	9	&	189	&	14	&	73	&	6	\\
+        \ZZ (EW)    &	10.9	&	0.9	&	6.9	&	0.3	&11.1	&	0.4	&	4.4	&	0.2	\\
+        \Zjet,\ttbar	&	0.3	&	0.1	&	2.1	&	0.4	&	6.7	&	1.6	&	3.1	&	0.4	\\
+        \ttv,\vvv	    &	3.0	&	0.2	&16.3	&	0.4	&26.8	&	0.6	&11.8	&	0.3	\\
+        \midrule
+        Total background	&	75	&	9	&	1000	&	18	&	1593	&	28	&	607	&	11	\\
+        
+        \midrule
+        Observed  & \multicolumn{2}{c}{75} & \multicolumn{2}{c}{932} & \multicolumn{2}{c}{1656} & \multicolumn{2}{c}{612} \\
+        \bottomrule
+      \end{tabular}
+    }
+\end{table}
+
+
+Then due to the same background estimation and modelling procedures, as well as the same method of systematic measurements between MVA- and Cut- based analysis,
+the following results of background-only fits in this selection are only shown in MVA-based analysis under the model of heavy Higgs resonance with narrow-width as an example.
+The final results of interpretation in both MVA- and cut- based analysis in different signal models described in section~\ref{sec:signal_model} will be presented in next section.
+
+The post-fit \mfl spectrum in each category is shown in figure~\ref{fig:m4l_postfit}.
 
 \begin{figure}[!ht]
   \begin{center}
@@ -114,31 +191,9 @@ The post-fit \mfl spectrum in each category is shown in figure~\ref{fig:m4l_post
   \end{center}
 \end{figure}
 
-
 To inspect the likelihood model, pulls and constraints as well as the correlation matrix of NPs are studied by performing a background only fit.
 Figure~\ref{fig:NPpull_cb_asimov} shows the pulls and constraints when fitting to background only Asimov data (top) and observed data (bottom).
 Figure~\ref{fig:NPcorr_cb_asimov} shows the correlation matrix, only for NPs with correlation between each others greater than 0.1 when fitting to background only Asimov data.
-The normalization of $ZZ$ background is taken from data for one category each, as shown in table~\ref{tab:muZZ_bonly_dnn}.
-
-\begin{table}[htbp]
-  \centering
-  \caption{$ZZ$ normalization factor in each category, obtained from a likelihood fit to the data under the background-only hypothesis.}
-  \label{tab:muZZ_bonly_dnn}
-  \small
-  \begin{spacing}{1.0}
-  \begin{tabular}{ccc}
-    \toprule
-    Normalization factor  & Fitted value \\
-    \midrule
-    $\mu_{ZZ}^{ggF-MVA-high}$  & 1.07 $\pm$ 0.05 \\
-    \hline
-    $\mu_{ZZ}^{ggF-MVA-low}$   & 1.12 $\pm$ 0.03 \\
-    \hline
-    $\mu_{ZZ}^{VBF-MVA-enriched}$  & 0.9 $\pm$ 0.3 \\
-    \bottomrule
-  \end{tabular}
-  \end{spacing}
-\end{table}
 
 \begin{figure}[!ht]
 \begin{center}
