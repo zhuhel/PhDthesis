@@ -22,31 +22,31 @@ C-factor is defined as the ratio between the number of selected events at detect
 \begin{equation}
 	\mathcal{C} = \frac{N_{detector-level}}{N_{FV.}}
 \end{equation}
-The value of C-factor for each $ZZjj$ process are calculated from each individual simulation samples as listed in table~\ref{tab:xs_cf} together with their systematics.
-\begin{table}[H]
-\begin{center}
-   \begin{tabular}{|c|c|c|c|c|}
-   \hline
-   Process          & $\mathcal{C}$ & $\Delta$C (stats.) & $\Delta$C (sys.)        & $\Delta$C (theo.)       \\
-   \hline
-   EWK $ZZjj$         & 0.663         & $\pm$0.002       & $\pm^{0.032}_{0.031}$ & NA                    \\
-   \hline
-   QCD \qqZZ        & 0.702         & $\pm$0.003       & $\pm^{0.061}_{0.051}$ & $\pm^{0.015}_{0.018}$ \\
-   \hline
-   QCD \ggZZ        & 0.741         & $\pm$0.021       & $\pm^{0.143}_{0.072}$ & $\pm{0.002}$          \\
-   \hline
-\end{tabular}
-\end{center}
-\caption{C Factor of different $ZZjj$ processes.}
-\label{tab:xs_cf}
-\end{table}
-
-Then the $\mathcal{C}$ from different processes are combined together to be used as inputs for cross section calculation:
+The value of C-factor for each $ZZjj$ process are firstly calculated from each individual simulation samples together with their systematics.
+%\begin{table}[H]
+%\begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%   \hline
+%   Process          & $\mathcal{C}$ & $\Delta$C (stats.) & $\Delta$C (sys.)        & $\Delta$C (theo.)       \\
+%   \hline
+%   EWK $ZZjj$         & 0.663         & $\pm$0.002       & $\pm^{0.032}_{0.031}$ & NA                    \\
+%   \hline
+%   QCD \qqZZ        & 0.702         & $\pm$0.003       & $\pm^{0.061}_{0.051}$ & $\pm^{0.015}_{0.018}$ \\
+%   \hline
+%   QCD \ggZZ        & 0.741         & $\pm$0.021       & $\pm^{0.143}_{0.072}$ & $\pm{0.002}$          \\
+%   \hline
+%\end{tabular}
+%\end{center}
+%\caption{C Factor of different $ZZjj$ processes.}
+%\label{tab:xs_cf}
+%\end{table}
+Then the $\mathcal{C}$ from different processes are combined together according to their fraction of events in fiducial volume,
+and used as inputs for cross section calculation:
 \begin{equation}
 	\mathcal{C} = \Sigma_{i} \frac{N_{FV.}^{i}}{\Sigma_{j} N_{FV.}^{j}} \times \mathcal{C}_{i} = 0.699\pm0.003(stats.)\pm^{0.011}_{0.013}(theo.)\pm0.028(exp.)
 \end{equation}
-The stats. refers to the statistical uncertainty from MC simulation statistics.
-The theo. and exp. denote the theoretical and experimental uncertainties described in section~\ref{sec:systematics}.
+The ``stats." refers to the statistical uncertainty from MC simulation statistics.
+The ``theo." and ``exp." denote the theoretical and experimental uncertainties described in section~\ref{sec:systematics}.
 
 \subsection{Result of fiducial cross section}
 

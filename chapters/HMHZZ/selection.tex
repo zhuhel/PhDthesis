@@ -26,9 +26,9 @@ The impact parameter requirements of $|d_{0}|$ < 1 mm and $|z_{0} sin\theta|$ < 
 \textbf{Jets:}
 Jets are clustered using the anti-$k_t$ algorithm with radius parameter $R$ = 0.4 implemented in the \textsc{FastJet} package as described in section~\ref{sec:jet}. 
 The `particle flow' (PFlow) objects~\cite{PERF-2015-09}, which combines measurements from both the tracker and the calorimeter, are used as inputs to the \textsc{FastJet} package.
-The energy deposited in the calorimeter by all charged particles is removed, and the jet reconstruction is performed on an ensemble of PFlow objects
-consisting of the remaining calorimeter energy and tracks which are matched to the hard interaction.
-This improves the accuracy of the charged-hadron measurement, while retaining the calorimeter measurements of neutral-particle energies. 
+The algorithm removes the energy deposited in the calorimeter from charged hadrons that are considered in jet reconstruction, and makes use of an ensemble of ``PFlow" objects including  
+the remaining calorimeter energy and tracks matched to the hard interaction.
+The accuracy of charged-particle measurements can be improved from tracker while retaining the energy measurements of neutral-particle in calorimeter.
 Compared to only using topological clusters, jets reconstructed with the particle flow algorithm with $\pt > 30~\gev$ have approximately 10\% better transverse momentum resolution.
 The jets used in this analysis are then required to have $\pt > 30~\GeV$ and $|\eta | < 4.5$.
 To further reduce the effects of pile-up jets, a jet vertex tagger (JVT) is applied to jets with $p_{T} <$ 60~\gev~and $|\eta| < 2.4$.
