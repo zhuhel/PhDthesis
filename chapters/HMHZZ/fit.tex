@@ -13,15 +13,15 @@ and a weighted sum of both signal and background probability distribution functi
 \begingroup
 \small
 \begin{equation}
-  {\cal L } (x_{1}..x_{n}| \sigma_{ggF}, \sigma_{VBF}) = \textrm{Pois}(n|S_{ggF} + S_{VBF} + B)  \left[ \prod\limits^{n}_{i=1}
-  \frac{S_{ggF} f_{\textrm{ggF}}(x_{i}) + S_{VBF} f_{\textrm{VBF}}(x_{i}) + B f_{\textrm{B}}(x_{i})}{S_{ggF} + S_{VBF} + B}
+  {\cal L } (x_{1}..x_{n}| \sigma_{\textrm{ggF}}, \sigma_{\textrm{VBF}}) = \textrm{Pois}(n|S_{\textrm{ggF}} + S_{\textrm{VBF}} + B)  \left[ \prod\limits^{n}_{i=1}
+  \frac{S_{\textrm{ggF}} f_{\textrm{ggF}}(x_{i}) + S_{\textrm{VBF}} f_{\textrm{VBF}}(x_{i}) + B f_{\textrm{B}}(x_{i})}{S_{\textrm{ggF}} + S_{\textrm{VBF}} + B}
   \right]
 \end{equation}
 \endgroup
 where $f_X$s are the pdfs of signal and backgrounds modelled in section~\ref{sec:signal_model} and ~\ref{sec:hmhzz_bkg}, 
 $S_X$ and $B$ are the normalizations of signal and sum of backgrounds.
 
-The parameters of interest (POI) in the search is $\sigma_{ggF}$ (and $\sigma_{VBF}$ only for NWA signal), which is the cross section of signal model in ggF (and VBF) production mode.
+The parameters of interest (POI) in the search is $\sigma_{\textrm{ggF}}$ (and $\sigma_{\textrm{VBF}}$ only for NWA signal), which is the cross section of signal model in ggF (and VBF) production mode.
 In the case of two POIs, when testing one POI, the other one is profiled along with other nuisance parameters (except left unconstrained) during the minimization. 
 These POIs enter the likelihood inside the expected signal yields $S_{\mathrm{ggF}}$ and $S_{\mathrm{VBF}}$ as:
 \begingroup
