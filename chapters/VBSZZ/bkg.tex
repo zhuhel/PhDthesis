@@ -106,13 +106,13 @@ The method is described as below:
 	\item Define a dedicated background dominant region to derive the fake factor for this background. 
 The \textit{fake factor} is defined as:
 \begin{equation}
-	\mathcal{F} = \mathcal{N}_{good} / \mathcal{N}_{pool}
+	\mathcal{F} = \mathcal{N}_{good} / \mathcal{N}_{poor}
 \end{equation}
 where $\mathcal{N}_{good}$ refers to the number of good leptons passing all SR selection, while $\mathcal{N}_{pool}$ denotes the number of poor leptons passing most SR selection but fail one certain requirement.
 	\item Define a fake control region, where one or two lepton(s) pass \textit{poor} requirement while all the other leptons are required to pass SR selection.
 	\item The number of fake events are calculated as:
 \begin{equation}
-	\mathcal{N}_{fake} = \left( N_{gggp} - N_{gggp}^{ZZ} \right) \times \mathcal{F} - \left( N_{ggpp} - N_{ggpp}^{ZZ} \right) \times \mathcal{F}^{2}
+	\mathcal{N}_{fake} = \left( \mathcal{N}_{gggp} - \mathcal{N}_{gggp}^{ZZ} \right) \times \mathcal{F} - \left( \mathcal{N}_{ggpp} - \mathcal{N}_{ggpp}^{ZZ} \right) \times \mathcal{F}^{2}
 \end{equation}
 with the subtraction of $ZZ$ contribution, and the double counting between $N_{gggp}$ and $N_{ggpp}$.
 \end{enumerate}
