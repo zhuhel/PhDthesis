@@ -1,5 +1,5 @@
-% !TeX encoding = UTF-8
-% !TeX program = xelatex
+% !TeX encoding = UTF-8 
+% !TeX program = latexmk
 % !TeX spellcheck = en_US
 
 \documentclass[doctor,english,pdf]{ustcthesis}
@@ -12,10 +12,10 @@
 \major{粒子与原子核物理}
 \supervisor{赵政国}
 \cosupervisor{马宏}
-% \date{二〇一七年五月一日} % 注释掉则为今日
-% \professionaltype{专业学位类型}
-% \secretlevel{秘密}        % 绝密|机密|秘密，注释本行则不保密
-% \secretyear{20}           % 保密年限
+\date{二〇二〇年十一月一日} % 注释掉则为今日
+\professionaltype{专业学位类型}
+%\secretlevel{秘密}        % 绝密|机密|秘密，注释本行则不保密
+%\secretyear{20}           % 保密年限
 
 %\entitle{Studies of Standard Model ZZ Production and Search for heavy ZZ resonances in Purely Leptonic Decay with ATLAS Detector}
 \entitle{Studies of Electroweak Symmetry Breaking in ZZ Production in Purely Leptonic Decay with ATLAS Detector}
@@ -23,9 +23,9 @@
 \enmajor{Particle and Nuclear Physics}
 \ensupervisor{Zhengguo Zhao (USTC)}
 \encosupervisor{Hong Ma (BNL)}
-% \endate{May 1, 2017}      % Today if commented
-% \enprofessionaltype{Professional degree type}
-% \ensecretlevel{Secret}    % Top secret|Highly secret|Secret
+\endate{Nov. 1st, 2020}      % Today if commented
+%\enprofessionaltype{Professional degree type}
+%\ensecretlevel{Secret}    % Top secret|Highly secret|Secret
 
 
 % 加载宏包和配置
@@ -73,18 +73,19 @@
 %\geometry{left=2cm,right=2cm}
 \begin{document}
 
+%\citestyle{numbers}
 \maketitle
-%\makestatement
+\makestatement
 
 \frontmatter
-%\linenumbers
+\linenumbers
 \input{chapters/abstract}
 \input{chapters/acknowledgments}
 \tableofcontents
 \listoffigures
 \listoftables
 
-\makededicate
+%\makededicate
 \newpage
 
 \mainmatter

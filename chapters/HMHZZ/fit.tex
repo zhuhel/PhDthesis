@@ -8,40 +8,65 @@ Results are presented in both cut- and MVA- based analysis.
 
 The upper limits on heavy resonances are obtained using the unbinned profile likelihood fits.
 \mfl is the discriminant.
-The likelihood function is a product of a Poisson term representing the probability of observing $n$ events 
-and a weighted sum of both signal and background probability distribution functions (pdfs) evaluated for all observed events.
+The likelihood function can be written as the product of the probability of observing $n$ events in Poisson distribution 
+and the sum of signal and background weighted following their probability density functions (PDFs):
 \begingroup
 \small
-\begin{equation}
+\begin{equation} \label{eq:likelihood}
   {\cal L } (x_{1}..x_{n}| \sigma_{\textrm{ggF}}, \sigma_{\textrm{VBF}}) = \textrm{Pois}(n|S_{\textrm{ggF}} + S_{\textrm{VBF}} + B)  \left[ \prod\limits^{n}_{i=1}
   \frac{S_{\textrm{ggF}} f_{\textrm{ggF}}(x_{i}) + S_{\textrm{VBF}} f_{\textrm{VBF}}(x_{i}) + B f_{\textrm{B}}(x_{i})}{S_{\textrm{ggF}} + S_{\textrm{VBF}} + B}
   \right]
 \end{equation}
 \endgroup
-where $f_X$s are the pdfs of signal and backgrounds modelled in section~\ref{sec:signal_model} and ~\ref{sec:hmhzz_bkg}, 
+where $f_X$s are the PDFs of signal and backgrounds modelled in section~\ref{sec:signal_model} and ~\ref{sec:hmhzz_bkg}, 
 $S_X$ and $B$ are the normalizations of signal and sum of backgrounds.
 
-The parameters of interest (POI) in the search is $\sigma_{\textrm{ggF}}$ (and $\sigma_{\textrm{VBF}}$ only for NWA signal), which is the cross section of signal model in ggF (and VBF) production mode.
-In the case of two POIs, when testing one POI, the other one is profiled along with other nuisance parameters (except left unconstrained) during the minimization. 
-These POIs enter the likelihood inside the expected signal yields $S_{\mathrm{ggF}}$ and $S_{\mathrm{VBF}}$ as:
+The parameters of interest (POI) in this search is $\sigma_{\textrm{ggF}}$ (and $\sigma_{\textrm{VBF}}$ only for NWA signal), 
+presenting the cross section of signal in ggF (and VBF) production mode.
+In the case of two POIs, when testing one POI, the other is left unconstrainted and profiled with other nuisance parameters during the minimization. 
+The expected signal yields $S_{\mathrm{ggF}}$ and $S_{\mathrm{VBF}}$ in equation~\ref{eq:likelihood} can be written from these POIs:
 \begingroup
 \small
 \begin{equation}
 S_{\mathrm{ggF(VBF)}} = \sigma_{\mathrm{ggF(VBF)}} \times B(S\rightarrow ZZ) \times A \times C \times \int\mathcal{L}
 \end{equation}
 \endgroup
-where $A\times C$ is the signal acceptance as parameterized in~\ref{sec:hmhzz_signal_acc}, and $\int\mathcal{L} = \lumi $ is the integrated luminosity of the dataset.
+where $B(S\rightarrow ZZ)$ is the branching ratio of signal decay to two Z bosons,
+$A\times C$ is the parameterized signal acceptance as described in~\ref{sec:hmhzz_signal_acc}, 
+and $\int\mathcal{L} = \lumi $ is the integrated luminosity of data.
 
-The dependence of the expected number of signal and background events (normalizations) and the shape of the PDFs on the systematic uncertainties measured in section~\ref{sec:hmhzz_sys} 
-is described by a set of nuisance parameters (NPs) $\theta_{i}$, constrained by Gaussian distribution described in section~\ref{sec:NPs}.
-The final likelihood function ${\cal L } ( \sigma_{\mathrm{ggF}}, \sigma_{\mathrm{VBF}},\mH,\theta_{i})$ is therefore a function of $\sigma_{\mathrm{ggF}}, \sigma_{\mathrm{VBF}} , \mH$, and $\theta_{i}$.
+The systematic uncertainties of the expected number of signal and background events (normalizations) and the shape of the PDFs measured in section~\ref{sec:hmhzz_sys} 
+is described by a set of nuisance parameters (NPs) $\theta_{i}$, constrained by Gaussian distribution described in section~\ref{sec:NPs} in fit.
+Thus, the final likelihood function ${\cal L } ( \sigma_{\mathrm{ggF}}, \sigma_{\mathrm{VBF}},\mH,\theta_{i})$ is modelled as a function of several variables: $\sigma_{\mathrm{ggF}}, \sigma_{\mathrm{VBF}} , \mH$, and $\theta_{i}$.
 
 Furthermore, the normalization of SM background $pp\to ZZ$, including both \qqZZ\ and \ggZZ, is a free parameter ($\mu_{ZZ}$) and profiled during the minimization.
-Floating $ZZ$ normalization in fit takes the advantage of reducing the dependence on theory predictions and their associated uncertainties,
-especially given that the increased data luminosity would provide precise determination of the SM $ZZ$ background rate.
+Given that the increased data luminosity can now provide precise determination of the SM $ZZ$ background with only about 2\% statistical uncertainty,
+floating $ZZ$ normalization in fit reduces the dependence on theory predictions and their corresponding large uncertainties (about 30\%).
 
-At the end, the upper limit on production cross-section $\sigma_{\mathrm{ggF(VBF)}}$ at a given heavy resonance model is obtained by setting the mass of signal $m_{H}$ parameter as constant at the desired value,
-and maximising the likelihood function with respect to nuisance parameters.
+%%% comparison: fixing vs floating muZZ
+In addition, the study on comparison of expected signal sensitivity between fixing (with Gaussian constraints on its normalization uncertainties) 
+and floating $ZZ$ normalization has been done.
+Table~\ref{tab:muZZ_limits} shows the value of expected 95\% $CLs$ upper limits under these two cases at three different mass points.
+\begin{table}[htbp]
+  \centering
+  \caption{Summary of $CLs$ upper limits on ggF production mode at 300, 600, 1000~\gev.}
+  \label{tab:muZZ_limits}
+  \begin{tabular}{c|c|c|c}
+    \hline
+    $\sigma_{\mathrm{ggF}} \times B(S\rightarrow ZZ)$ [pb] & 300 ~\gev  & 600 ~\gev & 1000 ~\gev  \\
+    \hline
+    Floating $ZZ$ normalization & 0.0892 & 0.0253 & 0.0125 \\
+    Fixing $ZZ$ normalization   & 0.0892 & 0.0254 & 0.0125 \\
+    \hline
+  \end{tabular}
+\end{table}
+The results prove that with the excellent discrimination power of \mfl distribution between the SM background and the resonant signal, 
+floating $ZZ$ normalization in fit would not reduce the expected signal sensitivity.
+%%%
+
+
+At the end, the upper limit on production cross-section $\sigma_{\mathrm{ggF(VBF)}}$ at a given heavy resonance model is obtained by fixing the mass of signal ($m_{H}$) at the desired value,
+and maximising the likelihood function.
 %The test statistics $q_\mu$ is used to set upper limits following \cite{CowanTestStatistics}. 
 The $CLs$ method described in section~\ref{sec:CLs} is used to obtain exclusion limits.
 %In order to measure the compatibility of the data with the background-only hypothesis ($\sigma_{\mathrm{ggF}}=\sigma_{\mathrm{VBF}}=0$), the test statistic $q_{0}$ is used as introduced in section~\ref{sec:teststat}.
