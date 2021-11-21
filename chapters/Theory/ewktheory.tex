@@ -1,7 +1,8 @@
 \subsection{Electroweak theory}
 \label{ewktheory}
-The electroweak interaction is the unified description of two of the four known fundamental interactions of nature: electromagnetism and the weak interaction.
-It is based on the gauge group $SU(2)_{L} \times SU(1)_{Y}$, in which $L$ is the left-handed fields and $Y$ is the weak hypercharge~\cite{Langacker:2009my}.
+The electroweak interaction is the unified description of two of the four known fundamental interactions of nature: 
+the electromagnetic interaction and the weak interaction.
+It is based on the gauge group $SU(2)_{L} \times U(1)_{Y}$, in which $L$ is the left-handed fields and $Y$ is the hypercharge~\cite{Langacker:2009my}.
 It follows the Lagrangian of
 \begin{equation} \label{eq:Lew}
 	L_{EW} = L_{gauge} + L_{Higgs} + L_{fermion} + L_{Yukawa}
@@ -11,7 +12,7 @@ $L_{gauge}$ is the \textbf{gauge term} part:
 \begin{equation}
 	L_{gauge} = -\frac{1}{4} W^{i}_{\mu\nu} W^{\mu\nu i} - \frac{1}{4} B_{\mu\nu} B^{\mu\nu}
 \end{equation}
-where $W^{i}_{\mu}$ and $B_{\mu}$ present the $SU(2)_{L}$ and $SU(1)_{Y}$ gauge fields respectively, with the corresponding field strength tensors of
+where $W^{i}_{\mu}$ and $B_{\mu}$ represent the $SU(2)_{L}$ and $U(1)_{Y}$ gauge fields respectively, with the corresponding field strength tensors of
 \begin{equation}
 \begin{split}
 	& B_{\mu\nu} = \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu} \\
@@ -30,7 +31,7 @@ and $V(\phi)$ is the Higgs potential which is restricted into the form of
 \begin{equation} \label{eq:Vhiggs}
 	V(\phi) = +\mu^{2}\phi^{\dagger}\phi + \lambda\left(\phi^{\dagger}\phi\right)^{2}
 \end{equation}
-due to the combination of $SU(2)_{L} \times SU(1)_{Y}$ invariance and renormalizability.
+due to the combination of $SU(2)_{L} \times U(1)_{Y}$ invariance and renormalizability.
 In Eq.~\ref{eq:Vhiggs}, $\mu$ is a mass-dependent parameter and $\lambda$ is the quartic Higgs scalar coupling, 
 which represents a quartic self-interaction between the scalar fields.
 When $\mu^{2} < 0$, there will be spontaneous symmetry breaking (more details in section~\ref{symbreaking}).
@@ -61,7 +62,7 @@ The last term in Eq.~\ref{eq:Lew} is \textbf{Yukawa term}
 \begin{equation}
 \begin{split}
 	{L}_{Yukawa} =& -\sum_{m,n=1}^{F} [\Gamma_{mn}^{u}\bar{q}_{mL}^{0}\widetilde{\phi}u_{nR}^{0} + \Gamma_{mn}^{d}\bar{q}_{mL}^{0}\phi d_{nR}^{0} \\
-	& + \Gamma_{mn}^{e}\bar{l}_{mn}^{0}\phi e_{nR}^{0} + \Gamma_{mn}^{\nu}\bar{l}_{mL}^{0}\widetilde{\phi}\nu_{nR}^{0}]+h.c.
+	& + \Gamma_{mn}^{e}\bar{l}_{mn}^{0}\phi e_{nR}^{0}]+h.c.
 \end{split}
 \end{equation}
 the matrices $\Gamma_{mn}$ refer to the Yukawa couplings between single Higgs doublet ($\phi$) and the various flavors of quarks (m) and leptons (n).
